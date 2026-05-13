@@ -69,11 +69,12 @@ window.APP = {
     return true;
   },
 
-  async loadNewsContent(dateOverride) {
+  async loadNewsContent(dateStr = null) {
     if (this.state.isLoading) return;
     this.state.isLoading = true;
     try {
-      let date = dateOverride || await this.fetchActiveDate();
+      // Use provided date string, or fetch from active.json if null (backward compatible)
+      let date = dateStr || await this.fetchActiveDate();
       if (!date) { 
         this.handleFetchFailure();
         return; 
