@@ -1,6 +1,3 @@
-/**
- * Carousel Module with error handling, image fallback, and JSON validation
- */
 window.carousel = (() => {
   let state = {
     currentIndex: 0,
@@ -12,7 +9,6 @@ window.carousel = (() => {
 
   function init(newsItems) {
     if (!newsItems || newsItems.length === 0) {
-      console.warn('Carousel: No news items provided');
       showNoNewsMessage();
       return;
     }
@@ -33,28 +29,28 @@ window.carousel = (() => {
 
   function next() {
     if (state.newsItems.length === 0) return;
+    if (state.isAnimating) return;
     state.isAnimating = true;
-    const container = document.getElementById('carousel-container');
-    const currentItem = container ? container.querySelector('.carousel-item') : null;
-    if (currentItem) currentItem.classList.add('carousel-fade-out');
+    const item = document.querySelector('.carousel-item');
+    if (item) item.classList.add('fade-out');
     setTimeout(() => {
       state.currentIndex = (state.currentIndex + 1) % state.newsItems.length;
       renderItem(state.currentIndex);
       state.isAnimating = false;
-    }, 300);
+    }, 600);
   }
 
   function prev() {
     if (state.newsItems.length === 0) return;
+    if (state.isAnimating) return;
     state.isAnimating = true;
-    const container = document.getElementById('carousel-container');
-    const currentItem = container ? container.querySelector('.carousel-item') : null;
-    if (currentItem) currentItem.classList.add('carousel-fade-out');
+    const item = document.querySelector('.carousel-item');
+    if (item) item.classList.add('fade-out');
     setTimeout(() => {
       state.currentIndex = (state.currentIndex - 1 + state.newsItems.length) % state.newsItems.length;
       renderItem(state.currentIndex);
       state.isAnimating = false;
-    }, 300);
+    }, 600);
   }
 
   function pause() { state.isPaused = true; }
@@ -67,123 +63,152 @@ window.carousel = (() => {
     const container = document.getElementById('carousel-container');
     if (!container) return;
 
-    let carouselItem = container.querySelector('.carousel-item');
-    if (!carouselItem) {
-      carouselItem = document.createElement('div');
-      carouselItem.className = 'carousel-item';
-      container.innerHTML = '';
-      container.appendChild(carouselItem);
-    }
-
-    let contentHTML = '';
+    let html = '';
+    
     if (item.type === 'birthday') {
-      contentHTML = '<div class="birthday-card"><h2 class="birthday-title">Gratulerer med dagen!</h2><div class="birthday-names">' + (item.names ? item.names.join(', ') : '') + '</div><p class="birthday-message">' + (item.message || '') + '</p></div>';
+      html = `
+        <div class="carousel-item birthday-card">
+          <div class="birthday-card-image">
+            <div class="birthday-icon">🎉</div>
+          </div>
+          <div class="birthday-card-content">
+            <h2 class="birthday-title">Gratulerer med dagen!</h2>
+            <div class="birthday-names">${(item.names || []).join(', ')}</div>
+            <p class="birthday-message">${item.message || ''}</p>
+          </div>
+        </div>
+      `;
     } else {
       const imageUrl = item.image_url || '';
-      const sourceName = item.source_name || 'Kilde';
+      const sourceName = item.source_name || 'Source';
       const title = item.title || '';
       const summary = item.summary || '';
       const sourceUrl = item.source_url || '';
 
-      contentHTML = '<div class="carousel-content">' +
-        '<div class="carousel-image-wrapper">' +
-        '<img src="' + imageUrl + '" alt="' + title + '" class="carousel-image" />' +
-        '<div class="image-fallback" style="display: none;">' +
-        '<span class="fallback-text">' + sourceName + '</span>' +
-        '</div>' +
-        '</div>' +
-        '<div class="carousel-text">' +
-        '<h2 class="carousel-headline">' + title + '</h2>' +
-        '<p class="carousel-summary">' + summary + '</p>' +
-        '</div>' +
-        '<div class="carousel-meta">' +
-        '<div id="qr-code" class="qr-code"></div>' +
-        '<span class="source-name">' + sourceName + '</span>' +
-        '</div>' +
-        '</div>';
+      html = `
+        <div class="carousel-item">
+          <div class="carousel-wrapper">
+            <div class="carousel-image-section">
+              <img 
+                src="${imageUrl}" 
+                alt="${title}" 
+                class="carousel-image"
+                onerror="handleImageError(this)"
+              />
+              <div class="image-fallback">
+                <div class="fallback-text">${sourceName}</div>
+              </div>
+              <div class="qr-overlay">
+                <div id="qr-code"></div>
+                <p class="qr-overlay-text">SCAN ME</p>
+              </div>
+            </div>
+            <div class="carousel-content">
+              <div class="carousel-content-top">
+                <div class="carousel-headline-row">
+                  <h2 class="carousel-headline">${title}</h2>
+                </div>
+                <p class="carousel-summary">${summary}</p>
+              </div>
+              <div class="carousel-meta">
+                <span class="source-name">${sourceName}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
 
       setTimeout(() => { generateQRCode(sourceUrl); }, 0);
     }
 
-    carouselItem.innerHTML = contentHTML;
+    container.innerHTML = html;
 
-    // Attach image error handler after rendering
-    const img = carouselItem.querySelector('.carousel-image');
-    if (img) {
-      img.onerror = function() {
-        img.style.display = 'none';
-        const fallback = carouselItem.querySelector('.image-fallback');
-        if (fallback) fallback.style.display = 'flex';
-        console.warn('Image failed to load:', img.src);
-      };
-      if (img.src) {
-        img.onload = function() {
-          img.classList.add('loaded');
-        };
+    const img = container.querySelector('.carousel-image');
+    if (img && img.src) {
+      if (img.complete) {
+        img.classList.add('loaded');
+      } else {
+        img.onload = () => img.classList.add('loaded');
       }
     }
 
-    carouselItem.classList.remove('carousel-fade-out');
-    carouselItem.classList.add('carousel-fade-in');
     updateProgressBar();
     updateQueuePreview(index);
-    setTimeout(() => { carouselItem.classList.remove('carousel-fade-in'); }, 300);
+    updateItemCounter();
+  }
+
+  function handleImageError(img) {
+    img.style.display = 'none';
+    const fallback = img.parentElement?.querySelector('.image-fallback');
+    if (fallback) fallback.classList.add('visible');
   }
 
   function updateProgressBar() {
-    const progressBar = document.getElementById('progress-bar');
-    if (!progressBar) return;
-    progressBar.style.animation = 'none';
-    void progressBar.offsetWidth;
-    progressBar.style.animation = 'progress-fill 15s linear forwards';
+    const bar = document.getElementById('progress-bar');
+    if (!bar) return;
+    bar.style.animation = 'none';
+    void bar.offsetWidth;
+    bar.style.animation = 'progress-fill 15s linear forwards';
+  }
+
+  function updateItemCounter() {
+    const current = document.getElementById('current-item');
+    const total = document.getElementById('total-items');
+    if (current) current.textContent = state.currentIndex + 1;
+    if (total) total.textContent = state.newsItems.length;
   }
 
   function updateQueuePreview(currentIndex) {
-    const queuePreview = document.getElementById('queue-preview');
-    if (!queuePreview) return;
-    const nextItems = [];
+    const preview = document.getElementById('queue-preview');
+    if (!preview) return;
+    
+    const items = [];
     for (let i = 1; i <= 3; i++) {
-      const nextIndex = (currentIndex + i) % state.newsItems.length;
-      const nextItem = state.newsItems[nextIndex];
+      const idx = (currentIndex + i) % state.newsItems.length;
+      const nextItem = state.newsItems[idx];
       if (nextItem) {
-        let headline = nextItem.title || '';
+        let title = nextItem.title || '';
         if (nextItem.type === 'birthday') {
-          headline = 'Gratulerer med dagen' + (nextItem.names && nextItem.names[0] ? ' - ' + nextItem.names[0] : '');
+          title = 'Gratulerer' + (nextItem.names?.[0] ? ' - ' + nextItem.names[0] : '');
         }
-        headline = headline.substring(0, 30);
-        if (headline.length === 30) headline += '...';
-        nextItems.push(headline);
+        items.push(title.substring(0, 40) + (title.length > 40 ? '...' : ''));
+      } else {
+        items.push('Kommer snart');
       }
     }
-    queuePreview.textContent = 'Neste: → ' + nextItems.join(' → ');
+
+    while (items.length < 3) {
+      items.push('Kommer snart');
+    }
+    
+    preview.innerHTML = items.map(item => `<div class="queue-item">${item}</div>`).join('');
   }
 
   function generateQRCode(url) {
-    const qrContainer = document.getElementById('qr-code');
-    if (!qrContainer || !window.QRCodeStyling) return;
+    const container = document.getElementById('qr-code');
+    if (!container || !window.QRCodeStyling) return;
+    
     try {
       const qr = new QRCodeStyling({
-        width: 200,
-        height: 200,
-        data: url || '',
-        margin: 10,
+        width: 160,
+        height: 160,
+        data: url || 'https://example.com',
+        margin: 8,
         dotsOptions: { color: '#FF6B35', type: 'rounded' },
-        backgroundOptions: { color: '#0A0F1A' },
+        backgroundOptions: { color: 'transparent' },
         cornersSquareOptions: { type: 'rounded' },
-        cornersDotOptions: { type: 'rounded' },
+        cornersDotOptions: { type: 'rounded', color: '#FF6B35' },
       });
-      qrContainer.innerHTML = '';
-      qr.append(qrContainer);
-    } catch (error) {
-      console.error('QR Code generation error:', error);
+      container.innerHTML = '';
+      qr.append(container);
+    } catch (e) {
+      console.warn('QR generation failed:', e);
     }
   }
 
   function showNoNewsMessage() {
-    const container = document.getElementById('no-news-message');
-    if (container) {
-      container.style.display = 'flex';
-    }
+    const el = document.getElementById('no-news-message');
+    if (el) el.classList.add('visible');
   }
 
   function getState() {
@@ -194,6 +219,8 @@ window.carousel = (() => {
       isAnimating: state.isAnimating,
     };
   }
+
+  window.handleImageError = handleImageError;
 
   return { init, next, prev, pause, resume, togglePause, getState };
 })();

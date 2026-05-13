@@ -6,173 +6,117 @@
     <meta name="description" content="Infoskjerm News Carousel - TV Display">
     <title>Infoskjerm News Display</title>
 
-    <!-- Tailwind CSS v4 CDN -->
-    <script src="https://cdn.tailwindcss.com/v4"></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'bg-primary': '#0A0F1A',
-                        'text-primary': '#F5F7FA',
-                        'accent': '#FF6B35',
+                        'slate': {
+                            '950': '#0A0E27',
+                            '900': '#0F1629',
+                            '800': '#1a2847',
+                        },
+                        'orange': {
+                            '500': '#FF6B35',
+                            '600': '#FF5722',
+                        },
                     },
                     fontFamily: {
-                        'sans': ['Inter', 'sans-serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
                     },
                 }
             }
         }
     </script>
 
-    <!-- Google Fonts Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=20260514h">
 </head>
-<body class="bg-[#0A0F1A] text-[#F5F7FA] font-sans overflow-hidden">
+<body class="min-h-screen flex flex-col bg-slate-950 text-slate-50 font-sans overflow-hidden">
 
     <!-- Header -->
-    <header class="h-20 bg-[#0F1420] border-b border-[#1A2233] flex items-center justify-between px-10">
-        <div class="text-sm font-semibold">
-            <span id="header-date">Loading...</span>
+    <header class="h-20 bg-gradient-to-r from-slate-900 to-slate-950 border-b border-slate-800/30 flex items-center justify-between px-12 backdrop-blur-sm">
+        <div>
+            <h1 class="text-4xl font-bold tracking-tight">Techfeed</h1>
         </div>
-        <div class="text-2xl font-bold">Infoskjerm</div>
-        <div class="text-sm font-semibold">
-            <span id="header-time">--:--</span>
+        <div class="flex items-center gap-8">
+            <p class="text-lg font-semibold tracking-wide text-slate-300">
+                <span id="header-date">Loading...</span>
+            </p>
+            <p class="text-lg font-semibold tracking-wide text-slate-200">
+                <span id="header-time">--:--</span>
+            </p>
         </div>
     </header>
 
-    <!-- Main Carousel Area -->
-    <main class="flex-1 flex items-center justify-center px-10 py-8">
-        <div id="carousel-container" class="w-full max-w-6xl">
-
-            <!-- Carousel Content Card -->
-            <div class="bg-[#141B2A] rounded-lg overflow-hidden shadow-2xl" style="aspect-ratio: 16/9;">
-                <div class="flex h-full">
-
-                    <!-- Left: Image Column -->
-                    <div class="w-2/3 relative bg-[#0A0F1A] overflow-hidden">
-                        <img id="carousel-image"
-                             src=""
-                             alt="News image"
-                             class="w-full h-full object-cover"
-                             style="opacity: 0; transition: opacity 0.6s ease-in-out;">
-
-                        <!-- Image Fallback Text (for missing images) -->
-                        <div id="image-fallback"
-                             class="absolute inset-0 flex items-center justify-center text-center px-8 opacity-0 transition-opacity"
-                             style="background: linear-gradient(135deg, #1A2233 0%, #0F1420 100%);">
-                            <div>
-                                <p id="fallback-source" class="text-4xl font-bold text-[#FF6B35]">--</p>
-                                <p class="text-2xl text-[#A0A8B8] mt-4">Image unavailable</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right: Content Column -->
-                    <div class="w-1/3 bg-[#0F1420] p-8 flex flex-col justify-between">
-
-                        <!-- Headline -->
-                        <div>
-                            <h2 id="carousel-headline"
-                                class="text-5xl font-bold leading-tight mb-6 line-clamp-3"
-                                style="font-size: 3rem;">
-                                Loading news...
-                            </h2>
-
-                            <!-- Summary -->
-                            <p id="carousel-summary"
-                               class="text-2xl leading-relaxed text-[#D0D8E0] line-clamp-6"
-                               style="font-size: 1.5rem;">
-                                Fetching content...
-                            </p>
-                        </div>
-
-                        <!-- QR Code & Source -->
-                        <div class="flex items-end justify-between gap-6">
-                            <div>
-                                <p id="carousel-source"
-                                   class="text-lg font-semibold text-[#FF6B35] uppercase tracking-wide">
-                                   Source
-                                </p>
-                            </div>
-                            <div id="qr-code" class="w-32 h-32 bg-[#1A2233] rounded-lg flex items-center justify-center">
-                                <span class="text-xs text-[#A0A8B8]">QR Code</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Main Carousel -->
+    <main class="flex-1 flex items-start justify-center px-6 py-4">
+        <div id="carousel-container" class="w-full h-full">
+            <!-- Carousel content injected by JS -->
         </div>
     </main>
 
-    <!-- Footer: Progress Bar & Queue Preview -->
-    <footer class="h-32 bg-[#0F1420] border-t border-[#1A2233] flex flex-col justify-between px-10 py-6">
-
+    <!-- Footer -->
+    <footer class="h-20 bg-gradient-to-t from-slate-900 to-slate-950 border-t border-slate-800/30 flex flex-col justify-between px-8 py-3">
         <!-- Progress Bar -->
-        <div class="w-full">
-            <div class="h-1 bg-[#1A2233] rounded-full overflow-hidden">
+        <div>
+            <div class="h-1.5 bg-slate-800/40 rounded-full overflow-hidden backdrop-blur-sm">
                 <div id="progress-bar"
-                     class="h-full bg-[#FF6B35] rounded-full"
+                     class="h-full bg-gradient-to-r from-orange-500 to-orange-600 rounded-full shadow-lg shadow-orange-500/50"
                      style="width: 0%; animation: progress-fill 15s linear forwards;">
                 </div>
             </div>
-            <p class="text-xs text-[#A0A8B8] mt-2">
-                <span id="current-item">1</span> / <span id="total-items">7</span>
-            </p>
         </div>
 
         <!-- Queue Preview -->
-        <div class="flex items-center gap-4 mt-4">
-            <span class="text-sm font-semibold text-[#A0A8B8]">Neste:</span>
-            <div id="queue-preview" class="flex gap-6 overflow-hidden">
-                <div class="text-sm text-[#A0A8B8] truncate">→ Item 1</div>
-                <div class="text-sm text-[#A0A8B8] truncate">→ Item 2</div>
-                <div class="text-sm text-[#A0A8B8] truncate">→ Item 3</div>
-            </div>
+        <div class="queue-row">
+            <p class="text-xs font-medium text-slate-400 whitespace-nowrap">
+                <span id="current-item">1</span> / <span id="total-items">7</span>
+            </p>
+            <div class="queue-label">Neste</div>
+            <div id="queue-preview" class="queue-preview"></div>
         </div>
     </footer>
 
-    <!-- No News Message (shown when no items available) -->
     <div id="no-news-message"
-         class="hidden fixed inset-0 bg-[#0A0F1A] flex flex-col items-center justify-center text-center px-10 z-50"
+         class="hidden fixed inset-0 bg-slate-950 flex items-center justify-center z-50 backdrop-blur-sm"
          style="display: none;">
-        <div class="max-w-2xl">
-            <div class="text-6xl mb-6">📰</div>
-            <h2 class="text-4xl font-bold mb-4">Ingen nyheter tilgjengelig i dag</h2>
-            <p class="text-2xl text-[#A0A8B8] mb-8">
-                Karussellen vil lastes når nyheter er tilgjengelig.
-            </p>
-            <p class="text-lg text-[#808A98]">
-                Siste kjente gode innhold vises når tilgjengelig.
-            </p>
+        <div class="text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-900 mb-6">
+                <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+            </div>
+            <h2 class="text-2xl font-bold mb-2">Ingen nyheter tilgjengelig</h2>
+            <p class="text-slate-400">Karussellen lastes når nyheter er tilgjengelig</p>
         </div>
     </div>
 
-    <!-- Fallback / Error State -->
     <div id="fallback-state"
-         class="hidden fixed inset-0 bg-[#0A0F1A] flex flex-col items-center justify-center text-center px-10 z-50"
+         class="hidden fixed inset-0 bg-slate-950 flex items-center justify-center z-50 backdrop-blur-sm"
          style="display: none;">
-        <div class="max-w-2xl">
-            <div class="text-6xl mb-6">⚠</div>
-            <h2 class="text-4xl font-bold mb-4">No content available</h2>
-            <p class="text-2xl text-[#A0A8B8] mb-8">
-                Unable to load today's news. Please check the data files.
-            </p>
-            <p class="text-lg text-[#808A98]">
-                Last known good content will display when available.
-            </p>
+        <div class="text-center">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-orange-500/10 mb-6">
+                <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+            </div>
+            <h2 class="text-2xl font-bold mb-2">Kan ikke hente innhold</h2>
+            <p class="text-slate-400">Viser sist kjente gode innhold når tilgjengelig</p>
         </div>
     </div>
 
-    <!-- QR Code Styling Library -->
+    <!-- QR Code Library -->
     <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
 
-    <!-- Main Application Scripts -->
-    <script src="js/carousel.js" defer></script>
-    <script src="js/app.js" defer></script>
+    <!-- Application Scripts -->
+    <script src="js/carousel.js?v=20260514h" defer></script>
+    <script src="js/app.js?v=20260514h" defer></script>
 
 </body>
 </html>

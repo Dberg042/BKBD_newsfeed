@@ -33,7 +33,11 @@ window.APP = {
   updateClock() {
     const now = new Date();
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const dateStr = now.toLocaleDateString('no-NO', options);
+    const dateStr = now
+      .toLocaleDateString('no-NO', options)
+      .split(' ')
+      .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+      .join(' ');
     const timeStr = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
     const hd = document.getElementById('header-date');
     const ht = document.getElementById('header-time');

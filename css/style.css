@@ -1,14 +1,4 @@
-/* Root CSS Variables */
-:root {
-    --color-bg-primary: #0A0F1A;
-    --color-bg-secondary: #0F1420;
-    --color-bg-tertiary: #141B2A;
-    --color-text-primary: #F5F7FA;
-    --color-text-secondary: #D0D8E0;
-    --color-text-tertiary: #A0A8B8;
-    --color-accent: #FF6B35;
-}
-
+/* Typography & Base Styles */
 html, body {
     cursor: none;
     user-select: none;
@@ -16,64 +6,193 @@ html, body {
 }
 
 body {
-    background-color: #0A0F1A;
+    background-color: #0A0E27;
     color: #F5F7FA;
     overflow: hidden;
+    font-feature-settings: "kern" 1, "liga" 1;
+    height: 100vh;
 }
 
-.carousel-item { width: 100%; opacity: 1; }
-.carousel-image-wrapper { width: 66%; position: relative; background: #0A0F1A; display: flex; align-items: center; }
-.carousel-image { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.6s; }
-.carousel-image.loaded { opacity: 1; }
+body > main {
+    height: calc(100vh - 80px - 112px);
+    flex: 0 0 auto;
+}
+
+/* Carousel Container */
+#carousel-container {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    opacity: 1;
+    animation: carousel-fade-in 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-item.fade-out {
+    animation: carousel-fade-out 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Main Carousel Card */
+.carousel-wrapper {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    min-height: 0;
+    display: grid;
+    grid-template-rows: 500px minmax(0, 1fr);
+    gap: 0;
+    background: linear-gradient(135deg, #0F1629 0%, #1a2847 100%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Image Section */
+.carousel-image-section {
+    position: relative;
+    background: linear-gradient(135deg, #0A0E27 0%, #0F1629 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    height: 500px;
+}
+
+.qr-overlay {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 20;
+}
+
+.qr-overlay-text {
+  background: #ffffff;
+  color: #FF6B35;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-top: 4px;
+
+.carousel-image-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 60% 40%, rgba(255, 107, 53, 0.1), transparent 70%);
+    pointer-events: none;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-image.loaded {
+    opacity: 1;
+}
 
 .image-fallback {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, #1A2233 0%, #0F1420 100%);
+    background: linear-gradient(135deg, rgba(31, 41, 55, 0.8) 0%, rgba(15, 22, 41, 0.8) 100%);
     display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 16px;
+    backdrop-filter: blur(10px);
+    z-index: 10;
 }
 
-.image-fallback.visible { display: flex !important; }
+.image-fallback.visible {
+    display: flex !important;
+}
 
 .fallback-text {
-    font-size: 36px;
-    font-weight: 800;
+    font-size: 40px;
+    font-weight: 700;
     color: #FF6B35;
     text-align: center;
-    padding: 20px;
+    letter-spacing: -0.02em;
     word-wrap: break-word;
 }
 
-.carousel-text {
-    width: 33%;
-    background: #0F1420;
-    padding: 32px;
+/* Content Section */
+.carousel-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 32px 36px;
+    position: relative;
+    overflow: hidden;
+    min-height: 0;
+}
+
+.carousel-content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.05), transparent 70%);
+    pointer-events: none;
+}
+
+.carousel-content-top {
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-headline-row {
+    display: block;
 }
 
 .carousel-headline {
-    font-size: 64px;
+    font-size: 54px;
     font-weight: 800;
+    line-height: 1.15;
     color: #F5F7FA;
-    margin-bottom: 24px;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.02em;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .carousel-summary {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 400;
+    line-height: 1.45;
     color: #D0D8E0;
+    margin: 0;
     display: -webkit-box;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
     -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .carousel-meta {
@@ -81,54 +200,119 @@ body {
     align-items: flex-end;
     justify-content: space-between;
     gap: 24px;
+    position: relative;
+    z-index: 1;
 }
 
-.source-name {
-    font-size: 18px;
+.queue-preview {
+    flex: 1;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    overflow: hidden;
+}
+
+.queue-item {
+    position: relative;
+    min-width: 0;
+    height: 32px;
+    padding: 6px 12px 6px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(59, 130, 246, 0.28);
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.88) 0%, rgba(30, 41, 59, 0.75) 100%);
+    font-size: 12px;
+    line-height: 1.2;
     font-weight: 600;
-    color: #FF6B35;
-    text-transform: uppercase;
-}
-
-#qr-code {
-    width: 200px;
-    height: 200px;
-    background: #0A0F1A;
-    border-radius: 8px;
+    color: #cbd5e1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#no-news-message {
-    position: fixed;
-    inset: 0;
-    background: #0A0F1A;
-    display: none;
+.queue-item::before {
+    content: none;
+}
+
+.queue-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.queue-label {
+    flex: 0 0 auto;
+    height: 32px;
+    padding: 0 14px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    z-index: 50;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 107, 53, 0.4);
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.32) 0%, rgba(255, 107, 53, 0.15) 100%);
+    color: #f8fafc;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.source-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #FF6B35;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.carousel-qr-panel {
+    flex: 0 0 auto;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 2px;
 }
 
-#no-news-message.visible { display: flex !important; }
-#fallback-state { position: fixed; inset: 0; background: #0A0F1A; display: none; align-items: center; justify-content: center; z-index: 50; }
-#fallback-state.visible { display: flex !important; }
-
-#progress-bar {
-    background: #FF6B35;
-    height: 4px;
-    width: 0%;
-    animation: progress-fill 15s linear forwards;
+.qr-title {
+    display: none;
 }
 
+.qr-subtitle {
+    margin: 0;
+    font-size: 11px;
+    font-weight: 600;
+    color: #A6B2C7;
+}
+
+/* QR Code */
+#qr-code {
+    width: 132px;
+    height: 132px;
+    background: linear-gradient(135deg, rgba(15, 22, 41, 0.8), rgba(26, 40, 71, 0.8));
+    border: 1px solid rgba(255, 107, 53, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#qr-code svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Animations */
 @keyframes progress-fill {
     from { width: 0%; }
     to { width: 100%; }
 }
-
-.carousel-fade-in { animation: carousel-fade-in 0.6s ease-in-out; }
-.carousel-fade-out { animation: carousel-fade-out 0.6s ease-in-out; }
 
 @keyframes carousel-fade-in {
     from { opacity: 0; }
@@ -140,10 +324,45 @@ body {
     to { opacity: 0; }
 }
 
+/* Birthday Card */
 .birthday-card {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #FFB366 0%, #FF8C42 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    overflow: hidden;
+    animation: carousel-fade-in 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.birthday-card-image {
+    background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.birthday-card-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1), transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05), transparent 50%);
+    pointer-events: none;
+}
+
+.birthday-icon {
+    font-size: 120px;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+.birthday-card-content {
+    background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,8 +371,52 @@ body {
     padding: 40px;
     text-align: center;
     color: white;
+    position: relative;
+    z-index: 2;
 }
 
-.birthday-title { font-size: 64px; font-weight: 800; }
-.birthday-names { font-size: 48px; font-weight: 600; }
-.birthday-message { font-size: 36px; font-weight: 400; }
+.birthday-title {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.birthday-names {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0.95;
+}
+
+.birthday-message {
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.9;
+    max-width: 300px;
+}
+
+/* Error States */
+#no-news-message, #fallback-state {
+    position: fixed;
+    inset: 0;
+    background: #0A0E27;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    flex-direction: column;
+}
+
+#no-news-message.visible, #fallback-state.visible {
+    display: flex !important;
+}
+
+/* Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+    .carousel-item,
+    .carousel-image,
+    #progress-bar {
+        animation: none;
+        transition: none;
+    }
+}
