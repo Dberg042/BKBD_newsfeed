@@ -1,26 +1,83 @@
-<!doctype html>
-<html lang="tr">
+<!DOCTYPE html>
+<html lang="no">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: grid;
-      place-items: center;
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #222;
+  <title>Infoskjerm - Nyheter</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-primary': '#0A0F1A',
+            'text-primary': '#F5F7FA',
+            'accent': '#FF6B35',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'sans-serif'],
+          },
+        }
+      }
     }
-    h1 {
-      font-size: 3rem;
-      letter-spacing: 1px;
-    }
-  </style>
+  </script>
+  
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- QR Code library -->
+  <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
 </head>
-<body>
-  <h1>Hello World</h1>
+<body class="bg-bg-primary text-text-primary">
+  <header>
+    <div class="logo">Infoskjerm</div>
+    <div class="header-info" id="header-date">Tirsdag 13. mai 2026</div>
+    <div class="header-time" id="header-time">12:34</div>
+  </header>
+  
+  <main>
+    <div id="carousel-container"></div>
+  </main>
+  
+  <footer>
+    <div class="progress-container">
+      <div id="progress-bar"></div>
+      <div class="progress-time"><span id="progress-time">0</span>s / 15s</div>
+    </div>
+    <div id="queue-preview"></div>
+  </footer>
+
+  <script src="js/carousel.js"></script>
+  <script src="js/app.js"></script>
+  
+  <script>
+    // Update clock every second
+    function updateClock() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      document.getElementById('header-time').textContent = hours + ':' + minutes;
+      
+      // Update progress time
+      const progressBar = document.getElementById('progress-bar');
+      if (progressBar && progressBar.style.animation) {
+        const match = progressBar.style.animation.match(/progress-fill (\d+)s/);
+        if (match) {
+          const elapsed = Math.round((performance.now() % 15000) / 1000);
+          document.getElementById('progress-time').textContent = elapsed;
+        }
+      }
+    }
+    
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 </body>
 </html>
