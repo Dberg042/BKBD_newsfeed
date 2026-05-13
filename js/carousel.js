@@ -190,10 +190,10 @@ window.carousel = (() => {
     
     try {
       const qr = new QRCodeStyling({
-        width: 160,
-        height: 160,
+        width: 132,
+        height: 132,
         data: url || 'https://example.com',
-        margin: 8,
+        margin: 6,
         dotsOptions: { color: '#FF6B35', type: 'rounded' },
         backgroundOptions: { color: 'transparent' },
         cornersSquareOptions: { type: 'rounded' },
