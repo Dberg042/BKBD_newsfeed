@@ -1,0 +1,7 @@
+.claude/agents/gsd-advisor-researcher.md
+.claude/gsd-file-manifest.json
+*.gemini*
+*.claude*
+*agents*
+*get-shit-done*
+*skills*
