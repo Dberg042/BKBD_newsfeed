@@ -121,13 +121,18 @@
             tomorrow.setDate(tomorrow.getDate() + 1);
             return tomorrow.toISOString().split('T')[0];
         }
-        function updatePreviewDateDisplay() {
-            const dateStr = getPreviewDate();
+        function formatDateForDisplay(dateStr) {
             const [year, month, day] = dateStr.split('-');
             const monthNames = ['januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'desember'];
             const monthName = monthNames[parseInt(month) - 1];
-            const display = day + '. ' + monthName + ' ' + year;
+            return day + '. ' + monthName + ' ' + year;
+        }
+        function updatePreviewDateDisplay() {
+            const dateStr = getPreviewDate();
+            const display = formatDateForDisplay(dateStr);
             document.getElementById('preview-date').textContent = display;
+            // Update header date to show preview date instead of today
+            document.getElementById('header-date').textContent = display;
             window.APP.loadNewsContent(dateStr);
         }
         document.addEventListener('DOMContentLoaded', () => {
