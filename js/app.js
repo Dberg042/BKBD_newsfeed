@@ -1,21 +1,29 @@
-// Infoskjerm News Display - with error handling, JSON validation, warning indicator
 window.APP = {
   config: { 
     pollingInterval: 300000, 
     retryAttempts: 3, 
     retryDelays: [1000, 3000, 9000], 
-    dataFolder: 'data' 
+    dataFolder: 'data',
+    failureThreshold: 3
   },
   state: { 
     lastKnownGood: null, 
     lastFetchDate: null, 
     currentNews: [], 
-    failureCount: 0, 
+    consecutiveFailures: 0, 
     isPolling: false, 
-    isLoading: false 
+    isLoading: false,
+    hasShownWarning: false
   },
 
   async init() {
+    try {
+      const saved = localStorage.getItem('APP_lastKnownGood');
+      if (saved) {
+        this.state.lastKnownGood = JSON.parse(saved);
+      }
+    } catch (e) {}
+    
     this.updateClock();
     setInterval(() => this.updateClock(), 1000);
     await this.loadNewsContent();
@@ -41,22 +49,21 @@ window.APP = {
       return data.date || new Date().toISOString().split('T')[0];
     } catch (e) {
       if (retryCount < this.config.retryAttempts) {
-        await new Promise(r => setTimeout(r, this.config.retryDelays[retryCount]));
+        const delay = this.config.retryDelays[retryCount];
+        console.warn('Active.json retry ' + (retryCount + 1) + ' in ' + delay + 'ms');
+        await new Promise(r => setTimeout(r, delay));
         return this.fetchActiveDate(retryCount + 1);
       }
+      console.error('Active.json failed after 3 attempts');
       return null;
     }
   },
 
   validateNewsItem(item) {
-    // Validate that item has required fields
     if (!item || typeof item !== 'object') {
-      console.warn('Invalid news item: not an object');
       return false;
     }
-    // Allow items with at least title and source_name
     if (!item.title && !item.headline) {
-      console.warn('Invalid news item: missing title');
       return false;
     }
     return true;
@@ -68,21 +75,21 @@ window.APP = {
     try {
       let date = dateOverride || await this.fetchActiveDate();
       if (!date) { 
-        this.showFallback(); 
+        this.handleFetchFailure();
         return; 
       }
+      
       const promises = [];
       for (let i = 1; i <= 7; i++) {
         promises.push(this.fetchNewsItem(date, 'news-' + String(i).padStart(2, '0') + '.json'));
       }
-      // Also try to load birthday.json
       promises.push(this.fetchNewsItem(date, 'birthday.json'));
       
       const results = await Promise.all(promises);
       const newsItems = results.filter(item => item !== null && this.validateNewsItem(item));
       
-      if (newsItems.length === 0) { 
-        this.showFallback(); 
+      if (newsItems.length === 0) {
+        this.handleFetchFailure();
         return; 
       }
       
@@ -90,21 +97,37 @@ window.APP = {
       this.state.currentNews = newsItems;
       this.state.lastFetchDate = date;
       this.state.lastKnownGood = { items: newsItems, date };
-      this.state.failureCount = 0;
+      this.state.consecutiveFailures = 0;
+      this.state.hasShownWarning = false;
       this.hideErrorIndicator();
+      
       try { 
         localStorage.setItem('APP_lastKnownGood', JSON.stringify(this.state.lastKnownGood)); 
       } catch (e) {}
+      
       this.displayCarousel(newsItems);
       this.hideFallback();
     } catch (e) {
       console.error('Error loading news:', e);
-      this.state.failureCount++;
-      if (this.state.failureCount >= 3) {
-        this.showErrorIndicator();
-      }
+      this.handleFetchFailure();
     } finally {
       this.state.isLoading = false;
+    }
+  },
+
+  handleFetchFailure() {
+    this.state.consecutiveFailures++;
+    console.warn('Consecutive failures: ' + this.state.consecutiveFailures);
+    
+    if (this.state.consecutiveFailures >= this.config.failureThreshold && !this.state.hasShownWarning) {
+      this.showErrorIndicator();
+      this.state.hasShownWarning = true;
+    }
+    
+    if (this.state.lastKnownGood && this.state.lastKnownGood.items && this.state.lastKnownGood.items.length > 0) {
+      this.displayCarousel(this.state.lastKnownGood.items);
+    } else {
+      this.showFallback();
     }
   },
 
@@ -117,10 +140,10 @@ window.APP = {
       return data;
     } catch (e) {
       if (retryCount < this.config.retryAttempts) {
-        await new Promise(r => setTimeout(r, this.config.retryDelays[retryCount]));
+        const delay = this.config.retryDelays[retryCount];
+        await new Promise(r => setTimeout(r, delay));
         return this.fetchNewsItem(date, filename, retryCount + 1);
       }
-      console.warn('Failed to fetch ' + filename + ':', e.message);
       return null;
     }
   },
@@ -143,10 +166,13 @@ window.APP = {
   showErrorIndicator() {
     const indicator = document.getElementById('fallback-state');
     if (indicator) {
+      const html = '<div style="text-align:center;padding:32px;background:rgba(15,20,32,0.95);border-radius:8px;border-top:4px solid #FF6B35">' +
+        '<div style="font-size:64px;margin-bottom:20px">X</div>' +
+        '<h2 style="font-size:48px;color:#F5F7FA;margin-bottom:16px">Tilkoblingsproblem</h2>' +
+        '<p style="font-size:28px;color:#D0D8E0">Viser lagret innhold</p>' +
+        '</div>';
+      indicator.innerHTML = html;
       indicator.style.display = 'flex';
-      indicator.innerHTML = '<div class="error-message"><div class="warning-icon">⚠</div><h2>Tilkoblingsproblem</h2><p>Viser lagret innhold.</p></div>';
-      indicator.style.backgroundColor = 'rgba(10, 15, 26, 0.9)';
-      indicator.style.borderTop = '4px solid #FF6B35';
     }
   },
 
@@ -164,6 +190,7 @@ window.APP = {
   },
 
   async checkUpdates() {
+    if (document.hidden) return;
     const nd = await this.fetchActiveDate();
     if (nd && nd !== this.state.lastFetchDate) {
       location.reload();
