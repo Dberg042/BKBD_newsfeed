@@ -1,5 +1,5 @@
 /**
- * Carousel Module
+ * Carousel Module with error handling, image fallback, and JSON validation
  */
 window.carousel = (() => {
   let state = {
@@ -13,7 +13,7 @@ window.carousel = (() => {
   function init(newsItems) {
     if (!newsItems || newsItems.length === 0) {
       console.warn('Carousel: No news items provided');
-      showFallbackMessage();
+      showNoNewsMessage();
       return;
     }
     state.newsItems = newsItems;
@@ -33,9 +33,10 @@ window.carousel = (() => {
 
   function next() {
     if (state.newsItems.length === 0) return;
-    const currentItem = document.getElementById('carousel-item');
-    if (currentItem) currentItem.classList.add('carousel-fade-out');
     state.isAnimating = true;
+    const container = document.getElementById('carousel-container');
+    const currentItem = container ? container.querySelector('.carousel-item') : null;
+    if (currentItem) currentItem.classList.add('carousel-fade-out');
     setTimeout(() => {
       state.currentIndex = (state.currentIndex + 1) % state.newsItems.length;
       renderItem(state.currentIndex);
@@ -45,9 +46,10 @@ window.carousel = (() => {
 
   function prev() {
     if (state.newsItems.length === 0) return;
-    const currentItem = document.getElementById('carousel-item');
-    if (currentItem) currentItem.classList.add('carousel-fade-out');
     state.isAnimating = true;
+    const container = document.getElementById('carousel-container');
+    const currentItem = container ? container.querySelector('.carousel-item') : null;
+    if (currentItem) currentItem.classList.add('carousel-fade-out');
     setTimeout(() => {
       state.currentIndex = (state.currentIndex - 1 + state.newsItems.length) % state.newsItems.length;
       renderItem(state.currentIndex);
@@ -65,11 +67,11 @@ window.carousel = (() => {
     const container = document.getElementById('carousel-container');
     if (!container) return;
 
-    let carouselItem = document.getElementById('carousel-item');
+    let carouselItem = container.querySelector('.carousel-item');
     if (!carouselItem) {
       carouselItem = document.createElement('div');
-      carouselItem.id = 'carousel-item';
       carouselItem.className = 'carousel-item';
+      container.innerHTML = '';
       container.appendChild(carouselItem);
     }
 
@@ -77,13 +79,50 @@ window.carousel = (() => {
     if (item.type === 'birthday') {
       contentHTML = '<div class="birthday-card"><h2 class="birthday-title">Gratulerer med dagen!</h2><div class="birthday-names">' + (item.names ? item.names.join(', ') : '') + '</div><p class="birthday-message">' + (item.message || '') + '</p></div>';
     } else {
-      const imageHTML = item.image_url ? '<img src="' + item.image_url + '" alt="' + item.title + '" class="carousel-image" onerror="this.style.display=\'none\'; document.querySelector(\'.image-fallback\').style.display=\'flex\';" />' : '';
-      const fallbackHTML = '<div class="image-fallback" style="display: none;"><span class="fallback-text">' + (item.source_name || 'Kilde') + '</span></div>';
-      contentHTML = '<div class="carousel-content"><div class="carousel-image-wrapper">' + imageHTML + fallbackHTML + '</div><div class="carousel-text"><h2 class="carousel-headline">' + (item.title || '') + '</h2><p class="carousel-summary">' + (item.summary || '') + '</p></div><div class="carousel-meta"><div id="qr-code" class="qr-code"></div><span class="source-name">' + (item.source_name || 'Kilde') + '</span></div></div>';
-      setTimeout(() => { generateQRCode(item.source_url); }, 0);
+      const imageUrl = item.image_url || '';
+      const sourceName = item.source_name || 'Kilde';
+      const title = item.title || '';
+      const summary = item.summary || '';
+      const sourceUrl = item.source_url || '';
+
+      contentHTML = '<div class="carousel-content">' +
+        '<div class="carousel-image-wrapper">' +
+        '<img src="' + imageUrl + '" alt="' + title + '" class="carousel-image" />' +
+        '<div class="image-fallback" style="display: none;">' +
+        '<span class="fallback-text">' + sourceName + '</span>' +
+        '</div>' +
+        '</div>' +
+        '<div class="carousel-text">' +
+        '<h2 class="carousel-headline">' + title + '</h2>' +
+        '<p class="carousel-summary">' + summary + '</p>' +
+        '</div>' +
+        '<div class="carousel-meta">' +
+        '<div id="qr-code" class="qr-code"></div>' +
+        '<span class="source-name">' + sourceName + '</span>' +
+        '</div>' +
+        '</div>';
+
+      setTimeout(() => { generateQRCode(sourceUrl); }, 0);
     }
 
     carouselItem.innerHTML = contentHTML;
+
+    // Attach image error handler after rendering
+    const img = carouselItem.querySelector('.carousel-image');
+    if (img) {
+      img.onerror = function() {
+        img.style.display = 'none';
+        const fallback = carouselItem.querySelector('.image-fallback');
+        if (fallback) fallback.style.display = 'flex';
+        console.warn('Image failed to load:', img.src);
+      };
+      if (img.src) {
+        img.onload = function() {
+          img.classList.add('loaded');
+        };
+      }
+    }
+
     carouselItem.classList.remove('carousel-fade-out');
     carouselItem.classList.add('carousel-fade-in');
     updateProgressBar();
@@ -140,10 +179,10 @@ window.carousel = (() => {
     }
   }
 
-  function showFallbackMessage() {
-    const container = document.getElementById('carousel-container');
+  function showNoNewsMessage() {
+    const container = document.getElementById('no-news-message');
     if (container) {
-      container.innerHTML = '<div class="fallback-message"><h2>Ingen nyheter tilgjengelig i dag</h2><p>Carousel vil lastes når nyheter er tilgjengelig.</p></div>';
+      container.style.display = 'flex';
     }
   }
 

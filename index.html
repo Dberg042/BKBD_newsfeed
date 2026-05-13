@@ -135,9 +135,26 @@
         </div>
     </footer>
 
+    <!-- No News Message (shown when no items available) -->
+    <div id="no-news-message"
+         class="hidden fixed inset-0 bg-[#0A0F1A] flex flex-col items-center justify-center text-center px-10 z-50"
+         style="display: none;">
+        <div class="max-w-2xl">
+            <div class="text-6xl mb-6">📰</div>
+            <h2 class="text-4xl font-bold mb-4">Ingen nyheter tilgjengelig i dag</h2>
+            <p class="text-2xl text-[#A0A8B8] mb-8">
+                Karussellen vil lastes når nyheter er tilgjengelig.
+            </p>
+            <p class="text-lg text-[#808A98]">
+                Siste kjente gode innhold vises når tilgjengelig.
+            </p>
+        </div>
+    </div>
+
     <!-- Fallback / Error State -->
     <div id="fallback-state"
-         class="hidden fixed inset-0 bg-[#0A0F1A] flex flex-col items-center justify-center text-center px-10 z-50">
+         class="hidden fixed inset-0 bg-[#0A0F1A] flex flex-col items-center justify-center text-center px-10 z-50"
+         style="display: none;">
         <div class="max-w-2xl">
             <div class="text-6xl mb-6">⚠</div>
             <h2 class="text-4xl font-bold mb-4">No content available</h2>
@@ -154,6 +171,7 @@
     <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
 
     <!-- Main Application Scripts -->
+    <script src="js/carousel.js" defer></script>
     <script src="js/app.js" defer></script>
 
 </body>
