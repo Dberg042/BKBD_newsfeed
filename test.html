@@ -12,9 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?v=20260514k">
     <style>
-        .preview-banner { position: fixed; top: 0; left: 0; right: 0; height: 44px; background: #b91c1c; display: flex; align-items: center; justify-content: center; z-index: 60; font-size: 14px; font-weight: 700; color: #fff; letter-spacing: 0.03em; gap: 8px; }
-        .preview-paused-indicator { position: fixed; bottom: 140px; left: 50%; transform: translateX(-50%); background: rgba(255,107,53,0.9); color: #fff; padding: 8px 20px; border-radius: 999px; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; z-index: 50; display: none; pointer-events: none; }
+        .preview-banner { position: fixed; top: 0; left: 0; right: 0; height: 5.5vh; background: #b91c1c; display: flex; align-items: center; justify-content: center; z-index: 60; font-size: clamp(0.8rem, 2vw, 1rem); font-weight: 700; color: #fff; letter-spacing: 0.03em; gap: 0.5rem; padding: 0 1rem; text-align: center; }
+        .preview-paused-indicator { position: fixed; bottom: 140px; left: 50%; transform: translateX(-50%); background: rgba(255,107,53,0.9); color: #fff; padding: 0.5rem 1.25rem; border-radius: 999px; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; z-index: 50; display: none; pointer-events: none; animation: slideUp 300ms ease; }
         .preview-paused-indicator.visible { display: block; }
+        .carousel-nav-buttons { position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; justify-content: space-between; align-items: center; padding: 0 clamp(0.75rem, 2vw, 1.5rem); z-index: 40; pointer-events: none; }
+        .carousel-nav-button { width: clamp(2.5rem, 6vw, 3.5rem); height: clamp(2.5rem, 6vw, 3.5rem); min-width: 2.75rem; min-height: 2.75rem; border-radius: 50%; background: rgba(255,107,53,0.85); border: none; color: #fff; font-size: clamp(1rem, 3vw, 1.75rem); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 200ms ease; pointer-events: all; box-shadow: 0 2px 12px rgba(0,0,0,0.3); flex-shrink: 0; font-weight: 600; }
+        .carousel-nav-button:active { background: rgba(255,107,53,0.95); transform: scale(0.95); }
+        .carousel-nav-button:hover { background: rgba(255,107,53,0.95); box-shadow: 0 4px 16px rgba(255,107,53,0.4); }
+        .carousel-nav-button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+        @keyframes slideUp { from { opacity: 0; transform: translateX(-50%) translateY(20px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+        @media (min-width: 768px) { .preview-banner { font-size: 1rem; } header { padding: 1.5rem 1.5rem !important; } header h1 { font-size: clamp(1.5rem, 4vw, 2rem) !important; } }
+        @media (min-width: 1024px) { header { padding: 1.5rem 3rem !important; } header h1 { font-size: 2.25rem !important; } }
     </style>
 </head>
 <body class="min-h-screen flex flex-col bg-slate-950 text-slate-50 font-sans overflow-hidden" style="padding-top:44px;">
@@ -26,16 +34,19 @@
         </svg>
         PREVIEW MODE — Viser nyheter for <span id="preview-date-label">laster...</span>
     </div>
-    <header class="h-20 bg-gradient-to-r from-slate-900 to-slate-950 border-b border-slate-800/30 flex items-center justify-between px-12 backdrop-blur-sm">
+    <header class="h-24 bg-gradient-to-r from-slate-900 to-slate-950 border-b border-slate-800/30 flex items-center justify-between px-12 backdrop-blur-sm">
         <div><h1 class="text-4xl font-bold tracking-tight">Techfeed</h1></div>
         <div class="flex items-center gap-8">
-            <p class="text-lg font-semibold tracking-wide text-slate-300"><span id="header-date">Loading...</span></p>
-            <p class="text-lg font-semibold tracking-wide text-slate-200"><span id="header-time">--:--</span></p>
+           
             <a href="https://github.com/Dberg042/BKBD_newsfeed/edit/main/data/active.json" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-5 rounded-lg text-sm tracking-wide transition-colors whitespace-nowrap">Godkjenn ✓</a>
         </div>
     </header>
-    <main class="flex-1 flex items-start justify-center px-6 py-4">
+    <main class="flex-1 flex items-start justify-center px-6 py-4 relative">
         <div id="carousel-container" class="w-full h-full" title="Klikk for å pause/fortsette"></div>
+        <div class="carousel-nav-buttons">
+            <button id="carousel-prev" class="carousel-nav-button" aria-label="Forrige slide" title="Forrige">&#10094;</button>
+            <button id="carousel-next" class="carousel-nav-button" aria-label="Neste slide" title="Neste">&#10095;</button>
+        </div>
     </main>
     <footer class="h-20 bg-gradient-to-t from-slate-900 to-slate-950 border-t border-slate-800/30 flex flex-col justify-between px-8 py-3">
         <div><div class="h-1.5 bg-slate-800/40 rounded-full overflow-hidden backdrop-blur-sm"><div id="progress-bar" class="h-full bg-gradient-to-r from-orange-500 to-orange-600 rounded-full shadow-lg shadow-orange-500/50" style="width:0%;animation:progress-fill 15s linear forwards;"></div></div></div>
@@ -103,9 +114,22 @@
                     });
                     var carouselContainer = document.getElementById('carousel-container');
                     var pausedIndicator = document.getElementById('preview-paused');
+                    var prevBtn = document.getElementById('carousel-prev');
+                    var nextBtn = document.getElementById('carousel-next');
+                    if (prevBtn) {
+                        prevBtn.addEventListener('click', function () {
+                            if (window.carousel) window.carousel.prev();
+                        });
+                    }
+                    if (nextBtn) {
+                        nextBtn.addEventListener('click', function () {
+                            if (window.carousel) window.carousel.next();
+                        });
+                    }
                     if (carouselContainer) {
                         carouselContainer.style.cursor = 'pointer';
-                        carouselContainer.addEventListener('click', function () {
+                        carouselContainer.addEventListener('click', function (e) {
+                            if (e.target.closest('.carousel-nav-button')) return;
                             if (!window.carousel) return;
                             window.carousel.togglePause();
                             var state = window.carousel.getState ? window.carousel.getState() : {};
@@ -120,3 +144,7 @@
     </script>
 </body>
 </html>
+
+
+
+
