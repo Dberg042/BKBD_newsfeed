@@ -178,14 +178,6 @@
     <!-- Preview Mode Overrides -->
     <script>
         (function () {
-            function getPreviewDate() {
-                var params = new URLSearchParams(window.location.search);
-                if (params.has('date')) return params.get('date');
-                var tomorrow = new Date();
-                tomorrow.setDate(tomorrow.getDate() + 1);
-                return tomorrow.toISOString().split('T')[0];
-            }
-
             function formatDateLabel(dateStr) {
                 var parts = dateStr.split('-');
                 var months = ['januar','februar','mars','april','mai','juni',
@@ -193,20 +185,42 @@
                 return parts[2] + '. ' + months[parseInt(parts[1], 10) - 1] + ' ' + parts[0];
             }
 
+            function getTomorrow() {
+                var d = new Date();
+                d.setDate(d.getDate() + 1);
+                return d.toISOString().split('T')[0];
+            }
+
+            async function resolvePreviewDate() {
+                // 1. URL param takes highest priority: ?date=2026-05-15
+                var params = new URLSearchParams(window.location.search);
+                if (params.has('date')) return params.get('date');
+
+                // 2. Fetch active.json and use date_test field
+                try {
+                    var res = await fetch('data/active.json?t=' + Date.now());
+                    if (res.ok) {
+                        var data = await res.json();
+                        if (data.date_test) return data.date_test;
+                    }
+                } catch (e) {}
+
+                // 3. Fallback: tomorrow
+                return getTomorrow();
+            }
+
             document.addEventListener('DOMContentLoaded', function () {
-                var previewDate = getPreviewDate();
-                var label = formatDateLabel(previewDate);
-
-                var bannerLabel = document.getElementById('preview-date-label');
-                if (bannerLabel) bannerLabel.textContent = label;
-
-                // Disable active.json polling
+                // Disable active.json polling immediately
                 if (window.APP) window.APP.checkUpdates = function () {};
 
-                // Load preview date content
-                if (window.APP && window.APP.loadNewsContent) {
-                    window.APP.loadNewsContent(previewDate);
-                }
+                resolvePreviewDate().then(function (previewDate) {
+                    var bannerLabel = document.getElementById('preview-date-label');
+                    if (bannerLabel) bannerLabel.textContent = formatDateLabel(previewDate);
+
+                    // Load preview date content
+                    if (window.APP && window.APP.loadNewsContent) {
+                        window.APP.loadNewsContent(previewDate);
+                    }
 
                 // Arrow key navigation
                 document.addEventListener('keydown', function (e) {
