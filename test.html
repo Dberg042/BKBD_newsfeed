@@ -5,81 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Infoskjerm News Carousel - Preview Mode">
     <title>Techfeed — Preview</title>
-
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'slate': {
-                            '950': '#0A0E27',
-                            '900': '#0F1629',
-                            '800': '#1a2847',
-                        },
-                        'orange': {
-                            '500': '#FF6B35',
-                            '600': '#FF5722',
-                        },
-                    },
-                    fontFamily: {
-                        'sans': ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
-            }
-        }
+        tailwind.config = {theme:{extend:{colors:{slate:{950:'#0A0E27',900:'#0F1629',800:'#1a2847'},orange:{500:'#FF6B35',600:'#FF5722'}},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}
     </script>
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css?v=20260514k">
-
     <style>
-        .preview-banner {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 44px;
-            background: #b91c1c;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 60;
-            font-size: 14px;
-            font-weight: 700;
-            color: #fff;
-            letter-spacing: 0.03em;
-            gap: 8px;
-        }
-        .preview-paused-indicator {
-            position: fixed;
-            bottom: 140px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(255, 107, 53, 0.9);
-            color: #fff;
-            padding: 8px 20px;
-            border-radius: 999px;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            z-index: 50;
-            display: none;
-            pointer-events: none;
-        }
-        .preview-paused-indicator.visible {
-            display: block;
-        }
+        .preview-banner { position: fixed; top: 0; left: 0; right: 0; height: 44px; background: #b91c1c; display: flex; align-items: center; justify-content: center; z-index: 60; font-size: 14px; font-weight: 700; color: #fff; letter-spacing: 0.03em; gap: 8px; }
+        .preview-paused-indicator { position: fixed; bottom: 140px; left: 50%; transform: translateX(-50%); background: rgba(255,107,53,0.9); color: #fff; padding: 8px 20px; border-radius: 999px; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; z-index: 50; display: none; pointer-events: none; }
+        .preview-paused-indicator.visible { display: block; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col bg-slate-950 text-slate-50 font-sans overflow-hidden" style="padding-top: 44px;">
-
-    <!-- Preview Banner -->
+<body class="min-h-screen flex flex-col bg-slate-950 text-slate-50 font-sans overflow-hidden" style="padding-top:44px;">
     <div class="preview-banner">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
@@ -88,115 +26,56 @@
         </svg>
         PREVIEW MODE — Viser nyheter for <span id="preview-date-label">laster...</span>
     </div>
-
-    <!-- Header (identical to index.html) -->
     <header class="h-20 bg-gradient-to-r from-slate-900 to-slate-950 border-b border-slate-800/30 flex items-center justify-between px-12 backdrop-blur-sm">
-        <div>
-            <h1 class="text-4xl font-bold tracking-tight">Techfeed</h1>
-        </div>
+        <div><h1 class="text-4xl font-bold tracking-tight">Techfeed</h1></div>
         <div class="flex items-center gap-8">
-            <p class="text-lg font-semibold tracking-wide text-slate-300">
-                <span id="header-date">Loading...</span>
-            </p>
-            <p class="text-lg font-semibold tracking-wide text-slate-200">
-                <span id="header-time">--:--</span>
-            </p>
-            <a href="https://github.com/Dberg042/BKBD_newsfeed/edit/main/data/active.json"
-               target="_blank"
-               class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-5 rounded-lg text-sm tracking-wide transition-colors whitespace-nowrap">
-                Godkjenn ✓
-            </a>
+            <p class="text-lg font-semibold tracking-wide text-slate-300"><span id="header-date">Loading...</span></p>
+            <p class="text-lg font-semibold tracking-wide text-slate-200"><span id="header-time">--:--</span></p>
+            <a href="https://github.com/Dberg042/BKBD_newsfeed/edit/main/data/active.json" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-5 rounded-lg text-sm tracking-wide transition-colors whitespace-nowrap">Godkjenn ✓</a>
         </div>
     </header>
-
-    <!-- Main Carousel (identical to index.html) -->
     <main class="flex-1 flex items-start justify-center px-6 py-4">
-        <div id="carousel-container" class="w-full h-full" title="Klikk for å pause/fortsette">
-            <!-- Carousel content injected by JS -->
-        </div>
+        <div id="carousel-container" class="w-full h-full" title="Klikk for å pause/fortsette"></div>
     </main>
-
-    <!-- Footer (identical to index.html) -->
     <footer class="h-20 bg-gradient-to-t from-slate-900 to-slate-950 border-t border-slate-800/30 flex flex-col justify-between px-8 py-3">
-        <div>
-            <div class="h-1.5 bg-slate-800/40 rounded-full overflow-hidden backdrop-blur-sm">
-                <div id="progress-bar"
-                     class="h-full bg-gradient-to-r from-orange-500 to-orange-600 rounded-full shadow-lg shadow-orange-500/50"
-                     style="width: 0%; animation: progress-fill 15s linear forwards;">
-                </div>
-            </div>
-        </div>
+        <div><div class="h-1.5 bg-slate-800/40 rounded-full overflow-hidden backdrop-blur-sm"><div id="progress-bar" class="h-full bg-gradient-to-r from-orange-500 to-orange-600 rounded-full shadow-lg shadow-orange-500/50" style="width:0%;animation:progress-fill 15s linear forwards;"></div></div></div>
         <div class="queue-row">
-            <p class="text-xs font-medium text-slate-400 whitespace-nowrap">
-                <span id="current-item">1</span> / <span id="total-items">7</span>
-            </p>
+            <p class="text-xs font-medium text-slate-400 whitespace-nowrap"><span id="current-item">1</span>/<span id="total-items">7</span></p>
             <div class="queue-label">Neste</div>
             <div id="queue-preview" class="queue-preview"></div>
         </div>
     </footer>
-
-    <!-- No News Message -->
-    <div id="no-news-message"
-         class="hidden fixed inset-0 bg-slate-950 flex items-center justify-center z-50 backdrop-blur-sm"
-         style="display: none; padding-top: 44px;">
+    <div id="no-news-message" class="hidden fixed inset-0 bg-slate-950 flex items-center justify-center z-50 backdrop-blur-sm" style="padding-top:44px;">
         <div class="text-center">
-            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-900 mb-6">
-                <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-            </div>
             <h2 class="text-2xl font-bold mb-2">Ingen nyheter tilgjengelig</h2>
             <p class="text-slate-400">Karussellen lastes når nyheter er tilgjengelig</p>
         </div>
     </div>
-
-    <!-- Fallback State -->
-    <div id="fallback-state"
-         class="hidden fixed inset-0 bg-slate-950 flex items-center justify-center z-50 backdrop-blur-sm"
-         style="display: none; padding-top: 44px;">
+    <div id="fallback-state" class="hidden fixed inset-0 bg-slate-950 flex items-center justify-center z-50 backdrop-blur-sm" style="padding-top:44px;">
         <div class="text-center">
-            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-orange-500/10 mb-6">
-                <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4v.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-            </div>
             <h2 class="text-2xl font-bold mb-2">Kan ikke hente innhold</h2>
             <p class="text-slate-400">Viser sist kjente gode innhold når tilgjengelig</p>
         </div>
     </div>
-
-    <!-- Paused indicator (preview-mode only) -->
     <div id="preview-paused" class="preview-paused-indicator">⏸ PAUSET — klikk for å fortsette</div>
-
-    <!-- QR Code Library -->
     <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
-
-    <!-- Application Scripts -->
     <script src="js/carousel.js?v=20260514k" defer></script>
     <script src="js/app.js?v=20260514k" defer></script>
-
-    <!-- Preview Mode Overrides -->
     <script>
         (function () {
             function formatDateLabel(dateStr) {
                 var parts = dateStr.split('-');
-                var months = ['januar','februar','mars','april','mai','juni',
-                              'juli','august','september','oktober','november','desember'];
+                var months = ['januar','februar','mars','april','mai','juni','juli','august','september','oktober','november','desember'];
                 return parts[2] + '. ' + months[parseInt(parts[1], 10) - 1] + ' ' + parts[0];
             }
-
             function getTomorrow() {
                 var d = new Date();
                 d.setDate(d.getDate() + 1);
                 return d.toISOString().split('T')[0];
             }
-
             async function resolvePreviewDate() {
-                // 1. URL param takes highest priority: ?date=2026-05-15
                 var params = new URLSearchParams(window.location.search);
                 if (params.has('date')) return params.get('date');
-
-                // 2. Fetch active.json and use date_test field
                 try {
                     var res = await fetch('data/active.json?t=' + Date.now());
                     if (res.ok) {
@@ -204,51 +83,40 @@
                         if (data.date_test) return data.date_test;
                     }
                 } catch (e) {}
-
-                // 3. Fallback: tomorrow
                 return getTomorrow();
             }
-
             document.addEventListener('DOMContentLoaded', function () {
-                // Disable active.json polling immediately
                 if (window.APP) window.APP.checkUpdates = function () {};
-
                 resolvePreviewDate().then(function (previewDate) {
                     var bannerLabel = document.getElementById('preview-date-label');
                     if (bannerLabel) bannerLabel.textContent = formatDateLabel(previewDate);
-
-                    // Load preview date content
                     if (window.APP && window.APP.loadNewsContent) {
                         window.APP.loadNewsContent(previewDate);
                     }
-
-                // Arrow key navigation
-                document.addEventListener('keydown', function (e) {
-                    if (!window.carousel) return;
-                    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                        window.carousel.next();
-                    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                        window.carousel.prev();
-                    }
-                });
-
-                // Click to pause / resume
-                var carouselContainer = document.getElementById('carousel-container');
-                var pausedIndicator = document.getElementById('preview-paused');
-                if (carouselContainer) {
-                    carouselContainer.style.cursor = 'pointer';
-                    carouselContainer.addEventListener('click', function () {
+                    document.addEventListener('keydown', function (e) {
                         if (!window.carousel) return;
-                        window.carousel.togglePause();
-                        var state = window.carousel.getState ? window.carousel.getState() : {};
-                        if (pausedIndicator) {
-                            pausedIndicator.classList.toggle('visible', !!state.isPaused);
+                        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                            window.carousel.next();
+                        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                            window.carousel.prev();
                         }
                     });
-                }
+                    var carouselContainer = document.getElementById('carousel-container');
+                    var pausedIndicator = document.getElementById('preview-paused');
+                    if (carouselContainer) {
+                        carouselContainer.style.cursor = 'pointer';
+                        carouselContainer.addEventListener('click', function () {
+                            if (!window.carousel) return;
+                            window.carousel.togglePause();
+                            var state = window.carousel.getState ? window.carousel.getState() : {};
+                            if (pausedIndicator) {
+                                pausedIndicator.classList.toggle('visible', !!state.isPaused);
+                            }
+                        });
+                    }
+                });
             });
         })();
     </script>
-
 </body>
 </html>
