@@ -250,7 +250,28 @@ Create an skill md file for Hermes
 3. Write `birthday.json` ONLY if there's a birthday today (otherwise omit entirely)
 4. Commit with message: `News update: YYYY-MM-DD`
 5. Push to `main` branch
-6. **DO NOT modify `active.json`** — that's User's manual approval gate
+6.  Update `data/active.json`:
+   - **MODIFY ONLY the `date_test` field** → set to today's date (e.g. `"date_test": "2026-05-15"`)
+   - This makes today's bulletin visible on `test.html` for review
+   - **DO NOT modify the `date` field** — that's the User's manual approval gate for production
+
+
+## active.json Schema (Reference)
+ 
+The repo's `data/active.json` has two date pointers:
+ 
+```json
+{
+  "date": "2026-05-13",
+  "date_test": "2026-05-15",
+  "approved_at": "2026-05-13T07:32:00Z",
+  "approved_by": "user"
+}
+```
+ 
+- `date` → consumed by `index.html` (production TV). **Only the User modifies this** via manual approval.
+- `date_test` → consumed by `test.html` (preview). **Hermes updates this** after each successful push so the User can review the latest bulletin.
+---
 
 **Quality requirements:**
 - Summary: 200-300 chars, complete sentences, Norwegian
