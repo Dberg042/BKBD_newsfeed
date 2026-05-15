@@ -74,9 +74,20 @@ body > main {
     bottom: 20px;
     right: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 8px;
     z-index: 20;
+}
+
+.qr-label {
+    font-size: 11px;
+    font-weight: 800;
+    color: #FF6B35;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
 }
 
 .qr-overlay-text {

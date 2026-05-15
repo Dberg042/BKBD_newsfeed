@@ -100,6 +100,7 @@ window.carousel = (() => {
               </div>
               <div class="qr-overlay">
                 <div id="qr-code"></div>
+                <div class="qr-label">SCAN &middot; LES MER</div>
               </div>
             </div>
             <div class="carousel-content">

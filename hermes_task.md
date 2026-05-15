@@ -150,7 +150,11 @@ Once quality control passes:
 3. Target path: `data/YYYY-MM-DD/` (mirror your workspace folder structure)
 4. Commit message format: `News update: YYYY-MM-DD (source: hermes)`
 5. Push to `main` branch
-6. **Do NOT touch `data/active.json`** — that's Ake's gate
+6. Update `data/active.json`:
+   - **MODIFY ONLY the `date_test` field** → set to today's date (e.g. `"date_test": "2026-05-15"`)
+   - This makes today's bulletin visible on `test.html` for review
+   - **DO NOT modify the `date` field** — that's the User's manual approval gate for production
+7. Commit the `active.json` change separately with message: `Update test pointer: YYYY-MM-DD (source: hermes)`
 
 ---
 
