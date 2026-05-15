@@ -1,0 +1,10 @@
+{
+  "id": "news-770",
+  "title": "Første macOS-kjerneexploit på Apple M5 – Mythos fant veien inn",
+  "summary": "Sikkerhetsforskere har utviklet det første offentlige macOS-kjerneexploitet på Apple M5 som omgår Apples Memory Integrity Enforcement. Exploitet ble bygget på fem dager med bistand fra Anthropics Mythos Preview. Apple investerte fem år i beskyttelsen. Rapporten publiseres etter retting.",
+  "image_url": "https://substackcdn.com/image/fetch/$s_!TJW7!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2c731d5e-68ca-4054-894f-659601de6a66_2048x1536.jpeg",
+  "source_url": "https://blog.calif.io/p/first-public-kernel-memory-corruption",
+  "source_name": "Calif",
+  "published_at": "2026-05-14T18:00:00Z",
+  "priority": 770
+}

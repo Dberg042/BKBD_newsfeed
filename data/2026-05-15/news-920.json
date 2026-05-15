@@ -1,0 +1,10 @@
+{
+  "id": "news-920",
+  "title": "OpenAI bekrefter sikkerhetsbrudd i forsyningskjedeangrep",
+  "summary": "OpenAI bekrefter at to ansattes enheter ble kompromittert i TanStack-angrepet mot programvareforsyningskjeden. Ingen kundedata eller produksjonssystemer ble berørt, men selskapet roterer nå kodesigneringssertifikater. Hendelsen viser den økende trusselen mot utviklerverktøy.",
+  "image_url": "https://www.bleepstatic.com/content/hl-images/2023/04/11/OpenAI_headpic.jpeg",
+  "source_url": "https://www.bleepingcomputer.com/news/security/openai-confirms-security-breach-in-tanstack-supply-chain-attack/",
+  "source_name": "BleepingComputer",
+  "published_at": "2026-05-15T12:00:00Z",
+  "priority": 920
+}

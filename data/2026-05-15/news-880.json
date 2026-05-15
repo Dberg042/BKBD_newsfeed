@@ -1,0 +1,10 @@
+{
+  "id": "news-880",
+  "title": "18 år gammel NGINX-sårbarhet muliggjør ekstern kodekjøring",
+  "summary": "Sikkerhetsforskere har oppdaget CVE-2026-42945, en kritisk heap-bufferoverflyt i NGINX som har eksistert siden 2008. Sårbarheten lar angripere oppnå ekstern kodekjøring via en tilstandsforskjell i rewrite/set-skriptmotoren. Alle NGINX-brukere med rewrite/set-direktiver bør oppdatere umiddelbart.",
+  "image_url": "https://depthfirst.com/uploads/editorial/thumbnails/nginx-findings.png",
+  "source_url": "https://depthfirst.com/research/nginx-rift-achieving-nginx-rce-via-an-18-year-old-vulnerability",
+  "source_name": "Depthfirst",
+  "published_at": "2026-05-15T12:00:00Z",
+  "priority": 880
+}
