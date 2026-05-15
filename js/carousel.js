@@ -99,8 +99,10 @@ window.carousel = (() => {
                 <div class="fallback-text">${sourceName}</div>
               </div>
               <div class="qr-overlay">
-                <div id="qr-code"></div>
-                <div class="qr-label">SCAN &middot; LES MER</div>
+                <div class="qr-frame">
+                  <div id="qr-code"></div>
+                  <div class="qr-label">SCAN &middot; LES MER</div>
+                </div>
               </div>
             </div>
             <div class="carousel-content">
@@ -197,7 +199,7 @@ window.carousel = (() => {
         dotsOptions: { color: '#FF6B35', type: 'rounded' },
         backgroundOptions: { color: 'transparent' },
         cornersSquareOptions: { type: 'rounded' },
-        cornersDotOptions: { type: 'rounded', color: '#FF6B35' },       
+        cornersDotOptions: { type: 'rounded', color: '#FF6B35' },      
       });
       container.innerHTML = '';
       qr.append(container);
