@@ -135,11 +135,22 @@ Run these checks on every JSON file. **If any fails, fix or drop the item.**
 
 Once quality control passes:
 
-1. Target repo: `https://github.com/Dberg042/BKBD_newsfeed.git`
-2. Target path: `data/YYYY-MM-DD/` (mirror your workspace folder structure)
-3. Commit message format: `News update: YYYY-MM-DD (source: hermes)`
-4. Push to `main` branch
-5. **Do NOT touch `data/active.json`** 
+1. **Generate `manifest.json`** in the date folder:
+   - Collect all `news-XXX.json` filenames in the folder (exclude `birthday.json`)
+   - Sort by priority number **descending** (highest = first)
+   - Keep max **10 items** (drop lowest-priority if over 10)
+   - Write as a JSON array: `["news-920.json", "news-850.json", ...]`
+   - Save to `data/YYYY-MM-DD/manifest.json`
+   - Example:
+     ```json
+     ["news-920.json", "news-880.json", "news-850.json", "news-800.json", "news-770.json", "news-750.json", "news-720.json", "news-550.json"]
+     ```
+
+2. Target repo: `https://github.com/Dberg042/BKBD_newsfeed.git`
+3. Target path: `data/YYYY-MM-DD/` (mirror your workspace folder structure)
+4. Commit message format: `News update: YYYY-MM-DD (source: hermes)`
+5. Push to `main` branch
+6. **Do NOT touch `data/active.json`** — that's Ake's gate
 
 ---
 
