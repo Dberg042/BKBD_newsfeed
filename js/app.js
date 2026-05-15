@@ -133,21 +133,34 @@ window.APP = {
   },
 
   async fetchNewsFileList(date) {
+    // 1. manifest.json — works on all static hosts (GitHub Pages, Netlify, etc.)
+    try {
+      const res = await fetch(this.config.dataFolder + '/' + date + '/manifest.json?t=' + Date.now());
+      if (res.ok) {
+        const files = await res.json();
+        if (Array.isArray(files) && files.length) return files;
+      }
+    } catch (e) {}
+
+    // 2. Directory listing — works on Python http.server (local dev)
     try {
       const res = await fetch(this.config.dataFolder + '/' + date + '/?t=' + Date.now());
-      if (!res.ok) throw new Error('no listing');
-      const html = await res.text();
-      const matches = [...html.matchAll(/href="(news-(\d+)\.json)"/g)];
-      if (!matches.length) throw new Error('no news files');
-      matches.sort((a, b) => parseInt(b[2], 10) - parseInt(a[2], 10));
-      return matches.map(m => m[1]);
-    } catch (e) {
-      const files = [];
-      for (let i = 1; i <= 10; i++) {
-        files.push('news-' + String(i).padStart(2, '0') + '.json');
+      if (res.ok) {
+        const html = await res.text();
+        const matches = [...html.matchAll(/href="(news-(\d+)\.json)"/g)];
+        if (matches.length) {
+          matches.sort((a, b) => parseInt(b[2], 10) - parseInt(a[2], 10));
+          return matches.map(m => m[1]);
+        }
       }
-      return files;
+    } catch (e) {}
+
+    // 3. Fallback: sequential pattern news-01..10
+    const files = [];
+    for (let i = 1; i <= 10; i++) {
+      files.push('news-' + String(i).padStart(2, '0') + '.json');
     }
+    return files;
   },
 
   async fetchNewsItem(date, filename, retryCount = 0) {

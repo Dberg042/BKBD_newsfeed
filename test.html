@@ -242,26 +242,39 @@
             }
 
             async function fetchNewsFileList(date) {
+                // 1. manifest.json — works on all static hosts (GitHub Pages, Netlify, etc.)
                 try {
-                    var res = await fetch('data/' + date + '/?t=' + Date.now());
-                    if (!res.ok) throw new Error('no listing');
-                    var html = await res.text();
-                    var re = /href="(news-(\d+)\.json)"/g;
-                    var matches = [];
-                    var m;
-                    while ((m = re.exec(html)) !== null) {
-                        matches.push({ file: m[1], num: parseInt(m[2], 10) });
+                    var res = await fetch('data/' + date + '/manifest.json?t=' + Date.now());
+                    if (res.ok) {
+                        var files = await res.json();
+                        if (Array.isArray(files) && files.length) return files;
                     }
-                    if (!matches.length) throw new Error('no news files');
-                    matches.sort(function (a, b) { return b.num - a.num; });
-                    return matches.map(function (x) { return x.file; });
-                } catch (e) {
-                    var files = [];
-                    for (var i = 1; i <= 10; i++) {
-                        files.push('news-' + String(i).padStart(2, '0') + '.json');
+                } catch (e) {}
+
+                // 2. Directory listing — works on Python http.server (local dev)
+                try {
+                    var res2 = await fetch('data/' + date + '/?t=' + Date.now());
+                    if (res2.ok) {
+                        var html = await res2.text();
+                        var re = /href="(news-(\d+)\.json)"/g;
+                        var matches = [];
+                        var m;
+                        while ((m = re.exec(html)) !== null) {
+                            matches.push({ file: m[1], num: parseInt(m[2], 10) });
+                        }
+                        if (matches.length) {
+                            matches.sort(function (a, b) { return b.num - a.num; });
+                            return matches.map(function (x) { return x.file; });
+                        }
                     }
-                    return files;
+                } catch (e) {}
+
+                // 3. Fallback: sequential pattern news-01..10
+                var fallback = [];
+                for (var i = 1; i <= 10; i++) {
+                    fallback.push('news-' + String(i).padStart(2, '0') + '.json');
                 }
+                return fallback;
             }
 
             async function loadAndRender() {
