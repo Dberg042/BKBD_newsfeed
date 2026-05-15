@@ -311,16 +311,16 @@ body > main {
 
 /* QR Code */
 #qr-code {
-    width: 132px;
-    height: 132px;
+    width: 160px;
+    height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#qr-code svg {
-    width: 100%;
-    height: 100%;
+#qr-code canvas {
+    width: 160px;
+    height: 160px;
 }
 
 /* Animations */
