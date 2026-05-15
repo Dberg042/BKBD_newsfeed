@@ -26,7 +26,8 @@ window.APP = {
     
     this.updateClock();
     setInterval(() => this.updateClock(), 1000);
-    await this.loadNewsContent();
+    const config = await this.fetchActiveConfig();
+    await this.loadNewsContent(config.date, config.files);
     this.startPolling();
   },
 
@@ -63,6 +64,25 @@ window.APP = {
     }
   },
 
+  async fetchActiveConfig(retryCount = 0) {
+    try {
+      const resp = await fetch('data/active.json?t=' + Date.now());
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const data = await resp.json();
+      return {
+        date: data.date || new Date().toISOString().split('T')[0],
+        files: Array.isArray(data.files) && data.files.length ? data.files : null
+      };
+    } catch (e) {
+      if (retryCount < this.config.retryAttempts) {
+        const delay = this.config.retryDelays[retryCount];
+        await new Promise(r => setTimeout(r, delay));
+        return this.fetchActiveConfig(retryCount + 1);
+      }
+      return { date: null, files: null };
+    }
+  },
+
   validateNewsItem(item) {
     if (!item || typeof item !== 'object') {
       return false;
@@ -73,18 +93,25 @@ window.APP = {
     return true;
   },
 
-  async loadNewsContent(dateStr = null) {
+  async loadNewsContent(dateStr = null, filesList = null) {
     if (this.state.isLoading) return;
     this.state.isLoading = true;
     try {
-      // Use provided date string, or fetch from active.json if null (backward compatible)
-      let date = dateStr || await this.fetchActiveDate();
+      let date = dateStr;
+      let resolvedFiles = filesList;
+
+      if (!date) {
+        const config = await this.fetchActiveConfig();
+        date = config.date;
+        resolvedFiles = config.files;
+      }
+
       if (!date) { 
         this.handleFetchFailure();
         return; 
       }
-      
-      const newsFiles = await this.fetchNewsFileList(date);
+
+      const newsFiles = resolvedFiles || await this.fetchNewsFileList(date);
       const promises = newsFiles.map(f => this.fetchNewsItem(date, f));
       promises.push(this.fetchNewsItem(date, 'birthday.json'));
       
@@ -133,16 +160,7 @@ window.APP = {
   },
 
   async fetchNewsFileList(date) {
-    // 1. manifest.json — works on all static hosts (GitHub Pages, Netlify, etc.)
-    try {
-      const res = await fetch(this.config.dataFolder + '/' + date + '/manifest.json?t=' + Date.now());
-      if (res.ok) {
-        const files = await res.json();
-        if (Array.isArray(files) && files.length) return files;
-      }
-    } catch (e) {}
-
-    // 2. Directory listing — works on Python http.server (local dev)
+    // 1. Directory listing — works on Python http.server (local dev)
     try {
       const res = await fetch(this.config.dataFolder + '/' + date + '/?t=' + Date.now());
       if (res.ok) {
@@ -155,7 +173,7 @@ window.APP = {
       }
     } catch (e) {}
 
-    // 3. Fallback: sequential pattern news-01..10
+    // 2. Fallback: sequential pattern news-01..10
     const files = [];
     for (let i = 1; i <= 10; i++) {
       files.push('news-' + String(i).padStart(2, '0') + '.json');

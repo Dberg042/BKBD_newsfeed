@@ -1,6 +1,8 @@
 {
   "date": "2026-05-15",
   "date_test": "2026-05-15",
-  "approved_at": "2026-05-13T06:00:00Z",
+  "files": ["news-920.json", "news-880.json", "news-850.json", "news-800.json", "news-770.json", "news-750.json", "news-720.json", "news-550.json"],
+  "files_test": ["news-920.json", "news-880.json", "news-850.json", "news-800.json", "news-770.json", "news-750.json", "news-720.json", "news-550.json"],
+  "approved_at": "2026-05-15T00:00:00Z",
   "approved_by": "System"
 }

@@ -156,19 +156,24 @@
                 });
             }
 
-            async function resolvePreviewDate() {
+            async function resolvePreviewConfig() {
                 var params = new URLSearchParams(window.location.search);
-                if (params.has('date')) return params.get('date');
+                if (params.has('date')) return { date: params.get('date'), files: null };
 
                 try {
                     var res = await fetch('data/active.json?t=' + Date.now());
                     if (res.ok) {
                         var data = await res.json();
-                        if (data.date_test) return data.date_test;
+                        if (data.date_test) {
+                            return {
+                                date: data.date_test,
+                                files: Array.isArray(data.files_test) && data.files_test.length ? data.files_test : null
+                            };
+                        }
                     }
                 } catch (e) {}
 
-                return getToday();
+                return { date: getToday(), files: null };
             }
 
             function normalizeItem(item) {
@@ -242,20 +247,11 @@
             }
 
             async function fetchNewsFileList(date) {
-                // 1. manifest.json — works on all static hosts (GitHub Pages, Netlify, etc.)
+                // 1. Directory listing — works on Python http.server (local dev)
                 try {
-                    var res = await fetch('data/' + date + '/manifest.json?t=' + Date.now());
+                    var res = await fetch('data/' + date + '/?t=' + Date.now());
                     if (res.ok) {
-                        var files = await res.json();
-                        if (Array.isArray(files) && files.length) return files;
-                    }
-                } catch (e) {}
-
-                // 2. Directory listing — works on Python http.server (local dev)
-                try {
-                    var res2 = await fetch('data/' + date + '/?t=' + Date.now());
-                    if (res2.ok) {
-                        var html = await res2.text();
+                        var html = await res.text();
                         var re = /href="(news-(\d+)\.json)"/g;
                         var matches = [];
                         var m;
@@ -269,7 +265,7 @@
                     }
                 } catch (e) {}
 
-                // 3. Fallback: sequential pattern news-01..10
+                // 2. Fallback: sequential pattern news-01..10
                 var fallback = [];
                 for (var i = 1; i <= 10; i++) {
                     fallback.push('news-' + String(i).padStart(2, '0') + '.json');
@@ -285,11 +281,12 @@
                 var errorState = document.getElementById('error-state');
 
                 try {
-                    var date = await resolvePreviewDate();
+                    var config = await resolvePreviewConfig();
+                    var date = config.date;
                     if (label) label.textContent = formatDateLabel(date);
                     if (headerDate) headerDate.textContent = formatHeaderDate(date);
 
-                    var newsFiles = await fetchNewsFileList(date);
+                    var newsFiles = config.files || await fetchNewsFileList(date);
                     var allFiles = newsFiles.concat(['birthday.json']);
 
                     var results = await Promise.all(allFiles.map(function (f) { return fetchNewsItem(date, f); }));
