@@ -84,10 +84,8 @@ window.APP = {
         return; 
       }
       
-      const promises = [];
-      for (let i = 1; i <= 7; i++) {
-        promises.push(this.fetchNewsItem(date, 'news-' + String(i).padStart(2, '0') + '.json'));
-      }
+      const newsFiles = await this.fetchNewsFileList(date);
+      const promises = newsFiles.map(f => this.fetchNewsItem(date, f));
       promises.push(this.fetchNewsItem(date, 'birthday.json'));
       
       const results = await Promise.all(promises);
@@ -97,8 +95,6 @@ window.APP = {
         this.handleFetchFailure();
         return; 
       }
-      
-      newsItems.sort((a, b) => (a.priority || 999) - (b.priority || 999));
       this.state.currentNews = newsItems;
       this.state.lastFetchDate = date;
       this.state.lastKnownGood = { items: newsItems, date };
@@ -133,6 +129,24 @@ window.APP = {
       this.displayCarousel(this.state.lastKnownGood.items);
     } else {
       this.showFallback();
+    }
+  },
+
+  async fetchNewsFileList(date) {
+    try {
+      const res = await fetch(this.config.dataFolder + '/' + date + '/?t=' + Date.now());
+      if (!res.ok) throw new Error('no listing');
+      const html = await res.text();
+      const matches = [...html.matchAll(/href="(news-(\d+)\.json)"/g)];
+      if (!matches.length) throw new Error('no news files');
+      matches.sort((a, b) => parseInt(b[2], 10) - parseInt(a[2], 10));
+      return matches.map(m => m[1]);
+    } catch (e) {
+      const files = [];
+      for (let i = 1; i <= 7; i++) {
+        files.push('news-' + String(i).padStart(2, '0') + '.json');
+      }
+      return files;
     }
   },
 

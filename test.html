@@ -3,90 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Infoskjerm News Carousel - Preview Mode">
-    <title>Techfeed — Preview</title>
+    <meta name="description" content="Techfeed Preview - Alle nyheter som kort">
+    <title>Techfeed — Preview Cards</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {theme:{extend:{colors:{slate:{950:'#0A0E27',900:'#0F1629',800:'#1a2847'},orange:{500:'#FF6B35',600:'#FF5722'}},fontFamily:{sans:['Inter','system-ui','sans-serif']}}}}
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: { 950: '#0A0E27', 900: '#0F1629', 800: '#1a2847' },
+                        orange: { 500: '#FF6B35', 600: '#FF5722' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        };
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20260514k">
     <style>
-        .preview-banner { position: fixed; top: 0; left: 0; right: 0; height: 5.5vh; background: #b91c1c; display: flex; align-items: center; justify-content: center; z-index: 60; font-size: clamp(0.8rem, 2vw, 1rem); font-weight: 700; color: #fff; letter-spacing: 0.03em; gap: 0.5rem; padding: 0 1rem; text-align: center; }
-        .preview-paused-indicator { position: fixed; bottom: 140px; left: 50%; transform: translateX(-50%); background: rgba(255,107,53,0.9); color: #fff; padding: 0.5rem 1.25rem; border-radius: 999px; font-size: clamp(0.75rem, 1.5vw, 0.875rem); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; z-index: 50; display: none; pointer-events: none; animation: slideUp 300ms ease; }
-        .preview-paused-indicator.visible { display: block; }
-        .carousel-nav-buttons { position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); display: flex; justify-content: space-between; align-items: center; padding: 0 clamp(0.75rem, 2vw, 1.5rem); z-index: 40; pointer-events: none; }
-        .carousel-nav-button { width: clamp(2.5rem, 6vw, 3.5rem); height: clamp(2.5rem, 6vw, 3.5rem); min-width: 2.75rem; min-height: 2.75rem; border-radius: 50%; background: rgba(255,107,53,0.85); border: none; color: #fff; font-size: clamp(1rem, 3vw, 1.75rem); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 200ms ease; pointer-events: all; box-shadow: 0 2px 12px rgba(0,0,0,0.3); flex-shrink: 0; font-weight: 600; }
-        .carousel-nav-button:active { background: rgba(255,107,53,0.95); transform: scale(0.95); }
-        .carousel-nav-button:hover { background: rgba(255,107,53,0.95); box-shadow: 0 4px 16px rgba(255,107,53,0.4); }
-        .carousel-nav-button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
-        @keyframes slideUp { from { opacity: 0; transform: translateX(-50%) translateY(20px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
-        @media (min-width: 768px) { .preview-banner { font-size: 1rem; } header { padding: 1.5rem 1.5rem !important; } header h1 { font-size: clamp(1.5rem, 4vw, 2rem) !important; } }
-        @media (min-width: 1024px) { header { padding: 1.5rem 3rem !important; } header h1 { font-size: 2.25rem !important; } }
+        html, body {
+            margin: 0;
+            padding: 0;
+            cursor: auto;
+            user-select: text;
+            -webkit-user-select: text;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: #0A0E27;
+            color: #F5F7FA;
+            font-family: Inter, system-ui, sans-serif;
+        }
+
+        .preview-banner {
+            position: sticky;
+            top: 0;
+            z-index: 60;
+            min-height: 44px;
+            background: #b91c1c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 8px 12px;
+            font-size: clamp(12px, 2vw, 15px);
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 0.03em;
+        }
+
+        .news-card {
+            background: linear-gradient(135deg, #0F1629 0%, #1a2847 100%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .news-image-wrap {
+            height: clamp(180px, 36vw, 280px);
+            background: linear-gradient(135deg, rgba(15, 22, 41, 0.95), rgba(26, 40, 71, 0.95));
+        }
+
+        .news-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .news-image-fallback {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FF6B35;
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 0.02em;
+            background: linear-gradient(135deg, rgba(15, 22, 41, 0.92), rgba(26, 40, 71, 0.92));
+        }
+
+        .hidden {
+            display: none !important;
+        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col bg-slate-950 text-slate-50 font-sans overflow-hidden" style="padding-top:44px;">
+<body class="min-h-screen bg-slate-950 text-slate-50">
     <div class="preview-banner">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-            <line x1="12" y1="9" x2="12" y2="13"/>
-            <line x1="12" y1="17" x2="12.01" y2="17"/>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <line x1="12" y1="9" x2="12" y2="13"></line>
+            <line x1="12" y1="17" x2="12.01" y2="17"></line>
         </svg>
         PREVIEW MODE — Viser nyheter for <span id="preview-date-label">laster...</span>
     </div>
-    <header class="h-24 bg-gradient-to-r from-slate-900 to-slate-950 border-b border-slate-800/30 flex items-center justify-between px-12 backdrop-blur-sm">
-        <div><h1 class="text-4xl font-bold tracking-tight">Techfeed</h1></div>
-        <div class="flex items-center gap-8">
-           
-            <a href="https://github.com/Dberg042/BKBD_newsfeed/edit/main/data/active.json" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-5 rounded-lg text-sm tracking-wide transition-colors whitespace-nowrap">Godkjenn ✓</a>
+
+    <header class="bg-gradient-to-r from-slate-900 to-slate-950 border-b border-slate-800/30 px-4 py-4 md:px-6 md:py-5">
+        <div class="max-w-4xl mx-auto flex items-center justify-between gap-4">
+            <h1 class="text-2xl md:text-3xl font-bold tracking-tight">Techfeed Preview</h1>
+            <p id="header-date" class="text-sm md:text-base font-semibold text-slate-300 whitespace-nowrap">Laster dato...</p>
         </div>
     </header>
-    <main class="flex-1 flex items-start justify-center px-6 py-4 relative">
-        <div id="carousel-container" class="w-full h-full" title="Klikk for å pause/fortsette"></div>
-        <div class="carousel-nav-buttons">
-            <button id="carousel-prev" class="carousel-nav-button" aria-label="Forrige slide" title="Forrige">&#10094;</button>
-            <button id="carousel-next" class="carousel-nav-button" aria-label="Neste slide" title="Neste">&#10095;</button>
-        </div>
+
+    <main class="px-4 py-5 md:px-6 md:py-6">
+        <section class="max-w-4xl mx-auto">
+            <div id="cards-container" class="space-y-5"></div>
+
+            <div id="empty-state" class="hidden rounded-2xl border border-slate-700 bg-slate-900/60 p-8 text-center text-slate-300">
+                Ingen nyheter tilgjengelig for valgt dato.
+            </div>
+
+            <div id="error-state" class="hidden rounded-2xl border border-orange-600/50 bg-orange-500/10 p-8 text-center text-orange-200">
+                Kunne ikke laste nyheter. Sjekk datafiler og prøv igjen.
+            </div>
+
+            <div class="pt-6 pb-10">
+                <a
+                    href="https://github.com/Dberg042/BKBD_newsfeed/edit/main/data/active.json"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="block w-full rounded-xl bg-orange-500 px-6 py-4 text-center text-base font-bold text-white transition-colors hover:bg-orange-600 md:text-lg"
+                >
+                    Godkjenn alle kort ✓
+                </a>
+            </div>
+        </section>
     </main>
-    <footer class="h-20 bg-gradient-to-t from-slate-900 to-slate-950 border-t border-slate-800/30 flex flex-col justify-between px-8 py-3">
-        <div><div class="h-1.5 bg-slate-800/40 rounded-full overflow-hidden backdrop-blur-sm"><div id="progress-bar" class="h-full bg-gradient-to-r from-orange-500 to-orange-600 rounded-full shadow-lg shadow-orange-500/50" style="width:0%;animation:progress-fill 15s linear forwards;"></div></div></div>
-        <div class="queue-row">
-            <p class="text-xs font-medium text-slate-400 whitespace-nowrap"><span id="current-item">1</span>/<span id="total-items">7</span></p>
-            <div class="queue-label">Neste</div>
-            <div id="queue-preview" class="queue-preview"></div>
-        </div>
-    </footer>
-    <div id="no-news-message" class="hidden fixed inset-0 bg-slate-950 flex items-center justify-center z-50 backdrop-blur-sm" style="padding-top:44px;">
-        <div class="text-center">
-            <h2 class="text-2xl font-bold mb-2">Ingen nyheter tilgjengelig</h2>
-            <p class="text-slate-400">Karussellen lastes når nyheter er tilgjengelig</p>
-        </div>
-    </div>
-    <div id="fallback-state" class="hidden fixed inset-0 bg-slate-950 flex items-center justify-center z-50 backdrop-blur-sm" style="padding-top:44px;">
-        <div class="text-center">
-            <h2 class="text-2xl font-bold mb-2">Kan ikke hente innhold</h2>
-            <p class="text-slate-400">Viser sist kjente gode innhold når tilgjengelig</p>
-        </div>
-    </div>
-    <div id="preview-paused" class="preview-paused-indicator">⏸ PAUSET — klikk for å fortsette</div>
-    <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
-    <script src="js/carousel.js?v=20260514k" defer></script>
-    <script src="js/app.js?v=20260514k" defer></script>
+
     <script>
         (function () {
+            function getToday() {
+                return new Date().toISOString().split('T')[0];
+            }
+
             function formatDateLabel(dateStr) {
                 var parts = dateStr.split('-');
                 var months = ['januar','februar','mars','april','mai','juni','juli','august','september','oktober','november','desember'];
                 return parts[2] + '. ' + months[parseInt(parts[1], 10) - 1] + ' ' + parts[0];
             }
-            function getTomorrow() {
-                var d = new Date();
-                d.setDate(d.getDate() + 1);
-                return d.toISOString().split('T')[0];
+
+            function formatHeaderDate(dateStr) {
+                var d = new Date(dateStr + 'T00:00:00');
+                if (isNaN(d.getTime())) return dateStr;
+                return d.toLocaleDateString('no-NO', {
+                    weekday: 'long',
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                });
             }
+
             async function resolvePreviewDate() {
                 var params = new URLSearchParams(window.location.search);
                 if (params.has('date')) return params.get('date');
+
                 try {
                     var res = await fetch('data/active.json?t=' + Date.now());
                     if (res.ok) {
@@ -94,52 +167,139 @@
                         if (data.date_test) return data.date_test;
                     }
                 } catch (e) {}
-                return getTomorrow();
+
+                return getToday();
             }
-            document.addEventListener('DOMContentLoaded', function () {
-                if (window.APP) window.APP.checkUpdates = function () {};
-                resolvePreviewDate().then(function (previewDate) {
-                    var bannerLabel = document.getElementById('preview-date-label');
-                    if (bannerLabel) bannerLabel.textContent = formatDateLabel(previewDate);
-                    if (window.APP && window.APP.loadNewsContent) {
-                        window.APP.loadNewsContent(previewDate);
+
+            function normalizeItem(item) {
+                return {
+                    title: item.title || item.headline || 'Uten tittel',
+                    summary: item.summary || item.description || '',
+                    source: item.source_name || item.source || item.publisher || 'Ukjent kilde',
+                    image: item.image || item.image_url || '',
+                    priority: typeof item.priority === 'number' ? item.priority : 999
+                };
+            }
+
+            async function fetchNewsItem(date, filename) {
+                try {
+                    var res = await fetch('data/' + date + '/' + filename + '?t=' + Date.now());
+                    if (!res.ok) return null;
+                    return await res.json();
+                } catch (e) {
+                    return null;
+                }
+            }
+
+            function renderCard(item, index) {
+                var article = document.createElement('article');
+                article.className = 'news-card';
+
+                var imageWrap = document.createElement('div');
+                imageWrap.className = 'news-image-wrap';
+
+                if (item.image) {
+                    var img = document.createElement('img');
+                    img.className = 'news-image';
+                    img.loading = 'lazy';
+                    img.alt = item.title;
+                    img.src = item.image;
+                    img.onerror = function () {
+                        img.remove();
+                        var fallback = document.createElement('div');
+                        fallback.className = 'news-image-fallback';
+                        fallback.textContent = 'Bilde utilgjengelig';
+                        imageWrap.appendChild(fallback);
+                    };
+                    imageWrap.appendChild(img);
+                } else {
+                    var noImg = document.createElement('div');
+                    noImg.className = 'news-image-fallback';
+                    noImg.textContent = 'Ingen bilde';
+                    imageWrap.appendChild(noImg);
+                }
+
+                var body = document.createElement('div');
+                body.className = 'p-4 md:p-5';
+                body.innerHTML =
+                    '<div class="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-orange-400">Haber ' + (index + 1) + '</div>' +
+                    '<h2 class="text-xl md:text-2xl font-bold leading-tight text-slate-100 mb-3">' + escapeHtml(item.title) + '</h2>' +
+                    '<p class="text-sm md:text-base leading-relaxed text-slate-300 mb-4">' + escapeHtml(item.summary) + '</p>' +
+                    '<p class="text-xs md:text-sm font-semibold uppercase tracking-[0.12em] text-orange-300">' + escapeHtml(item.source) + '</p>';
+
+                article.appendChild(imageWrap);
+                article.appendChild(body);
+                return article;
+            }
+
+            function escapeHtml(str) {
+                return String(str)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#039;');
+            }
+
+            async function fetchNewsFileList(date) {
+                try {
+                    var res = await fetch('data/' + date + '/?t=' + Date.now());
+                    if (!res.ok) throw new Error('no listing');
+                    var html = await res.text();
+                    var re = /href="(news-(\d+)\.json)"/g;
+                    var matches = [];
+                    var m;
+                    while ((m = re.exec(html)) !== null) {
+                        matches.push({ file: m[1], num: parseInt(m[2], 10) });
                     }
-                    document.addEventListener('keydown', function (e) {
-                        if (!window.carousel) return;
-                        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                            window.carousel.next();
-                        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                            window.carousel.prev();
-                        }
+                    if (!matches.length) throw new Error('no news files');
+                    matches.sort(function (a, b) { return b.num - a.num; });
+                    return matches.map(function (x) { return x.file; });
+                } catch (e) {
+                    var files = [];
+                    for (var i = 1; i <= 7; i++) {
+                        files.push('news-' + String(i).padStart(2, '0') + '.json');
+                    }
+                    return files;
+                }
+            }
+
+            async function loadAndRender() {
+                var label = document.getElementById('preview-date-label');
+                var headerDate = document.getElementById('header-date');
+                var cardsContainer = document.getElementById('cards-container');
+                var emptyState = document.getElementById('empty-state');
+                var errorState = document.getElementById('error-state');
+
+                try {
+                    var date = await resolvePreviewDate();
+                    if (label) label.textContent = formatDateLabel(date);
+                    if (headerDate) headerDate.textContent = formatHeaderDate(date);
+
+                    var newsFiles = await fetchNewsFileList(date);
+                    var allFiles = newsFiles.concat(['birthday.json']);
+
+                    var results = await Promise.all(allFiles.map(function (f) { return fetchNewsItem(date, f); }));
+                    var items = results
+                        .filter(function (item) { return !!item && (item.title || item.headline); })
+                        .map(normalizeItem);
+
+                    cardsContainer.innerHTML = '';
+
+                    if (!items.length) {
+                        emptyState.classList.remove('hidden');
+                        return;
+                    }
+
+                    items.forEach(function (item, index) {
+                        cardsContainer.appendChild(renderCard(item, index));
                     });
-                    var carouselContainer = document.getElementById('carousel-container');
-                    var pausedIndicator = document.getElementById('preview-paused');
-                    var prevBtn = document.getElementById('carousel-prev');
-                    var nextBtn = document.getElementById('carousel-next');
-                    if (prevBtn) {
-                        prevBtn.addEventListener('click', function () {
-                            if (window.carousel) window.carousel.prev();
-                        });
-                    }
-                    if (nextBtn) {
-                        nextBtn.addEventListener('click', function () {
-                            if (window.carousel) window.carousel.next();
-                        });
-                    }
-                    if (carouselContainer) {
-                        carouselContainer.style.cursor = 'pointer';
-                        carouselContainer.addEventListener('click', function (e) {
-                            if (e.target.closest('.carousel-nav-button')) return;
-                            if (!window.carousel) return;
-                            window.carousel.togglePause();
-                            var state = window.carousel.getState ? window.carousel.getState() : {};
-                            if (pausedIndicator) {
-                                pausedIndicator.classList.toggle('visible', !!state.isPaused);
-                            }
-                        });
-                    }
-                });
-            });
+                } catch (e) {
+                    errorState.classList.remove('hidden');
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', loadAndRender);
         })();
     </script>
 </body>
