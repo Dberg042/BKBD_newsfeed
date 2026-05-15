@@ -197,13 +197,7 @@ window.carousel = (() => {
         dotsOptions: { color: '#FF6B35', type: 'rounded' },
         backgroundOptions: { color: 'transparent' },
         cornersSquareOptions: { type: 'rounded' },
-        cornersDotOptions: { type: 'rounded', color: '#FF6B35' },
-        image: 'https://scontent.fosl3-1.fna.fbcdn.net/v/t39.30808-6/300373773_503649668430388_4575791145281745938_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=aBWjR-wnOfEQ7kNvwGuZcrs&_nc_oc=AdoahPEWPBHHRYTjwkTKsXDOhBEnqkI-WUt9oivP-TMqwEE_X-1JaS2tPJEkI3s__gzsRV1XGn1hfgZF3XWpsbKC&_nc_zt=23&_nc_ht=scontent.fosl3-1.fna&_nc_gid=0iD6ayvD3iCXQr_Q7SM30g&_nc_ss=7b2a8&oh=00_Af7bnsfzki0DVLhw4VT-LzM06A9fR-ZaYOPWzBtZ0hT0bA&oe=6A0AE819',
-        imageOptions: {
-          hideBackgroundDots: true,
-          imageSize: 0.4,
-          margin: 8
-        }
+        cornersDotOptions: { type: 'rounded', color: '#FF6B35' },       
       });
       container.innerHTML = '';
       qr.append(container);
