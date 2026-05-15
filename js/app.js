@@ -143,7 +143,7 @@ window.APP = {
       return matches.map(m => m[1]);
     } catch (e) {
       const files = [];
-      for (let i = 1; i <= 7; i++) {
+      for (let i = 1; i <= 10; i++) {
         files.push('news-' + String(i).padStart(2, '0') + '.json');
       }
       return files;
