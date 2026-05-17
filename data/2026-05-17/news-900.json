@@ -1,0 +1,9 @@
+{
+  "id": "news-900",
+  "title": "Første macOS-kjerneutnyttelse på Apple M5 — Mythos AI fant veien inn på fem dager",
+  "summary": "Calif har publisert første macOS-kjerneutnyttelse som overlever Apples MIE-beskyttelse (Memory Integrity Enforcement) på M5. Apple brukte fem år på MIE. Ved hjelp av Mythos Preview fant teamet og utnyttet to sårbarheter på fem dager. Full rapport kommer etter at Apple patcher.",
+  "source_url": "https://blog.calif.io/p/first-public-kernel-memory-corruption",
+  "source_name": "Calif",
+  "published_at": "2026-05-14T20:00:00Z",
+  "priority": 900
+}

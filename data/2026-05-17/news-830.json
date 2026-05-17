@@ -1,0 +1,10 @@
+{
+  "id": "news-830",
+  "title": "Anthropic lanserer Agent View — administrer dusinvis av parallelle kodeøkter fra terminalen",
+  "summary": "Anthropic har sluppet Agent View for Claude Code — et terminalgrensesnitt for å overvåke dusinvis av parallelle kodeøkter. Hver økt får isolerte git-arbeidstrær, så agenter kan jobbe på samme repo uten konflikter. Bakgrunnsjobber og inline-svar støttes. Tilgjengelig for Pro, Max, Team og Enterprise.",
+  "image_url": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/215a08d6-64a7-4da4-904d-5ff89e7bc22f/Screenshot_2026-05-13_at_6.33.49_PM.png",
+  "source_url": "https://www.anthropic.com/product/claude-code",
+  "source_name": "Anthropic",
+  "published_at": "2026-05-17T12:00:00Z",
+  "priority": 830
+}

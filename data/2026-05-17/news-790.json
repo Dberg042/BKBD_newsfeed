@@ -1,0 +1,10 @@
+{
+  "id": "news-790",
+  "title": "Thinking Machines Lab lanserer sin første KI-modell — full-dupleks samtale-KI med 0,4 sekunders responstid",
+  "summary": "Mira Muratis Thinking Machines Lab har lansert TML-Interaction-Small, en full-dupleks KI som lytter og snakker samtidig. Med 0,4 sekunders latenstid slår den OpenAI og Google på FD-bench. En 276B-modell håndterer sanntidschat mens en annen kjører dypere resonnering i parallell.",
+  "image_url": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/5dca0d95-1f2a-427b-83c8-01c66d582776/Screenshot_2026-05-13_at_6.35.43_PM.png",
+  "source_url": "https://thinkingmachines.ai/",
+  "source_name": "Thinking Machines Lab",
+  "published_at": "2026-05-17T12:00:00Z",
+  "priority": 790
+}

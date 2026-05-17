@@ -1,0 +1,9 @@
+{
+  "id": "news-870",
+  "title": "To nye Windows-nulldagssårbarheter sluppet — BitLocker-bypass og SYSTEM-tilgang",
+  "summary": "En anonym forsker har sluppet YellowKey (BitLocker-bypass via USB) og GreenPlasma (SYSTEM-rettigheter). Dette er femte nulldag fra samme person i år. YellowKey kan mitigere med BitLocker-PIN og BIOS-passord. GreenPlasma har ingen kjent mitigering. Microsoft har ikke patchet noen av dem.",
+  "source_url": "https://www.theregister.com/security/2026/05/13/disgruntled-researcher-releases-two-more-microsoft-zero-days/5239758",
+  "source_name": "The Register",
+  "published_at": "2026-05-13T16:00:00Z",
+  "priority": 870
+}

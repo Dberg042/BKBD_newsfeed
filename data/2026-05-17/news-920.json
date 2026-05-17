@@ -1,0 +1,9 @@
+{
+  "id": "news-920",
+  "title": "OpenAI bekrefter sikkerhetsbrudd i TanStack-forsyningskjedeangrep",
+  "summary": "To OpenAI-ansatte ble kompromittert i \"Mini Shai-Hulud\"-angrepet mot TanStacks npm-økosystem. TeamPCP-gjengen fikk tilgang til interne kildearkiver og kodesigneringssertifikater. OpenAI roterer alle sertifikater — macOS-brukere må oppdatere apper innen 12. juni. Ingen kundedata rammet.",
+  "source_url": "https://www.bleepingcomputer.com/news/security/openai-confirms-security-breach-in-tanstack-supply-chain-attack/",
+  "source_name": "BleepingComputer",
+  "published_at": "2026-05-14T18:00:00Z",
+  "priority": 920
+}

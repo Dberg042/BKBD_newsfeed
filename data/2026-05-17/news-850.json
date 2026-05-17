@@ -1,0 +1,10 @@
+{
+  "id": "news-850",
+  "title": "Agentmemory gir kodende AI-agenter vedvarende hukommelse — åpen kildekode og trending på GitHub",
+  "summary": "Agentmemory gir AI-kodingsagenter som Claude Code, Codex og Cursor vedvarende hukommelse på tvers av økter. Det fanger kontekst via 12 livssykluskroker og oppnår 95,2 % R@5 på LongMemEval-S. Ingen eksterne databaser — alt kjører som én Node-prosess. Apache 2.0-lisensiert og gratis.",
+  "image_url": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/742d87d7-8fc8-47b1-a7fa-ac32e871f7d0/image.png",
+  "source_url": "https://www.agent-memory.dev/",
+  "source_name": "Agentmemory",
+  "published_at": "2026-05-17T12:00:00Z",
+  "priority": 850
+}
