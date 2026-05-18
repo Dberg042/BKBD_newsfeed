@@ -76,15 +76,15 @@
 .text-orange-300 { color: #fdba74; }
 .text-orange-400 { color: #fb923c; }
 .text-orange-500 { color: #FF6B35; }
-.bg-slate-950 { background-color: #0A0E27; }
-.bg-slate-900 { background-color: #0F1629; }
+.bg-slate-950 { background-color: #11133A; }
+.bg-slate-900 { background-color: #191b43; }
 .bg-orange-500 { background-color: #FF6B35; }
 
 /* Backgrounds & Gradients */
 .bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to)); }
 .bg-gradient-to-t { background-image: linear-gradient(to top, var(--tw-gradient-from), var(--tw-gradient-to)); }
-.from-slate-900 { --tw-gradient-from: #0F1629; }
-.to-slate-950 { --tw-gradient-to: #0A0E27; }
+.from-slate-900 { --tw-gradient-from: #191b43; }
+.to-slate-950 { --tw-gradient-to: #11133A; }
 .from-orange-500 { --tw-gradient-from: #FF6B35; }
 .to-orange-600 { --tw-gradient-to: #FF5722; }
 
@@ -196,7 +196,7 @@ html, body {
 }
 
 body {
-    background-color: #0A0E27;
+    background-color: #11133A;
     color: #F5F7FA;
     overflow: hidden;
     font-feature-settings: "kern" 1, "liga" 1;
@@ -267,7 +267,7 @@ body > main {
     grid-template-rows: 55vh minmax(0, 1fr);
     grid-template-rows: clamp(200px, 55vh, 520px) minmax(0, 1fr);
     gap: 0;
-    background: linear-gradient(135deg, #0F1629 0%, #1a2847 100%);
+    background: linear-gradient(135deg, #191b43 0%, #1a2847 100%);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6),
@@ -278,7 +278,7 @@ body > main {
 /* Image Section */
 .carousel-image-section {
     position: relative;
-    background: linear-gradient(135deg, #0A0E27 0%, #0F1629 100%);
+    background: linear-gradient(135deg, #11133A 0%, #191b43 100%);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -487,7 +487,7 @@ body > main {
     padding: 6px 12px 6px 12px;
     border-radius: 6px;
     border: 1px solid rgba(59, 130, 246, 0.28);
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.88) 0%, rgba(30, 41, 59, 0.75) 100%);
+    background: linear-gradient(135deg,#11133A 0%, #191b43 100%);
     font-size: 12px;
     line-height: 1.2;
     font-weight: 600;
@@ -661,7 +661,7 @@ body > main {
 #no-news-message, #fallback-state {
     position: fixed;
     top: 0; right: 0; bottom: 0; left: 0;
-    background: #0A0E27;
+    background: #11133A;
     display: none;
     align-items: center;
     justify-content: center;
