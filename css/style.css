@@ -10,8 +10,8 @@
 .items-start { align-items: flex-start; }
 .justify-center { justify-content: center; }
 .justify-between { justify-content: space-between; }
-.gap-4 { gap: 1rem; }
-.gap-8 { gap: 2rem; }
+.gap-4 > * + * { margin-left: 1rem; }
+.gap-8 > * + * { margin-left: 2rem; }
 .block { display: block; }
 .hidden { display: none !important; }
 .fixed { position: fixed; }
@@ -266,7 +266,7 @@ body > main {
     display: grid;
     grid-template-rows: 55vh minmax(0, 1fr);
     grid-template-rows: clamp(200px, 55vh, 520px) minmax(0, 1fr);
-    gap: 0;
+    grid-gap: 0;
     background: linear-gradient(135deg, #191b43 0%, #1a2847 100%);
     border-radius: 16px;
     overflow: hidden;
@@ -382,9 +382,12 @@ body > main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 16px;
     backdrop-filter: blur(10px);
     z-index: 10;
+}
+
+.image-fallback > * + * {
+    margin-top: 16px;
 }
 
 .image-fallback.visible {
@@ -466,9 +469,12 @@ body > main {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    gap: 24px;
     position: relative;
     z-index: 1;
+}
+
+.carousel-meta > * + * {
+    margin-left: 24px;
 }
 
 .queue-preview {
@@ -476,7 +482,7 @@ body > main {
     min-width: 0;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
+    grid-gap: 10px;
     overflow: hidden;
 }
 
@@ -507,8 +513,11 @@ body > main {
 .queue-row {
     display: flex;
     align-items: center;
-    gap: 12px;
     min-width: 0;
+}
+
+.queue-row > * + * {
+    margin-left: 12px;
 }
 
 .queue-label {
@@ -541,8 +550,11 @@ body > main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
     margin-top: 2px;
+}
+
+.carousel-qr-panel > * + * {
+    margin-top: 8px;
 }
 
 .qr-title {
@@ -592,7 +604,7 @@ body > main {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
+    grid-gap: 0;
     overflow: hidden;
     animation: carousel-fade-in 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -629,12 +641,15 @@ body > main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
     padding: 40px;
     text-align: center;
     color: white;
     position: relative;
     z-index: 2;
+}
+
+.birthday-card-content > * + * {
+    margin-top: 20px;
 }
 
 .birthday-title {
