@@ -1,0 +1,9 @@
+{
+  "id": "news-770",
+  "title": "Bun skrives om fra Zig til Rust — AI-generert portering på seks dager skaper debatt",
+  "summary": "JavaScript-runtime Bun omskrives fra Zig til Rust — 6 755 AI-genererte commits merget på seks dager uten menneskelig review. Tester passerer, men skjulte invarianter kan skape fremtidige feilsøkingsfeller. Debatten handler om AI-oversatt kode kan vedlikeholdes trygt over tid.",
+  "source_url": "https://en.liujiacai.net/2026/05/16/bun-rust-port/",
+  "source_name": "Jiacai Liu",
+  "published_at": "2026-05-16T12:00:00Z",
+  "priority": 770
+}

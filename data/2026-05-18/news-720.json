@@ -1,0 +1,10 @@
+{
+  "id": "news-720",
+  "title": "Tencent lanserer Hunyuan HY3 — åpen MoE-modell med 262K kontekstvindu og agentfokus",
+  "summary": "Tencent har sluppet Hunyuan HY3 Preview, en åpen Mixture-of-Experts-modell med 295 mrd parametre og 262 000 tokens kontekstvindu. Kun 21 mrd parametre aktiveres per token. Oppnår 74,4 % på SWE-bench Verified med tre valgbare resonneringsmoduser. Åpne vekter for selvhosting tilgjengelig på GitHub.",
+  "image_url": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3040c5ba-9185-4009-850d-55e91fb4999b/image.png?t=1779025898",
+  "source_url": "https://www.siliconflow.com/models/hy3-preview",
+  "source_name": "Tencent",
+  "published_at": "2026-05-17T18:00:00Z",
+  "priority": 720
+}

@@ -1,0 +1,9 @@
+{
+  "id": "news-750",
+  "title": "Grafana GitHub-token stjålet — angriper lastet ned hele kodebasen og krevde løsepenger",
+  "summary": "En angriper stjal et GitHub-token og lastet ned Grafanas kodebase før vedkommende krevde løsepenger. Grafana nektet å betale og styrket sikkerheten. Hendelsen knyttes til CoinbaseCartel, en utpressingsgruppe som har rammet rundt 170 virksomheter innen helse, teknologi og industri.",
+  "source_url": "https://thehackernews.com/2026/05/grafana-github-token-breach-led-to.html",
+  "source_name": "The Hacker News",
+  "published_at": "2026-05-17T08:00:00Z",
+  "priority": 750
+}

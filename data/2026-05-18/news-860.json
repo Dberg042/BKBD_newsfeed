@@ -1,0 +1,10 @@
+{
+  "id": "news-860",
+  "title": "Agentmemory gir kodeagenter ubegrenset minne på tvers av økter — gratis og åpen kildekode",
+  "summary": "Agentmemory gir AI-kodeagenter vedvarende minne på tvers av økter via tolv automatiske livssyklus-kroker. Verktøyet fungerer med Claude Code, Codex, Cursor og alle MCP-kompatible agenter. Oppnår 95,2 % R@5 på LongMemEval og bruker 92 % færre tokens enn kontekstbaserte løsninger. Apache 2.0.",
+  "image_url": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/742d87d7-8fc8-47b1-a7fa-ac32e871f7d0/image.png?t=1779025863",
+  "source_url": "https://www.agent-memory.dev/",
+  "source_name": "Agentmemory",
+  "published_at": "2026-05-17T18:00:00Z",
+  "priority": 860
+}

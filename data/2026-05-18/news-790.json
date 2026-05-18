@@ -1,0 +1,9 @@
+{
+  "id": "news-790",
+  "title": "Populær npm-pakke node-ipc kompromittert — stjeler utvikleres credentials via DNS",
+  "summary": "Forsyningskjedeangrep mot npm-pakken node-ipc rammer over 690 000 ukentlige nedlastinger. En infostealer stjeler AWS-nøkler, SSH-nøkler og miljøvariabler via kamuflerte DNS-oppslag. En aktør overtok en inaktiv vedlikeholders konto. Utviklere bør fjerne pakken og rotere alle nøkler umiddelbart.",
+  "source_url": "https://www.bleepingcomputer.com/news/security/popular-node-ipc-npm-package-compromised-to-steal-credentials/",
+  "source_name": "BleepingComputer",
+  "published_at": "2026-05-18T11:00:00Z",
+  "priority": 790
+}

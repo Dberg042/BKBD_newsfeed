@@ -1,0 +1,9 @@
+{
+  "id": "news-880",
+  "title": "Fire kjedede sårbarheter oppdaget i OpenClaw — angripere kan overta AI-agenter",
+  "summary": "Cyera har avdekket fire kjedede sårbarheter i AI-agentplattformen OpenClaw. Sårbarhetene gir angripere mulighet til sandkasse-flukt, lekkasje av hemmeligheter og rettighetseskalering. Rundt 65 000 instanser er eksponert på nettet. Umiddelbar oppdatering og rotering av nøkler anbefales.",
+  "source_url": "https://www.cyera.com/blog/claw-chain-cyera-research-unveil-four-chainable-vulnerabilities-in-openclaw",
+  "source_name": "Cyera",
+  "published_at": "2026-05-18T12:00:00Z",
+  "priority": 880
+}

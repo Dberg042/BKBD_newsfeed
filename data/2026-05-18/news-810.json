@@ -1,0 +1,9 @@
+{
+  "id": "news-810",
+  "title": "Slik bruker du Claude Code i store kodebaser — lær av Anthropics beste praksis",
+  "summary": "Anthropic deler beste praksis for Claude Code i store produksjonsmiljøer. Guiden dekker monolitter med millioner av kodelinjer, eldre systemer og distribuerte mikrotjenester. Sentrale verktøy: CLI-filer, kroker, ferdigheter, plugins og MCP-servere — bygget i riktig rekkefølge for maksimal effekt.",
+  "source_url": "https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start",
+  "source_name": "Anthropic",
+  "published_at": "2026-05-18T12:00:00Z",
+  "priority": 810
+}

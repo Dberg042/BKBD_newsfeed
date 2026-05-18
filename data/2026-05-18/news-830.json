@@ -1,0 +1,10 @@
+{
+  "id": "news-830",
+  "title": "Claude Code får Agent View — kjør dusinvis av parallelle kodeøkter fra ett dashboard",
+  "summary": "Anthropic har lansert Agent View, som lar utviklere kjøre dusinvis av parallelle Claude Code-økter fra ett dashboard. Økter får isolerte git-arbeidstrær. Utviklere kan hoppe mellom økter, sende bakgrunnsjobber og svare på agenter uten kontekstbytte. Tilgjengelig for Pro, Max, Team og Enterprise.",
+  "image_url": "https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/215a08d6-64a7-4da4-904d-5ff89e7bc22f/Screenshot_2026-05-13_at_6.33.49_PM.png?t=1778711676",
+  "source_url": "https://www.anthropic.com/product/claude-code",
+  "source_name": "Anthropic",
+  "published_at": "2026-05-17T18:00:00Z",
+  "priority": 830
+}
