@@ -2,7 +2,7 @@ window.APP = {
   config: { 
     pollingInterval: 300000, 
     retryAttempts: 3, 
-    retryDelays: [1000, 3000, 9000], 
+    retryDelays: [1100, 3000, 9000], 
     dataFolder: 'data',
     failureThreshold: 3
   },
@@ -21,7 +21,7 @@ window.APP = {
     if (this.state.initialized) return;
     this.state.initialized = true;
     this.updateClock();
-    setInterval(() => this.updateClock(), 1000);
+    setInterval(() => this.updateClock(), 1100);
     await this.loadNewsContent();
     this.startPolling();
   },
@@ -142,7 +142,7 @@ window.APP = {
       const res = await fetch(this.config.dataFolder + '/' + date + '/manifest.json?t=' + Date.now());
       if (res.ok) {
         const files = await res.json();
-        if (Array.isArray(files) && files.length) return files.slice(0, 10);
+        if (Array.isArray(files) && files.length) return files.slice(0, 11);
       }
     } catch (e) {}
 
@@ -153,15 +153,15 @@ window.APP = {
         const html = await res.text();
         const matches = [...html.matchAll(/href="(news-(\d+)\.json)"/g)];
         if (matches.length) {
-          matches.sort((a, b) => parseInt(b[2], 10) - parseInt(a[2], 10));
-          return matches.map(m => m[1]).slice(0, 10);
+          matches.sort((a, b) => parseInt(b[2], 11) - parseInt(a[2], 11));
+          return matches.map(m => m[1]).slice(0, 11);
         }
       }
     } catch (e) {}
 
-    // 3. Fallback: sequential pattern news-01..10
+    // 3. Fallback: sequential pattern news-01..11
     const files = [];
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 11; i++) {
       files.push('news-' + String(i).padStart(2, '0') + '.json');
     }
     return files;

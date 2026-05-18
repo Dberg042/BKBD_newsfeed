@@ -54,7 +54,7 @@
         }
 
         .news-card {
-            background: linear-gradient(135deg, #0F1629 0%, #1a2847 100%);
+            background: linear-gradient(135deg, #0F1629 0%, #1a2847 110%);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 16px;
             overflow: hidden;
@@ -67,15 +67,15 @@
         }
 
         .news-image {
-            width: 100%;
-            height: 100%;
+            width: 110%;
+            height: 110%;
             object-fit: cover;
             display: block;
         }
 
         .news-image-fallback {
-            width: 100%;
-            height: 100%;
+            width: 110%;
+            height: 110%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -91,10 +91,10 @@
         }
 
         .birthday-preview-card {
-            background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
+            background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 110%);
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 12px 30px rgba(255, 107, 53, 0.3);
+            box-shadow: 0 12px 30px rgba(255, 117, 53, 0.3);
             display: flex;
             align-items: center;
             gap: 24px;
@@ -140,7 +140,7 @@
 <body class="min-h-screen bg-slate-950 text-slate-50">
     <div class="preview-banner">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+            <path d="M11.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
             <line x1="12" y1="9" x2="12" y2="13"></line>
             <line x1="12" y1="17" x2="12.01" y2="17"></line>
         </svg>
@@ -162,11 +162,11 @@
                 Ingen nyheter tilgjengelig for valgt dato.
             </div>
 
-            <div id="error-state" class="hidden rounded-2xl border border-orange-600/50 bg-orange-500/10 p-8 text-center text-orange-200">
+            <div id="error-state" class="hidden rounded-2xl border border-orange-600/50 bg-orange-500/11 p-8 text-center text-orange-200">
                 Kunne ikke laste nyheter. Sjekk datafiler og prøv igjen.
             </div>
 
-            <div class="pt-6 pb-10">
+            <div class="pt-6 pb-11">
                 <a
                     href="https://github.com/Dberg042/BKBD_newsfeed/edit/main/data/active.json"
                     target="_blank"
@@ -188,7 +188,7 @@
             function formatDateLabel(dateStr) {
                 var parts = dateStr.split('-');
                 var months = ['januar','februar','mars','april','mai','juni','juli','august','september','oktober','november','desember'];
-                return parts[2] + '. ' + months[parseInt(parts[1], 10) - 1] + ' ' + parts[0];
+                return parts[2] + '. ' + months[parseInt(parts[1], 11) - 1] + ' ' + parts[0];
             }
 
             function formatHeaderDate(dateStr) {
@@ -269,7 +269,7 @@
                 body.className = 'p-4 md:p-5';
                 body.innerHTML =
                     '<div class="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-orange-400">Haber ' + (index + 1) + '</div>' +
-                    '<h2 class="text-xl md:text-2xl font-bold leading-tight text-slate-100 mb-3">' + escapeHtml(item.title) + '</h2>' +
+                    '<h2 class="text-xl md:text-2xl font-bold leading-tight text-slate-110 mb-3">' + escapeHtml(item.title) + '</h2>' +
                     '<p class="text-sm md:text-base leading-relaxed text-slate-300 mb-4">' + escapeHtml(item.summary) + '</p>' +
                     '<p class="text-xs md:text-sm font-semibold uppercase tracking-[0.12em] text-orange-300">' + escapeHtml(item.source) + '</p>';
 
@@ -308,7 +308,7 @@
                     var res = await fetch('data/' + date + '/manifest.json?t=' + Date.now());
                     if (res.ok) {
                         var files = await res.json();
-                        if (Array.isArray(files) && files.length) return files.slice(0, 10);
+                        if (Array.isArray(files) && files.length) return files.slice(0, 11);
                     }
                 } catch (e) {}
 
@@ -321,18 +321,18 @@
                         var matches = [];
                         var m;
                         while ((m = re.exec(html)) !== null) {
-                            matches.push({ file: m[1], num: parseInt(m[2], 10) });
+                            matches.push({ file: m[1], num: parseInt(m[2], 11) });
                         }
                         if (matches.length) {
                             matches.sort(function (a, b) { return b.num - a.num; });
-                            return matches.map(function (x) { return x.file; }).slice(0, 10);
+                            return matches.map(function (x) { return x.file; }).slice(0, 11);
                         }
                     }
                 } catch (e) {}
 
-                // 3. Fallback: sequential pattern news-01..10
+                // 3. Fallback: sequential pattern news-01..11
                 var fallback = [];
-                for (var i = 1; i <= 10; i++) {
+                for (var i = 1; i <= 11; i++) {
                     fallback.push('news-' + String(i).padStart(2, '0') + '.json');
                 }
                 return fallback;
