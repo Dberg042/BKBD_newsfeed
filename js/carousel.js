@@ -89,6 +89,12 @@ window.carousel = (() => {
         <div class="carousel-item">
           <div class="carousel-wrapper">
             <div class="carousel-image-section">
+              <img
+                src="${imageUrl}"
+                alt=""
+                aria-hidden="true"
+                class="carousel-image-bg"
+              />
               <img 
                 src="${imageUrl}" 
                 alt="${title}" 
@@ -126,11 +132,16 @@ window.carousel = (() => {
     container.innerHTML = html;
 
     const img = container.querySelector('.carousel-image');
+    const imgBg = container.querySelector('.carousel-image-bg');
     if (img && img.src) {
-      if (img.complete) {
+      const addLoaded = () => {
         img.classList.add('loaded');
+        if (imgBg) imgBg.classList.add('loaded');
+      };
+      if (img.complete) {
+        addLoaded();
       } else {
-        img.onload = () => img.classList.add('loaded');
+        img.onload = addLoaded;
       }
     }
 
