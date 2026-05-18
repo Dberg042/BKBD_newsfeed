@@ -47,7 +47,7 @@ body > main {
     max-height: 100%;
     min-height: 0;
     display: grid;
-    grid-template-rows: clamp(200px, 50vh, 500px) minmax(0, 1fr);
+    grid-template-rows: clamp(200px, 55vh, 550px) minmax(0, 1fr);
     gap: 0;
     background: linear-gradient(135deg, #0F1629 0%, #1a2847 100%);
     border-radius: 16px;
@@ -66,7 +66,7 @@ body > main {
     align-items: center;
     justify-content: center;
     min-height: 0;
-    height: clamp(200px, 50vh, 500px);
+    height: clamp(200px, 55vh, 550px);
 }
 
 .qr-overlay {
@@ -121,8 +121,9 @@ body > main {
 
 .carousel-image {
     width: 100%;
-    height: clamp(200px, 50vh, 500px);
+    height: clamp(200px, 55vh, 550px);
     object-fit: cover;
+    object-position: center 20%;
     opacity: 0;
     transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
