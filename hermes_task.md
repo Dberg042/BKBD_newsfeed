@@ -24,6 +24,14 @@ All JSON files for the day go inside this folder.
 
 ---
 
+## General Image Rule (All Sources)
+
+For every story, you MUST attempt to find an image via `og:image` meta tag before omitting `image_url`:
+```
+curl -sL <url> | grep -oP 'og:image[^>]*content="\K[^"]+'
+```
+If this returns a URL, include it as `image_url`. The only valid reason to omit `image_url` is when the source has no og:image meta tag AND no visible images. Do NOT skip this step.
+
 ## Sources & Priority Order
 
 Process sources in this order. Stop collecting once you have 10 high-quality items.
@@ -39,6 +47,7 @@ Process sources in this order. Stop collecting once you have 10 high-quality ite
 - For each selected story:
   - Click through to the actual article
   - Extract: title, summary, first relevant image URL, source URL
+  - **Image:** Run `curl -sL <url> | grep -oP 'og:image[^>]*content="\K[^"]+'` on the article URL to find the social preview image. If it returns a URL, use it. If not, look for the first `<img>` tag on the page. If still nothing, omit `image_url`.
   - Source name: `Kode24`
 
 ### Source 2: TLDR Newsletters (English → translate to Norwegian)
@@ -49,9 +58,8 @@ Check in this order: `TLDR AI`, `TLDR InfoSec`, `TLDR Dev`, then base `TLDR`.
 - For each story:
   - Use the summary from the newsletter (don't fetch the source unless summary is incomplete)
   - Extract source URL from the newsletter link
-  - In most cases you need to follow article link and extract first/relevant image under the topic title 
   - Source name: whoever published the original (e.g., `TanStack`, `Microsoft`, `GitHub`)
-  - **Image:** Only include if the newsletter contains one for that story. If no image, omit the `image_url` field entirely — do not invent or substitute.
+  - **Image:** If the newsletter contains an image for that story, use it. Otherwise, follow the source URL and run `curl -sL <url> | grep -oP 'og:image[^>]*content="\K[^"]+'` — if it returns a URL, use it. If still nothing, omit `image_url` entirely.
 
 ### Source 3: Simplifying AI Newsletter (English → translate to Norwegian)
 - Find today's edition
@@ -60,7 +68,7 @@ Check in this order: `TLDR AI`, `TLDR InfoSec`, `TLDR Dev`, then base `TLDR`.
 - Use the newsletter content directly — if possible
 - Extract the image URL from the newsletter HTML if present
 - Source name: original publisher (e.g., `Google`, `OpenAI`, `Anthropic`)
-- If you cannot found story image, follow the link to get relevant link.
+- If you cannot found story image, follow the link and run `curl -sL <url> | grep -oP 'og:image[^>]*content="\K[^"]+'` to extract the social preview image.
 
 ---
 
@@ -114,7 +122,7 @@ Run these checks on every JSON file. **If any fails, fix or drop the item.**
 ### Per-item checks:
 1. ✅ **Language:** Is `title` and `summary` actually in Norwegian? (not English with Norwegian words)
 2. ✅ **Summary length:** Between 200 and 300 characters?
-3. ✅ **Image URL (if present):** Does HEAD request return 200 OK?
+3. ✅ **Image URL (if present):** Does `curl -sI <image_url>` return 200 OK?
 4. ✅ **Source URL:** Does HEAD request return 200 OK?
 5. ✅ **No ads:** Re-check the content isn't sponsored/promotional
 6. ✅ **Schema:** All required fields present, types correct?
