@@ -151,10 +151,13 @@ window.APP = {
       const res = await fetch(this.config.dataFolder + '/' + date + '/?t=' + Date.now());
       if (res.ok) {
         const html = await res.text();
-        const matches = [...html.matchAll(/href="(news-(\d+)\.json)"/g)];
+        var re = /href="(news-(\d+)\.json)"/g;
+        var matches = [];
+        var m;
+        while ((m = re.exec(html)) !== null) { matches.push(m); }
         if (matches.length) {
-          matches.sort((a, b) => parseInt(b[2], 11) - parseInt(a[2], 11));
-          return matches.map(m => m[1]).slice(0, 11);
+          matches.sort(function(a, b) { return parseInt(b[2], 10) - parseInt(a[2], 10); });
+          return matches.map(function(x) { return x[1]; }).slice(0, 11);
         }
       }
     } catch (e) {}

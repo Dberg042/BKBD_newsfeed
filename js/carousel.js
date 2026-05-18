@@ -152,7 +152,7 @@ window.carousel = (() => {
 
   function handleImageError(img) {
     img.style.display = 'none';
-    const fallback = img.parentElement?.querySelector('.image-fallback');
+    const fallback = img.parentElement && img.parentElement.querySelector('.image-fallback');
     if (fallback) fallback.classList.add('visible');
   }
 
@@ -182,7 +182,7 @@ window.carousel = (() => {
       if (nextItem) {
         let title = nextItem.title || '';
         if (nextItem.type === 'birthday') {
-          title = 'Gratulerer' + (nextItem.names?.[0] ? ' - ' + nextItem.names[0] : '');
+          title = 'Gratulerer' + (nextItem.names && nextItem.names[0] ? ' - ' + nextItem.names[0] : '');
         }
         items.push(title.substring(0, 40) + (title.length > 40 ? '...' : ''));
       } else {
