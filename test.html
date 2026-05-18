@@ -89,6 +89,52 @@
         .hidden {
             display: none !important;
         }
+
+        .birthday-preview-card {
+            background: linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(255, 107, 53, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 32px;
+            color: #fff;
+        }
+
+        .birthday-preview-icon {
+            font-size: 72px;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .birthday-preview-body {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .birthday-preview-label {
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            opacity: 0.8;
+        }
+
+        .birthday-preview-names {
+            font-size: clamp(22px, 5vw, 32px);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+        }
+
+        .birthday-preview-message {
+            font-size: 15px;
+            font-weight: 400;
+            opacity: 0.9;
+            margin: 0;
+        }
     </style>
 </head>
 <body class="min-h-screen bg-slate-950 text-slate-50">
@@ -232,6 +278,21 @@
                 return article;
             }
 
+            function renderBirthdayCard(item) {
+                var article = document.createElement('article');
+                article.className = 'birthday-preview-card';
+                var names = (item.names || []).map(escapeHtml).join(', ');
+                var message = escapeHtml(item.message || 'Gratulerer med dagen! 🎉');
+                article.innerHTML =
+                    '<div class="birthday-preview-icon">🎉</div>' +
+                    '<div class="birthday-preview-body">' +
+                        '<div class="birthday-preview-label">Bursdagshilsen</div>' +
+                        '<div class="birthday-preview-names">' + names + '</div>' +
+                        '<p class="birthday-preview-message">' + message + '</p>' +
+                    '</div>';
+                return article;
+            }
+
             function escapeHtml(str) {
                 return String(str)
                     .replace(/&/g, '&amp;')
@@ -290,12 +351,13 @@
                     if (headerDate) headerDate.textContent = formatHeaderDate(date);
 
                     var newsFiles = await fetchNewsFileList(date);
-                    var allFiles = newsFiles.concat(['birthday.json']);
 
-                    var results = await Promise.all(allFiles.map(function (f) { return fetchNewsItem(date, f); }));
-                    var items = results
-                        .filter(function (item) { return !!item && (item.title || item.headline); })
-                        .map(normalizeItem);
+                    var results = await Promise.all(newsFiles.map(function (f) { return fetchNewsItem(date, f); }));
+                    var items = results.filter(function (item) {
+                        if (!item) return false;
+                        if (item.type === 'birthday') return Array.isArray(item.names) && item.names.length > 0;
+                        return !!(item.title || item.headline);
+                    });
 
                     cardsContainer.innerHTML = '';
 
@@ -304,8 +366,14 @@
                         return;
                     }
 
-                    items.forEach(function (item, index) {
-                        cardsContainer.appendChild(renderCard(item, index));
+                    var newsIndex = 0;
+                    items.forEach(function (item) {
+                        if (item.type === 'birthday') {
+                            cardsContainer.appendChild(renderBirthdayCard(item));
+                        } else {
+                            cardsContainer.appendChild(renderCard(normalizeItem(item), newsIndex));
+                            newsIndex++;
+                        }
                     });
                 } catch (e) {
                     errorState.classList.remove('hidden');

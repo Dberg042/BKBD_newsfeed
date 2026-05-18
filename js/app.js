@@ -7,6 +7,7 @@ window.APP = {
     failureThreshold: 3
   },
   state: { 
+    initialized: false,
     lastKnownGood: null, 
     lastFetchDate: null, 
     currentNews: [], 
@@ -17,13 +18,8 @@ window.APP = {
   },
 
   async init() {
-    try {
-      const saved = localStorage.getItem('APP_lastKnownGood');
-      if (saved) {
-        this.state.lastKnownGood = JSON.parse(saved);
-      }
-    } catch (e) {}
-    
+    if (this.state.initialized) return;
+    this.state.initialized = true;
     this.updateClock();
     setInterval(() => this.updateClock(), 1000);
     await this.loadNewsContent();
@@ -67,6 +63,9 @@ window.APP = {
     if (!item || typeof item !== 'object') {
       return false;
     }
+    if (item.type === 'birthday') {
+      return Array.isArray(item.names) && item.names.length > 0;
+    }
     if (!item.title && !item.headline) {
       return false;
     }
@@ -85,8 +84,6 @@ window.APP = {
 
       const newsFiles = await this.fetchNewsFileList(date);
       const promises = newsFiles.map(f => this.fetchNewsItem(date, f));
-      promises.push(this.fetchNewsItem(date, 'birthday.json'));
-      
       const results = await Promise.all(promises);
       const newsItems = results.filter(item => item !== null && this.validateNewsItem(item));
       
@@ -124,6 +121,14 @@ window.APP = {
       this.state.hasShownWarning = true;
     }
     
+    // Load from localStorage only as last resort when live fetch fails
+    if (!this.state.lastKnownGood) {
+      try {
+        const saved = localStorage.getItem('APP_lastKnownGood');
+        if (saved) this.state.lastKnownGood = JSON.parse(saved);
+      } catch (e) {}
+    }
+
     if (this.state.lastKnownGood && this.state.lastKnownGood.items && this.state.lastKnownGood.items.length > 0) {
       this.displayCarousel(this.state.lastKnownGood.items);
     } else {
@@ -230,4 +235,3 @@ window.APP = {
 };
 
 document.addEventListener('DOMContentLoaded', () => window.APP.init());
-if (document.readyState === 'complete' || document.readyState === 'interactive') window.APP.init();
