@@ -24,13 +24,28 @@ All JSON files for the day go inside this folder.
 
 ---
 
-## General Image Rule (All Sources)
+## General Image Rule (All Sources) — DO NOT SKIP
 
-For every story, you MUST attempt to find an image via `og:image` meta tag before omitting `image_url`:
+For every story, you MUST find an image via these methods IN ORDER before omitting `image_url`:
+
+**Method 1 — og:image (99% of sites):**
 ```
 curl -sL <url> | grep -oP 'og:image[^>]*content="\K[^"]+'
 ```
-If this returns a URL, include it as `image_url`. The only valid reason to omit `image_url` is when the source has no og:image meta tag AND no visible images. Do NOT skip this step.
+
+**Method 2 — content-before-property format** (Cyera, thestateofbrand, Webflow sites):
+```
+curl -sL <url> | grep -oP 'content="[^"]*"[^>]*property="og:image"' | grep -oP 'content="\K[^"]+'
+```
+
+**Method 3 — twitter:image fallback** (The Hacker News, Blogger-based sites):
+```
+curl -sL <url> | grep -oP "content='\K[^']+" | grep -m1 -i 'http'
+```
+
+**IMPORTANT:** `web_extract` strips all HTML/images — do NOT use it for image extraction. Always use `curl` + `grep` directly on the article URL. Exception: Beehiiv-hosted newsletter images (TLDR/Simplifying AI newsletters) where image is in the email body.
+
+If ALL three methods return nothing, omit `image_url` entirely — no placeholders.
 
 ## Sources & Priority Order
 
