@@ -1,0 +1,10 @@
+{
+  "id": "news-850",
+  "title": "Anthropic kjøper SDK-startupen Stainless for å styrke agent-tilkoblinger",
+  "summary": "Anthropic har kjøpt Stainless, som har generert alle offisielle Anthropic SDK-er siden lanseringen. Stainless bygger SDK-er fra API-spesifikasjoner på tvers av TypeScript, Python og Go. Oppkjøpet skal forbedre agent-tilkobling via Model Context Protocol.",
+  "image_url": "https://www.anthropic.com/api/opengraph-illustration?name=Node%20Shapes&backgroundColor=coral",
+  "source_url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+  "source_name": "Anthropic",
+  "published_at": "2026-05-18T00:00:00Z",
+  "priority": 850
+}

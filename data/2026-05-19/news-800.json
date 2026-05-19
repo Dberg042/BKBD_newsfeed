@@ -1,0 +1,10 @@
+{
+  "id": "news-800",
+  "title": "Cloudflare testet Mythos på 50+ egne repoer — her er hva de fant",
+  "summary": "Cloudflare testet Anthropics sikkerhetsmodell Mythos Preview mot over 50 egne kodebaser. Modellen bygget komplette exploit-kjeder og genererte PoC-kode automatisk — et sprang fra tidligere modeller. Smalt scopede analyser ga langt bedre resultater enn brede søk.",
+  "image_url": "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/4ILuGDGHs7n6fbasZ54VOx/0dbf7f7099880643bb53eafceb695281/OG_Share_2024-2025-2026__35_.png",
+  "source_url": "https://blog.cloudflare.com/cyber-frontier-models/",
+  "source_name": "Cloudflare",
+  "published_at": "2026-05-18T00:00:00Z",
+  "priority": 800
+}

@@ -1,0 +1,10 @@
+{
+  "id": "news-700",
+  "title": "De siste seks månedene i LLM-utvikling på fem minutter",
+  "summary": "Simon Willison oppsummerer et vendepunkt i AI-utviklingen fra senhøsten 2025 til tidlig 2026. Kodeagenter er blitt pålitelige daglige verktøy, lokale assistenter er praktisk mulig, og åpne modeller kjører på forbrukerhardware. AI går fra demoer til reell nytte.",
+  "image_url": "https://static.simonwillison.net/static/2026/5-minutes-llms/5-minutes-llms.001.jpeg",
+  "source_url": "https://simonwillison.net/2026/May/19/5-minute-llms/",
+  "source_name": "Simon Willison",
+  "published_at": "2026-05-19T00:00:00Z",
+  "priority": 700
+}

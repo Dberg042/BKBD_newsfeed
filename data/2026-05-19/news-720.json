@@ -1,0 +1,9 @@
+{
+  "id": "news-720",
+  "title": "Sikkerhetsforsker kompromitterte Claude Code via ondsinnede Skills",
+  "summary": "En sikkerhetsforsker har vist hvordan Claude Code kan kompromitteres via ondsinnede skill-filer. Ved å utnytte frontmatter kunne forskeren overskrive verktøyinnstillinger og opprette ondsinnede sub-agenter. Funnene viser risikoen ved deling av skills uten validering i AI-drevne utviklingsmiljøer.",
+  "source_url": "https://labs.reversec.com/posts/2026/05/skill-issues-compromising-claude-code-with-malicious-skills-agents-part-1",
+  "source_name": "Reversec Labs",
+  "published_at": "2026-05-19T00:00:00Z",
+  "priority": 720
+}

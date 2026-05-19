@@ -1,0 +1,10 @@
+{
+  "id": "news-750",
+  "title": "Cursor lanserer Composer 2.5 — forbedret kodeagent med målrettet RL-trening",
+  "summary": "Cursor har sluppet Composer 2.5, en kodeagent på Kimi K2.5 med målrettet reinforcement learning og 25× mer syntetiske treningsdata. Modellen holder seg på sporet over lange oppgaver og følger komplekse instruksjoner mer presist. Cursor og SpaceXAI trener en ny modell med ti ganger mer regnekraft.",
+  "image_url": "https://ptht05hbb1ssoooe.public.blob.vercel-storage.com/assets/changelog/cursor-composer2.5-og-2400x1200.png",
+  "source_url": "https://cursor.com/blog/composer-2-5",
+  "source_name": "Cursor",
+  "published_at": "2026-05-18T00:00:00Z",
+  "priority": 750
+}

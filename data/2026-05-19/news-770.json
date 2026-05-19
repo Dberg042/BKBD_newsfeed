@@ -1,0 +1,10 @@
+{
+  "id": "news-770",
+  "title": "Project Zero fant 0-click exploit på Pixel 10 — full kernel-kontroll på fem linjer kode",
+  "summary": "Google Project Zero har portert en 0-click exploit-kjede til Pixel 10. En sårbarhet i Tensor G5s VPU-driver tillot vilkårlig lesing og skriving til Linux-kjernen via ubegrenset minnemapping. Utnyttelsen krever kun fem linjer kode. Patchet etter 71 dager.",
+  "image_url": "https://projectzero.google/images/preview_image.png",
+  "source_url": "https://projectzero.google/2026/05/pixel-10-exploit.html",
+  "source_name": "Google Project Zero",
+  "published_at": "2026-05-13T00:00:00Z",
+  "priority": 770
+}
