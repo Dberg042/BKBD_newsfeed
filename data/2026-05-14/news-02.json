@@ -5,6 +5,7 @@
   "image_url": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&h=500&fit=crop",
   "source_url": "https://equinor.com/stavanger-ai-center",
   "source_name": "Equinor",
-  "published_at": "2026-05-13T07:15:00Z", 
-  "priority": 2
+  "published_at": "2026-05-13T07:15:00Z",
+  "priority": 2,
+  "local_image": "optimized-images/news-02_260514.jpg"
 }

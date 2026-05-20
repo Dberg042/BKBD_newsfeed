@@ -1,0 +1,13 @@
+{
+  "name": "bkbd-newsfeed",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Infoskjerm news display with image optimization pipeline",
+  "scripts": {
+    "optimize": "node scripts/optimize-images.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0",
+    "sharp": "^0.33.0"
+  }
+}
