@@ -1,4 +1,11 @@
 window.carousel = (() => {
+  const MAX_IMG_WIDTH = 1280;
+  const MAX_IMG_HEIGHT = 720;
+  // Hard limit: if image exceeds this AND can't be downscaled, show fallback
+  const HARD_LIMIT_WIDTH = 2560;
+  const HARD_LIMIT_HEIGHT = 1440;
+  let _currentBlobUrl = null;
+
   let state = {
     currentIndex: 0,
     newsItems: [],
@@ -6,6 +13,68 @@ window.carousel = (() => {
     isAnimating: false,
     isPaused: false,
   };
+
+  /**
+   * Loads an image URL off-screen. If its dimensions exceed the max,
+   * draws it to a canvas at reduced size and returns a blob URL.
+   * Otherwise returns the original URL. Old blob URLs are revoked.
+   * Returns object: { url, skipBg } where skipBg=true means image is
+   * oversized but couldn't be downscaled (skip background to save memory).
+   */
+  function prepareImage(url) {
+    return new Promise(function(resolve) {
+      if (!url) { resolve({ url: '', skipBg: false }); return; }
+      var img = new Image();
+      img.onload = function() {
+        var w = img.naturalWidth;
+        var h = img.naturalHeight;
+        if (w <= MAX_IMG_WIDTH && h <= MAX_IMG_HEIGHT) {
+          resolve({ url: url, skipBg: false });
+          return;
+        }
+        // Image is oversized — attempt downscale via canvas
+        var ratio = Math.min(MAX_IMG_WIDTH / w, MAX_IMG_HEIGHT / h);
+        var newW = Math.round(w * ratio);
+        var newH = Math.round(h * ratio);
+        try {
+          var canvas = document.createElement('canvas');
+          canvas.width = newW;
+          canvas.height = newH;
+          var ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, newW, newH);
+          canvas.toBlob(function(blob) {
+            if (blob) {
+              var blobUrl = URL.createObjectURL(blob);
+              resolve({ url: blobUrl, skipBg: false });
+            } else if (w > HARD_LIMIT_WIDTH || h > HARD_LIMIT_HEIGHT) {
+              resolve({ url: '', skipBg: true });
+            } else {
+              resolve({ url: url, skipBg: true });
+            }
+            canvas = null;
+          }, 'image/jpeg', 0.82);
+        } catch (e) {
+          // Canvas tainted (cross-origin) — can't downscale
+          // If image exceeds hard limit, don't render it at all (prevent crash)
+          if (w > HARD_LIMIT_WIDTH || h > HARD_LIMIT_HEIGHT) {
+            resolve({ url: '', skipBg: true });
+          } else {
+            // Manageable size — use original but skip bg duplicate to save memory
+            resolve({ url: url, skipBg: true });
+          }
+        }
+      };
+      img.onerror = function() { resolve({ url: url, skipBg: false }); };
+      img.src = url;
+    });
+  }
+
+  function revokeOldBlob() {
+    if (_currentBlobUrl) {
+      URL.revokeObjectURL(_currentBlobUrl);
+      _currentBlobUrl = null;
+    }
+  }
 
   function init(newsItems) {
     if (!newsItems || newsItems.length === 0) {
@@ -59,14 +128,15 @@ window.carousel = (() => {
 
   function renderItem(index) {
     if (!state.newsItems[index]) return;
-    const item = state.newsItems[index];
-    const container = document.getElementById('carousel-container');
+    var item = state.newsItems[index];
+    var container = document.getElementById('carousel-container');
     if (!container) return;
 
-    let html = '';
-    
+    // Revoke previous blob to free memory
+    revokeOldBlob();
+
     if (item.type === 'birthday') {
-      html = `
+      var html = `
         <div class="carousel-item birthday-card">
           <div class="birthday-card-image">
             <div class="birthday-icon">🎉</div>
@@ -79,71 +149,88 @@ window.carousel = (() => {
         </div>
       `;
     } else {
-      const imageUrl = item.image_url || '';
-      const sourceName = item.source_name || 'Source';
-      const title = item.title || '';
-      const summary = item.summary || '';
-      const sourceUrl = item.source_url || '';
+      var imageUrl = item.image_url || '';
+      var sourceName = item.source_name || 'Source';
+      var title = item.title || '';
+      var summary = item.summary || '';
+      var sourceUrl = item.source_url || '';
 
-      html = `
-        <div class="carousel-item">
-          <div class="carousel-wrapper">
-            <div class="carousel-image-section">
-              <img
-                src="${imageUrl}"
-                alt=""
-                aria-hidden="true"
-                class="carousel-image-bg"
-              />
-              <img 
-                src="${imageUrl}" 
-                alt="${title}" 
-                class="carousel-image"
-                onerror="handleImageError(this)"
-              />
-              <div class="image-fallback">
-                <div class="fallback-text">${sourceName}</div>
-              </div>
-              <div class="qr-overlay">
-                <div class="qr-frame">
-                  <div id="qr-code"></div>
-                  <div class="qr-label">SCAN &middot; LES MER</div>
+      prepareImage(imageUrl).then(function(result) {
+        var safeUrl = result.url;
+        var skipBg = result.skipBg;
+
+        // Track blob URL for cleanup
+        if (safeUrl !== imageUrl && safeUrl.indexOf('blob:') === 0) {
+          _currentBlobUrl = safeUrl;
+        }
+
+        // If oversized and can't downscale, skip background to save GPU memory
+        var bgHtml = (skipBg || !safeUrl) ? '' :
+          '<img src="' + safeUrl + '" alt="" aria-hidden="true" class="carousel-image-bg" />';
+
+        // If image URL is empty (hard limit exceeded), show fallback immediately
+        var fgImgHtml = safeUrl
+          ? '<img src="' + safeUrl + '" alt="' + title + '" class="carousel-image" onerror="handleImageError(this)" />'
+          : '';
+        var fallbackVisible = safeUrl ? '' : ' visible';
+
+        var newsHtml = `
+          <div class="carousel-item">
+            <div class="carousel-wrapper">
+              <div class="carousel-image-section">
+                ${bgHtml}
+                ${fgImgHtml}
+                <div class="image-fallback${fallbackVisible}">
+                  <div class="fallback-text">${sourceName}</div>
+                </div>
+                <div class="qr-overlay">
+                  <div class="qr-frame">
+                    <div id="qr-code"></div>
+                    <div class="qr-label">SCAN &middot; LES MER</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="carousel-content">
-              <div class="carousel-content-top">
-                <div class="carousel-headline-row">
-                  <h2 class="carousel-headline">${title}</h2>
+              <div class="carousel-content">
+                <div class="carousel-content-top">
+                  <div class="carousel-headline-row">
+                    <h2 class="carousel-headline">${title}</h2>
+                  </div>
+                  <p class="carousel-summary">${summary}</p>
                 </div>
-                <p class="carousel-summary">${summary}</p>
-              </div>
-              <div class="carousel-meta">
-                <span class="source-name">${sourceName}</span>
+                <div class="carousel-meta">
+                  <span class="source-name">${sourceName}</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      `;
+        `;
 
-      setTimeout(() => { generateQRCode(sourceUrl); }, 0);
+        container.innerHTML = newsHtml;
+
+        var img = container.querySelector('.carousel-image');
+        var imgBg = container.querySelector('.carousel-image-bg');
+        if (img && img.src) {
+          var addLoaded = function() {
+            img.classList.add('loaded');
+            if (imgBg) imgBg.classList.add('loaded');
+          };
+          if (img.complete) {
+            addLoaded();
+          } else {
+            img.onload = addLoaded;
+          }
+        }
+
+        setTimeout(function() { generateQRCode(sourceUrl); }, 0);
+      });
+
+      updateProgressBar();
+      updateQueuePreview(index);
+      updateItemCounter();
+      return;
     }
 
     container.innerHTML = html;
-
-    const img = container.querySelector('.carousel-image');
-    const imgBg = container.querySelector('.carousel-image-bg');
-    if (img && img.src) {
-      const addLoaded = () => {
-        img.classList.add('loaded');
-        if (imgBg) imgBg.classList.add('loaded');
-      };
-      if (img.complete) {
-        addLoaded();
-      } else {
-        img.onload = addLoaded;
-      }
-    }
 
     updateProgressBar();
     updateQueuePreview(index);
