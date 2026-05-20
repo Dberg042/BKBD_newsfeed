@@ -207,7 +207,8 @@
                     title: item.title || item.headline || 'Uten tittel',
                     summary: item.summary || item.description || '',
                     source: item.source_name || item.source || item.publisher || 'Ukjent kilde',
-                    image: item.image || item.image_url || '',
+                    image: item.local_image || item.image || item.image_url || '',
+                    remoteImage: item.image_url || '',
                     priority: typeof item.priority === 'number' ? item.priority : 999
                 };
             }
@@ -236,6 +237,18 @@
                     img.alt = item.title;
                     img.src = item.image;
                     img.onerror = function () {
+                        // If local optimized image failed and we have a remote URL, try it
+                        if (this.src.indexOf('optimized-images/') !== -1 && item.remoteImage && item.remoteImage !== this.src) {
+                            this.onerror = function () {
+                                this.remove();
+                                var fallback2 = document.createElement('div');
+                                fallback2.className = 'news-image-fallback';
+                                fallback2.textContent = 'Bilde utilgjengelig';
+                                imageWrap.appendChild(fallback2);
+                            };
+                            this.src = item.remoteImage;
+                            return;
+                        }
                         img.remove();
                         var fallback = document.createElement('div');
                         fallback.className = 'news-image-fallback';

@@ -1,0 +1,96 @@
+name: Update Active Pointer
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: 'Target date in YYYY-MM-DD format. Leave blank to auto-pick the newest dated folder.'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  update-pointer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Determine target date
+        id: resolve
+        run: |
+          TARGET="${{ github.event.inputs.target_date }}"
+
+          if [ -n "$TARGET" ]; then
+            # Validate format
+            if ! echo "$TARGET" | grep -qE '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'; then
+              echo "::error::Invalid date format: '$TARGET'. Use YYYY-MM-DD."
+              exit 1
+            fi
+            # Verify folder + manifest exist
+            if [ ! -f "data/$TARGET/manifest.json" ]; then
+              echo "::error::data/$TARGET/ does not exist or has no manifest.json."
+              exit 1
+            fi
+            echo "date=$TARGET" >> "$GITHUB_OUTPUT"
+          else
+            # Auto-pick newest dated folder
+            NEWEST=$(ls -d data/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9] 2>/dev/null | sort | tail -1 | xargs basename 2>/dev/null)
+            if [ -z "$NEWEST" ]; then
+              echo "::error::No dated folders found under data/. Cannot update pointer."
+              exit 1
+            fi
+            if [ ! -f "data/$NEWEST/manifest.json" ]; then
+              echo "::error::data/$NEWEST/ exists but has no manifest.json."
+              exit 1
+            fi
+            echo "date=$NEWEST" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Update active.json
+        id: update
+        run: |
+          NEW_DATE="${{ steps.resolve.outputs.date }}"
+          OLD_DATE=$(cat data/active.json | python3 -c "import sys,json; print(json.load(sys.stdin).get('date',''))")
+          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          NEWS_COUNT=$(ls data/$NEW_DATE/news-*.json 2>/dev/null | wc -l)
+
+          cat > data/active.json << EOF
+          {
+            "date": "$NEW_DATE",
+            "date_test": "$NEW_DATE",
+            "approved_at": "$TIMESTAMP",
+            "approved_by": "GitHub Actions (${{ github.actor }})"
+          }
+          EOF
+
+          # Remove leading whitespace from heredoc
+          sed -i 's/^          //' data/active.json
+
+          echo "old_date=$OLD_DATE" >> "$GITHUB_OUTPUT"
+          echo "new_date=$NEW_DATE" >> "$GITHUB_OUTPUT"
+          echo "news_count=$NEWS_COUNT" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/active.json
+          git commit -m "chore: point active to ${{ steps.resolve.outputs.date }}"
+          git push
+
+      - name: Write step summary
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" << 'EOF'
+          ## Active Pointer Updated
+          - **Old date:** ${{ steps.update.outputs.old_date }}
+          - **New date:** ${{ steps.update.outputs.new_date }}
+          - **News items in new folder:** ${{ steps.update.outputs.news_count }}
+          - **Triggered by:** ${{ github.actor }}
+          - **Deploy will start automatically.** Check the [Actions tab](${{ github.server_url }}/${{ github.repository }}/actions).
+          EOF

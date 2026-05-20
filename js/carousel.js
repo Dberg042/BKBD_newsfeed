@@ -149,7 +149,8 @@ window.carousel = (() => {
         </div>
       `;
     } else {
-      var imageUrl = item.image_url || '';
+      var imageUrl = item.local_image || item.image_url || '';
+      var remoteUrl = item.image_url || '';
       var sourceName = item.source_name || 'Source';
       var title = item.title || '';
       var summary = item.summary || '';
@@ -170,7 +171,7 @@ window.carousel = (() => {
 
         // If image URL is empty (hard limit exceeded), show fallback immediately
         var fgImgHtml = safeUrl
-          ? '<img src="' + safeUrl + '" alt="' + title + '" class="carousel-image" onerror="handleImageError(this)" />'
+          ? '<img src="' + safeUrl + '" alt="' + title + '" class="carousel-image" data-remote="' + remoteUrl + '" onerror="handleImageError(this)" />'
           : '';
         var fallbackVisible = safeUrl ? '' : ' visible';
 
@@ -238,8 +239,15 @@ window.carousel = (() => {
   }
 
   function handleImageError(img) {
+    var remoteUrl = img.getAttribute('data-remote') || '';
+    // If we were loading a local optimized image and have a remote fallback, try remote
+    if (img.src.indexOf('optimized-images/') !== -1 && remoteUrl && remoteUrl !== img.src) {
+      img.setAttribute('data-remote', ''); // prevent infinite loop
+      img.src = remoteUrl;
+      return;
+    }
     img.style.display = 'none';
-    const fallback = img.parentElement && img.parentElement.querySelector('.image-fallback');
+    var fallback = img.parentElement && img.parentElement.querySelector('.image-fallback');
     if (fallback) fallback.classList.add('visible');
   }
 
