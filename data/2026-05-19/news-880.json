@@ -1,8 +1,7 @@
 {
   "id": "news-880",
   "title": "Nvidias første CPU for AI-agenter leveres til topplabene",
-  "summary": "Nvidia har begynt å levere Vera, sin første spesialbygde CPU, til Anthropic, OpenAI, SpaceXAI og Oracle. Vera har 88 Olympus-kjerner, 1,2 TB/s minnebåndbredde og 50 % raskere ytelse per kjerne. Oracle planlegger hundre tusen enheter fra 2026.",
-  "image_url": "https://blogs.nvidia.com/wp-content/uploads/2026/05/Vera-CPU_Tray_Open-34_Wide_R6C-FNL-5260651.jpg",
+  "summary": "Nvidia har begynt å levere Vera, sin første spesialbygde CPU, til Anthropic, OpenAI, SpaceXAI og Oracle. Vera har 88 Olympus-kjerner, 1,2 TB/s minnebåndbredde og 50 % raskere ytelse per kjerne. Oracle planlegger hundre tusen enheter fra,
   "source_url": "https://blogs.nvidia.com/blog/vera-cpu-delivery/",
   "source_name": "Nvidia",
   "published_at": "2026-05-19T00:00:00Z",
