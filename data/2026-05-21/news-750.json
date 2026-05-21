@@ -1,0 +1,10 @@
+{
+  "id": "news-750",
+  "title": "Supply chain-angrep: TanStack og PyPI-pakker kompromittert",
+  "summary": "«Mini Shai-Hulud» supply chain-angrepet har kompromittert store npm- og PyPI-pakker inkludert TanStack, UiPath og Mistral AI. En selvpropagerende credential worm installerer en destruktiv wiper daemon som sletter utvikleres hjemmekatalog ved tilbakekall av stjålne GitHub-tokens. Umiddelbar audit av avhengigheter anbefales.",
+  "image_url": "",
+  "source_url": "https://www.wiz.io/blog/mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised",
+  "source_name": "TLDR",
+  "published_at": "2026-05-21",
+  "priority": 750
+}

@@ -1,0 +1,10 @@
+{
+  "id": "news-850",
+  "title": "GitHub etterforsker uautorisert tilgang til interne repos",
+  "summary": "GitHub etterforsker uautorisert tilgang til interne repositorier. Ingen bevis for påvirkning av kundedata utenfor GitHub sine interne systemer foreløpig. Hendelsen understreker behovet for strenge tilgangskontroller og supply chain-sikkerhet i moderne utviklingsplattformer.",
+  "image_url": "",
+  "source_url": "https://twitter.com/github/status/2056884788179726685",
+  "source_name": "HN",
+  "published_at": "2026-05-21",
+  "priority": 850
+}

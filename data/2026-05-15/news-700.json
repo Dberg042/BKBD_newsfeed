@@ -1,0 +1,9 @@
+{
+  "id": "news-700",
+  "title": "Grok Build – ny terminalbasert kodeagent fra xAI",
+  "summary": "xAI har lansert Grok Build i tidlig beta for SuperGrok Heavy-abonnenter. Kodeagenten kjører fra terminal og støtter subagenter, MCP-servere, plugins og worktree-integrasjoner. Den har også headless-modus for automatisering og konkurrerer direkte med OpenAI Codex CLI og Claude Code.",
+  "source_url": "https://x.ai/news/grok-build-cli",
+  "source_name": "xAI",
+  "published_at": "2026-05-15T13:00:00Z",
+  "priority": 700
+}

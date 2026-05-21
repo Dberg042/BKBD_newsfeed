@@ -1,0 +1,10 @@
+{
+  "id": "news-590",
+  "title": "18 måter å spare AI-tokenbudsjetter på",
+  "summary": "Christopher Penn gir 18 konkrete teknikker for å redusere AI-tokenforbruk — fra formatvalg (CSV/JSON istedenfor PDF/HTML) til prompt-komprimering, chunking, og riktig modellvalg. Enterprise-selskaper rapporterer sprengte budsjetter allerede midt i måneden. Også relevant: tokens vokser kvadratisk i lange samtaler fordi hele chat-historikken sendes hver gang.",
+  "image_url": "",
+  "source_url": "https://almosttimely.substack.com/p/almost-timely-news-18-ways-to-save",
+  "source_name": "Simplifying AI",
+  "published_at": "2026-05-21",
+  "priority": 590
+}
