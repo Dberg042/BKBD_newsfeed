@@ -1,86 +1,12 @@
-{
-  "date": "2026-05-21",
-  "total_news": 10,
-  "news": [
-    {
-      "id": "news-590",
-      "title": "18 måter å spare AI-tokenbudsjetter på",
-      "source_name": "Simplifying AI",
-      "source_url": "https://almosttimely.substack.com/p/almost-timely-news-18-ways-to-save",
-      "image_url": "",
-      "priority": 590
-    },
-    {
-      "id": "news-750",
-      "title": "Supply chain-angrep: TanStack og PyPI-pakker kompromittert",
-      "source_name": "TLDR",
-      "source_url": "https://www.wiz.io/blog/mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised",
-      "image_url": "",
-      "priority": 750
-    },
-    {
-      "id": "news-760",
-      "title": "Claude Managed Agents integreres med Cloudflare",
-      "source_name": "TLDR",
-      "source_url": "https://blog.cloudflare.com/claude-managed-agents/",
-      "image_url": "",
-      "priority": 760
-    },
-    {
-      "id": "news-770",
-      "title": "OpenAI lanserer «Guaranteed Capacity» for enterprise",
-      "source_name": "TLDR",
-      "source_url": "https://www.cnbc.com/2026/05/19/openai-announces-new-guaranteed-capacity-offering-for-customers-to-secure-compute.html",
-      "image_url": "",
-      "priority": 770
-    },
-    {
-      "id": "news-780",
-      "title": "Antigravity 2.0 — Googles agentplattform lansert",
-      "source_name": "TLDR",
-      "source_url": "https://antigravity.google/product/antigravity-2",
-      "image_url": "",
-      "priority": 780
-    },
-    {
-      "id": "news-790",
-      "title": "SpaceX planlegger å kjøpe Cursor — IPO på trappene",
-      "source_name": "TLDR",
-      "source_url": "https://links.tldrnewsletter.com/VO6WHi",
-      "image_url": "",
-      "priority": 790
-    },
-    {
-      "id": "news-840",
-      "title": "Railway blokkert av Google Cloud — hendelsesrapport",
-      "source_name": "HN",
-      "source_url": "https://blog.railway.com/p/incident-report-may-19-2026-gcp-account-outage",
-      "image_url": "https://res.cloudinary.com/railway/image/upload/v1734405679/incident-hero_ri6qfy.png",
-      "priority": 840
-    },
-    {
-      "id": "news-850",
-      "title": "GitHub etterforsker uautorisert tilgang til interne repos",
-      "source_name": "HN",
-      "source_url": "https://twitter.com/github/status/2056884788179726685",
-      "image_url": "",
-      "priority": 850
-    },
-    {
-      "id": "news-860",
-      "title": "Show HN: Forge — Guardrails for agentiske oppgaver",
-      "source_name": "HN",
-      "source_url": "https://github.com/antoinezambelli/forge",
-      "image_url": "https://opengraph.githubassets.com/0985710165d339c566f85ec1a7b9f7c6692606619583d54a7c82ad66fa04a187/antoinezambelli/forge",
-      "priority": 860
-    },
-    {
-      "id": "news-870",
-      "title": "Google Search får sin største oppdatering noensinne",
-      "source_name": "HN",
-      "source_url": "https://blog.google/products-and-platforms/products/search/search-io-2026/",
-      "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Search_AI_and_search_engine_v46_16x9_1.width-1300.jpg",
-      "priority": 870
-    }
-  ]
-}
+[
+  "news-590.json",
+  "news-750.json",
+  "news-760.json",
+  "news-770.json",
+  "news-780.json",
+  "news-790.json",
+  "news-840.json",
+  "news-850.json",
+  "news-860.json",
+  "news-870.json"
+]
