@@ -1,0 +1,10 @@
+{
+  "id": "news-720",
+  "title": "Show HN: Forge – Guardrails for Agentic Tasks",
+  "summary": "Forge er et guardrail-system for AI-agenter som løfter en 8B-modell fra 53% til 99% nøyaktighet på agentiske oppgaver. Åpen kildekode. Svært relevant for alle som bygger produksjonsklare AI-agenter — viser at små modeller med rett innramming kan utkonkurrere store.",
+  "image_url": "https://opengraph.githubassets.com/0985710165d339c566f85ec1a7b9f7c6692606619583d54a7c82ad66fa04a187/antoinezambelli/forge",
+  "source_url": "https://github.com/antoinezambelli/forge",
+  "source_name": "GitHub",
+  "published_at": "2026-05-21",
+  "priority": 720
+}

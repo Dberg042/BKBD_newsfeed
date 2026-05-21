@@ -1,10 +1,10 @@
 {
   "id": "news-770",
-  "title": "OpenAI lanserer «Guaranteed Capacity» for enterprise",
-  "summary": "OpenAI lanserer «Guaranteed Capacity» — en tjeneste der kunder kan sikre langsiktig tilgang til compute for AI-produkter, agenter og arbeidsflyter. 1–3 års forpliktelser med rabatter. Dette er OpenAIs svar på enterprise-behovet for forutsigbar AI-kapasitet og kostnadskontroll.",
-  "image_url": "",
-  "source_url": "https://www.cnbc.com/2026/05/19/openai-announces-new-guaranteed-capacity-offering-for-customers-to-secure-compute.html",
-  "source_name": "TLDR",
+  "title": "npm/PyPI Supply Chain Attack — TanStack Compromised",
+  "summary": "\"Mini Shai-Hulud\" supply chain-angrep har kompromittert store npm- og PyPI-pakker inkludert TanStack, UiPath og Mistral AI. En selvpropagerende credential worm installerer en destruktiv wiper daemon som sletter utvikleres hjemmekatalog hvis stjålne GitHub-tokens tilbakekalles. Umiddelbar audit av dependencies anbefales.",
+  "image_url": "https://www.wiz.io/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fq33z9u1bbgnv%2Fmini-shai-hulud%2Fhero.png&w=1200&q=75",
+  "source_url": "https://www.wiz.io/blog/mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised",
+  "source_name": "Wiz",
   "published_at": "2026-05-21",
   "priority": 770
 }

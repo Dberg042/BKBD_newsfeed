@@ -1,10 +1,10 @@
 {
   "id": "news-760",
-  "title": "Claude Managed Agents integreres med Cloudflare",
-  "summary": "Cloudflare og Anthropic integrerer Claude Managed Agents med Cloudflares infrastruktur. Utviklere får forbedret sikkerhet med tilpassbare proxyer, private tjenestetilkoblinger, og valg mellom lette V8-isolater eller fulle microVM-er. Inkluderer browser control, epost per agent, og Workers AI/R2-tilkoblinger.",
-  "image_url": "",
-  "source_url": "https://blog.cloudflare.com/claude-managed-agents/",
-  "source_name": "TLDR",
+  "title": "GitHub Investigating Unauthorized Access",
+  "summary": "GitHub etterforsker uautorisert tilgang til interne repos. Ingen bevis for påvirkning av kundedata utenfor GitHub's interne systemer. Sikkerhetshendelsen understreker behovet for strenge access controls og supply chain-sikkerhet.",
+  "image_url": "https://opengraph.githubassets.com/github-security-hero.png",
+  "source_url": "https://x.com/github/status/2056884788179726685",
+  "source_name": "GitHub",
   "published_at": "2026-05-21",
   "priority": 760
 }

@@ -1,10 +1,10 @@
 {
   "id": "news-750",
-  "title": "Supply chain-angrep: TanStack og PyPI-pakker kompromittert",
-  "summary": "«Mini Shai-Hulud» supply chain-angrepet har kompromittert store npm- og PyPI-pakker inkludert TanStack, UiPath og Mistral AI. En selvpropagerende credential worm installerer en destruktiv wiper daemon som sletter utvikleres hjemmekatalog ved tilbakekall av stjålne GitHub-tokens. Umiddelbar audit av avhengigheter anbefales.",
-  "image_url": "",
-  "source_url": "https://www.wiz.io/blog/mini-shai-hulud-strikes-again-tanstack-more-npm-packages-compromised",
-  "source_name": "TLDR",
+  "title": "SpaceX Plans to Acquire Cursor",
+  "summary": "SpaceX forventes å fil for IPO og planlegger å kjøpe Cursor i juli — med $10 mrd breakup fee hvis avtalen ikke går gjennom. Dette ville bli et av de største oppkjøpene i utviklerverktøy-historien. Viser hvor strategisk viktige AI-drevne kodeverktøy har blitt.",
+  "image_url": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fspacex-cursor-hero.png",
+  "source_url": "https://news.bloomberglaw.com/ip-law/spacex-is-said-to-plan-to-buy-startup-cursor-30-days-after-ipo",
+  "source_name": "Bloomberg",
   "published_at": "2026-05-21",
   "priority": 750
 }

@@ -1,0 +1,10 @@
+{
+  "id": "news-730",
+  "title": "Incident Report: Railway Blocked by Google Cloud",
+  "summary": "Railway rapporterer om en alvorlig GCP-kontohendelse der Google Cloud stengte deres konto, noe som forårsaket omfattende driftsstans. Nå løst. En kraftig påminnelse om single-cloud-risk og behovet for multi-cloud-strategi.",
+  "image_url": "https://res.cloudinary.com/railway/image/upload/v1734405679/incident-hero_ri6qfy.png",
+  "source_url": "https://blog.railway.com/p/incident-report-may-19-2026-gcp-account-outage",
+  "source_name": "Railway",
+  "published_at": "2026-05-21",
+  "priority": 730
+}

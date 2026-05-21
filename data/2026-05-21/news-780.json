@@ -1,10 +1,10 @@
 {
   "id": "news-780",
-  "title": "Antigravity 2.0 — Googles agentplattform lansert",
-  "summary": "Google Antigravity 2.0 er en dedikert plattform for å jobbe med flere autonome agenter parallelt. Inkluderer dynamiske subagenter, planlagte oppgaver, artifacts, live voice transcription og utvidet tilpasning. Tilgjengelig for macOS på både Apple Silicon og Intel. En direkte konkurrent til Claude Code og Codex.",
-  "image_url": "",
-  "source_url": "https://antigravity.google/product/antigravity-2",
-  "source_name": "TLDR",
+  "title": "Google Changes Its Search Box",
+  "summary": "Google Search får sin største oppdatering noensinne med Gemini 3.5 Flash integrert i en ny AI-søkeboks. Bakgrunnsagenter kan automatisere oppgaver som booking. Personlig intelligens kobler private data fra Gmail og Kalender for skreddersydde resultater.",
+  "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Search_AI_and_search_engine_v46_16x9_1.width-1300.jpg",
+  "source_url": "https://blog.google/products-and-platforms/products/search/search-io-2026/",
+  "source_name": "Google",
   "published_at": "2026-05-21",
   "priority": 780
 }

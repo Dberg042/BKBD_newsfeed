@@ -1,9 +1,10 @@
 {
   "id": "news-790",
-  "title": "SpaceX planlegger å kjøpe Cursor — IPO på trappene",
-  "summary": "SpaceX forventes å fil for IPO og planlegger å kjøpe Cursor i juli — med 10 milliarder dollar i breakup fee hvis avtalen ikke går gjennom. Dette ville bli et av de største oppkjøpene i utviklerverktøy-historien og viser hvor strategisk viktige AI-drevne kodeverktøy har blitt.",
-  "source_url": "https://links.tldrnewsletter.com/VO6WHi",
-  "source_name": "TLDR",
+  "title": "Claude Managed Agents on Cloudflare",
+  "summary": "Cloudflare og Anthropic integrerer Claude Managed Agents med Cloudflares infrastruktur. Utviklere får forbedret sikkerhet med tilpassbare proxyer, private service-tilkoblinger, og valg mellom lette V8-isolater eller fulle microVM-er for raskere, billigere skalering. Inkluderer browser control, epost per agent, og Workers AI/R2-tilkoblinger.",
+  "image_url": "https://blog.cloudflare.com/content/images/2026/05/claude-managed-agents-social.png",
+  "source_url": "https://blog.cloudflare.com/claude-managed-agents/",
+  "source_name": "Cloudflare",
   "published_at": "2026-05-21",
   "priority": 790
 }

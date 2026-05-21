@@ -1,0 +1,10 @@
+{
+  "id": "news-710",
+  "title": "Gemini 3.5 Flash Released",
+  "summary": "Google lanserte Gemini 3.5 Flash på I/O 2026 — en rask modell optimalisert for agentiske arbeidsflyter, koding og lang-horisont oppgaver. Overgår 3.1 Pro på koding, agent- og multimodale benchmarks. Støtter 1M+ input tokens. Tilgjengelig i Gemini-appen, Search, Antigravity 2.0 og API.",
+  "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-5__keywordstatement__metacard__light.width-1300.png",
+  "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/",
+  "source_name": "Google",
+  "published_at": "2026-05-21",
+  "priority": 710
+}
