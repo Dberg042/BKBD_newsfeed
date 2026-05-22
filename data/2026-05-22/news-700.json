@@ -1,0 +1,10 @@
+{
+  "id": "news-700",
+  "title": "Google Agent Executor: En åpen distribuert kjøretidsmotor for langvarige agentarbeidsflyter",
+  "summary": "Google Agent Executor er en åpen kildekode-standard for pålitelig kjøring av langvarige agentarbeidsflyter. Nøkkelfunksjoner inkluderer varig kjøring, sikker isolasjon, tilkoblingsgjenoppretting og øktkonsistens, med optimalisering for massive agent-deployments via Kubernetes Engine.",
+  "image_url": "https://storage.googleapis.com/gweb-cloudblog-publish/images/01_-_AI__Machine_Learning_H1ZyZG8.max-2600x2600.jpg",
+  "source_url": "https://cloud.google.com/blog/products/ai-machine-learning/agent-executor-googles-distributed-agent-runtime/",
+  "source_name": "Google Cloud",
+  "published_at": "2026-05-22T06:00:00Z",
+  "priority": 700
+}

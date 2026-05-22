@@ -1,0 +1,10 @@
+{
+  "id": "news-720",
+  "title": "Microsoft åpner RAMPART og Clarity for sikkerhetstesting av AI-agenter",
+  "summary": "Microsoft har lansert to åpen kildekode-verktøy for sikkerhetstesting av AI-agenter. RAMPART er et Pytest-rammeverk for adversarial testing mot prompt-injeksjon og dataeksfiltrering, mens Clarity er en strukturert sparringspartner som tester designantagelser før kode skrives.",
+  "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEheh8SBZDUM83ug6w9EopUahk6CPc27TOD5qpmZWVC8hDMYM-8wdgTLXt1KHv_66Q061_5gm3crZszZf-UvSWWZKb6Aax7BxJ5gzPEyfQTp9JPEcNUmLZnEBD3YuFHoqCU4stvSdSVON7hFJq4ZYb4Rdq1vyOK0VUURDjUpCcEP9_SN5xkQckqwaFS_-dQz/s16000/mss.jpg",
+  "source_url": "https://thehackernews.com/2026/05/microsoft-open-sources-rampart-and.html",
+  "source_name": "The Hacker News",
+  "published_at": "2026-05-22T06:00:00Z",
+  "priority": 720
+}

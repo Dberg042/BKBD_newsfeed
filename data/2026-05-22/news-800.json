@@ -1,0 +1,10 @@
+{
+  "id": "news-800",
+  "title": "Grafana-brudd forårsaket av glemt token-rotasjon etter TanStack-angrep",
+  "summary": "Grafana ble kompromittert fordi én GitHub workflow-token ikke ble rotert under oppryddingen etter Shai-Hulud-kampanjen. TeamPCP fikk tilgang til private repositories og stjal kildekode samt forretningskontaktdata. Ingen kundeproduksjonssystemer ble berørt.",
+  "image_url": "https://www.bleepstatic.com/content/hl-images/2026/05/20/GitHub.jpg",
+  "source_url": "https://www.bleepingcomputer.com/news/security/grafana-breach-caused-by-missed-token-rotation-after-tanstack-attack/",
+  "source_name": "BleepingComputer",
+  "published_at": "2026-05-22T06:00:00Z",
+  "priority": 800
+}

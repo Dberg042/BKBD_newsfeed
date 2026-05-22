@@ -1,0 +1,9 @@
+{
+  "id": "news-600",
+  "title": "Python 3.15: Funksjoner som ikke kom på forsiden",
+  "summary": "Python 3.15 introduserer TaskGroup.cancel() for asynkrone tasker, ContextDecorator med async-støtte, og threading.serialize_iterator for trådsikre iteratorer. I tillegg får collections.Counter XOR-operasjon og frozendict (PEP 814) muliggjør immutable JSON-parsing.",
+  "source_url": "https://blog.changs.co.uk/python-315-features-that-didnt-make-the-headlines.html",
+  "source_name": "Chang's Blog",
+  "published_at": "2026-05-22T06:00:00Z",
+  "priority": 600
+}

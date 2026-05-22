@@ -1,0 +1,10 @@
+{
+  "id": "news-750",
+  "title": "Alle tale- og videosamtaler på Discord er nå ende-til-ende-kryptert",
+  "summary": "Discord har fullført migreringen av alle samtaler — en-til-en, gruppe, kanal og Go Live — til DAVE-protokollen for ende-til-ende-kryptering. Dette representerer en flerårig satsing fra Discord, og fra mars 2026 er E2EE obligatorisk for alle tale- og videosamtaler på plattformen.",
+  "image_url": "https://cdn.prod.website-files.com/5f9072399b2640f14d6a2bf4/6a025bd747acaa792ad3ddad_image1.png",
+  "source_url": "https://discord.com/blog/every-voice-and-video-call-on-discord-is-now-end-to-end-encrypted",
+  "source_name": "Discord",
+  "published_at": "2026-05-22T06:00:00Z",
+  "priority": 750
+}

@@ -1,0 +1,10 @@
+{
+  "id": "news-880",
+  "title": "GitHub bekrefter innbrudd i 3 800 interne repos via ondsinnet VS Code-utvidelse",
+  "summary": "GitHub bekrefter at en ondsinnet VS Code-utvidelse installert av en ansatt ga TeamPCP tilgang til 3 800 interne repositories. Kildekode fra Actions, Copilot, CodeQL og Dependabot er lekket. Samme aktør trojaniserte også Microsofts durabletask PyPI-pakke.",
+  "image_url": "https://www.bleepstatic.com/content/hl-images/2026/05/20/GitHub.jpg",
+  "source_url": "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/",
+  "source_name": "BleepingComputer",
+  "published_at": "2026-05-22T06:00:00Z",
+  "priority": 880
+}
