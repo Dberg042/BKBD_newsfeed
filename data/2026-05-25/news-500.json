@@ -1,0 +1,10 @@
+{
+  "id": "news-500",
+  "title": "Microsoft open-sourcer den tidligste DOS-kildekoden som er oppdaget",
+  "summary": "Microsoft har sluppet 86-DOS 1.00-kjernen og PC-DOS 1.00-snapshots — den tidligste DOS-kildekoden som er funnet. Koden ble manuelt transkribert fra Tim Patersons papirutskrifter fordi moderne OCR ikke taklet de tiår gamle dokumentene.",
+  "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/04/86-DOS-artifact-and-IBM-PC-1152x648.jpg",
+  "source_url": "https://arstechnica.com/gadgets/2026/04/microsoft-open-sources-the-earliest-dos-source-code-discovered-to-date",
+  "source_name": "Ars Technica",
+  "published_at": "2026-05-25T06:00:00Z",
+  "priority": 500
+}

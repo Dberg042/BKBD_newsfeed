@@ -1,0 +1,10 @@
+{
+  "id": "news-520",
+  "title": "sp.h — standardbiblioteket C fortjener",
+  "summary": "sp.h er et 15 000-linjers single-header C99-bibliotek uten avhengigheter som programmerer direkte mot syscalls. Det dropper nullterminerte strenger for peker+lengde (`sp_str_t`) og krever eksplisitt minnehåndtering via et tilpasset allokator-grensesnitt. Kompilerer på alle større plattformer.",
+  "image_url": "https://opengraph.githubassets.com/1/tspader/sp",
+  "source_url": "https://spader.zone/sp/",
+  "source_name": "spader.zone",
+  "published_at": "2026-05-25T06:00:00Z",
+  "priority": 520
+}

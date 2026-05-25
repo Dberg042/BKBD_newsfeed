@@ -1,0 +1,10 @@
+{
+  "id": "news-450",
+  "title": "Making Deep Learning Go Brrrr — ytelsesoptimalisering fra første prinsipper",
+  "summary": "Horace He viser at minnebåndbredde er den reelle flaskehalsen i DL — punktoperasjoner oppnår 250-700 ganger færre FLOPS enn matmul fordi tiden går til dataflytting. Operator fusion halverer lese-/skriveoperasjoner og er den viktigste optimaliseringen.",
+  "image_url": "https://opengraph.githubassets.com/1/horace.io/brrr_intro",
+  "source_url": "https://horace.io/brrr_intro.html",
+  "source_name": "Horace He",
+  "published_at": "2026-05-25T06:00:00Z",
+  "priority": 450
+}

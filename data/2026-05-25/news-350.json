@@ -1,0 +1,10 @@
+{
+  "id": "news-350",
+  "title": "På `<dl>` — det undervurderte HTML-elementet for navn-verdi-par",
+  "summary": "Ben Myers utforsker HTMLs `<dl>`-element for navn-verdi-par med `<dt>`/`<dd>`-semantikk og `<div>`-wrapping for styling. Eksemplifiseres med et D&D-statblock og demonstrerer `aria-label`/`aria-labelledby` for skjermlesere. Selv om støtten ikke er universell, gir semantisk HTML klare fordeler.",
+  "image_url": "https://opengraph.githubassets.com/1/benmyers-dev/dl-article",
+  "source_url": "https://benmyers.dev/blog/on-the-dl/",
+  "source_name": "Ben Myers",
+  "published_at": "2026-05-25T06:00:00Z",
+  "priority": 350
+}

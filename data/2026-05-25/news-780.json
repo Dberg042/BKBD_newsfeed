@@ -1,0 +1,10 @@
+{
+  "id": "news-780",
+  "title": "C# får union types i .NET 11 Preview 2",
+  "summary": "C# innfører union types med `union`-nøkkelordet i .NET 11 Preview 2, med diskriminerte unioner og uttømmende pattern matching. Dette erstatter null-sjekker og exceptions for feilmodellering, og gir færre NullReferenceException-krasj i produksjonskode.",
+  "image_url": "https://feqrpbgfdqblsnzijlmk.supabase.co/storage/v1/object/public/media/hero/2026/05/dotnet-csharp-union-types.webp",
+  "source_url": "https://andrewlock.net/exploring-the-dotnet-11-preview-2-dotnet-gets-union-types",
+  "source_name": "Andrew Lock",
+  "published_at": "2026-05-25T06:00:00Z",
+  "priority": 780
+}
