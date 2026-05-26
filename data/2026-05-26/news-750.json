@@ -1,0 +1,10 @@
+{
+  "id": "news-750",
+  "title": "C# 15 får union types i .NET 11 Preview",
+  "summary": ".NET 11 Preview gir C# 15 union types via det nye `union`-nøkkelordet. Kompilatoren håndhever uttømmende switch-sjekker uten fallback. Fungerer på eldre runtimes med .NET 11 SDK. Rider-støtte under utvikling. Løfter C# på linje med F# og Rust i typesystemet.",
+  "image_url": "https://andrewlock.net/content/images/2026/unions.png",
+  "source_url": "https://andrewlock.net/exploring-the-dotnet-11-preview-2-dotnet-gets-union-types/",
+  "source_name": "Andrew Lock",
+  "published_at": "2026-05-26T06:00:00Z",
+  "priority": 750
+}

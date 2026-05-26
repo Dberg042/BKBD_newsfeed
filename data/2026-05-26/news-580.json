@@ -1,0 +1,10 @@
+{
+  "id": "news-580",
+  "title": "ByteDance slapp Lance: Multimodal AI trent på kun 128 GPU-er",
+  "summary": "ByteDance lanserte Lance, en multimodal modell med 3 mrd aktive parametere. Håndterer bilde- og videoforståelse, generering og redigering. Trent på kun 128 A100-GPU-er — viser at avansert multimodal AI ikke krever datasentre i hyperskala. Modellen er åpen kildekode på Hugging Face.",
+  "image_url": "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/bytedance-research/Lance.png",
+  "source_url": "https://huggingface.co/bytedance-research/Lance",
+  "source_name": "ByteDance Research",
+  "published_at": "2026-05-26T06:00:00Z",
+  "priority": 580
+}

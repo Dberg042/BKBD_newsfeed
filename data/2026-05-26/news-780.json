@@ -1,0 +1,10 @@
+{
+  "id": "news-780",
+  "title": "MCP-spesifikasjonen får sin største revisjon noensinne",
+  "summary": "MCP-spesifikasjonens største revisjon noensinne: stateless core på HTTP, OAuth/OpenID Connect-autorisasjon, deprecation-policy og breaking changes. Endelig versjon kommer 28. juli. Dette er infrastrukturen agent-økosystemet bygges på — relevant for alle som bygger AI-agenter.",
+  "image_url": "https://blog.modelcontextprotocol.io/og-image.png",
+  "source_url": "https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/",
+  "source_name": "Model Context Protocol",
+  "published_at": "2026-05-26T06:00:00Z",
+  "priority": 780
+}
