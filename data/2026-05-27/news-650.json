@@ -1,0 +1,10 @@
+{
+  "id": "news-650",
+  "title": "Cloudflare Flagship – feature flag-tjeneste for utviklere",
+  "summary": "Cloudflare lanserer Flagship, en feature flag-tjeneste integrert med Workers via native bindinger og OpenFeature-standarden. Støtter targeting-regler, prosentvise rulleutrulleringer og flagg med boolske, string-, tall- eller JSON-verdier – uten omdeployering. Nyttig for norske DevOps-team.",
+  "image_url": "https://developers.cloudflare.com/dev-products-preview.png",
+  "source_url": "https://developers.cloudflare.com/flagship/",
+  "source_name": "Cloudflare",
+  "published_at": "2026-05-27T06:00:00Z",
+  "priority": 650
+}

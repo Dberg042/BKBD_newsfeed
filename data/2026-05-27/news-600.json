@@ -1,0 +1,10 @@
+{
+  "id": "news-600",
+  "title": "Use boring languages with LLMs",
+  "summary": "Språk med sterke konvensjoner gir best resultat med LLM-agenter. Go trekkes frem som beste språk for AI-tiden – én riktig måte å gjøre ting på, standardbibliotek i verdensklasse og minnehåndtering uten borrow-checker-kompleksitet. Ruby on Rails er et annet godt eksempel på konsistens.",
+  "image_url": "https://jry.io/writing/use-boring-languages-with-llms/python_environment_2x.png",
+  "source_url": "https://jry.io/writing/use-boring-languages-with-llms/",
+  "source_name": "Jacob Young",
+  "published_at": "2026-05-27T06:00:00Z",
+  "priority": 600
+}

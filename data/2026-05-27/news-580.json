@@ -1,0 +1,10 @@
+{
+  "id": "news-580",
+  "title": "Perplexity open-sourcer Bumblebee-sikkerhetsskanner",
+  "summary": "Perplexity har open-sourcet Bumblebee, en read-only sikkerhetsskanner for macOS og Linux. Sjekker utviklermaskiner for risikable pakker, nettleserutvidelser og MCP-konfigurasjoner ved å lese lokale metadata som lockfiles og utvidelsesmanifester. Gir strukturert NDJSON-output til sikkerhetsteam.",
+  "image_url": "https://storage.ghost.io/c/2a/1b/2a1b1782-8506-4d7d-bf53-ad3fb52e2a0f/content/images/size/w1200/2026/05/w2H5dF2klaXurFpO73Td8XiGvPM.webp",
+  "source_url": "https://www.testingcatalog.com/perplexity-open-sources-bumblebee-security-scanner/",
+  "source_name": "TestingCatalog",
+  "published_at": "2026-05-27T06:00:00Z",
+  "priority": 580
+}

@@ -1,0 +1,10 @@
+{
+  "id": "news-850",
+  "title": "«TrapDoor»-angrep: 34 skadelige pakker på npm, PyPI og Crates.io",
+  "summary": "«TrapDoor»-angrepet har forgiftet 34 pakker på tvers av npm, PyPI og Crates.io i over 384 versjoner. Pakkene stjeler kryptolommebøker, SSH-nøkler og cloud-legitimasjon – en alvorlig supply chain-trussel for utviklere på tvers av alle økosystemer. Sjekk avhengighetene deres umiddelbart.",
+  "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgzB0VWNtg7Kq5pB6DCFy7DgIBk1PGq6Q7Z5JKZMvTkBM4T5P8Dju2QoT1v1MLwg2970v1u8ctIQB1UbINb6NUkVHQwIXScd8_DOYFxAYjZ7mgYeldwRFKj4FLe66-UPG6wKGlcftr2rEeaA4Q8VfBZ4mKCv1W_L2dg3xg-ISkO5aS0IsF_fUlwbcrfS1A/w0/trapdoor.webp",
+  "source_url": "https://www.cyberkendra.com/2026/05/malicious-packages-on-npm-pypi-and.html",
+  "source_name": "CyberKendra",
+  "published_at": "2026-05-27T06:00:00Z",
+  "priority": 850
+}

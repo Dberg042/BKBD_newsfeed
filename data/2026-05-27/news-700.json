@@ -1,0 +1,10 @@
+{
+  "id": "news-700",
+  "title": "npm lanserer staged publishing og installasjonskontroller",
+  "summary": "npm ruller ut to sikkerhetsfokuserte CLI-endringer: staged publishing gir kontrollert publisering med flere valideringstrinn, og nye install-time-kontroller blokkerer mistenkelige pakker før installasjon. Viktig oppdatering for norske utviklere som er avhengige av npm-økosystemet i hverdagen.",
+  "image_url": "https://github.blog/wp-content/themes/github-2021-child/dist/img/social-v3-new-releases.jpg",
+  "source_url": "https://github.blog/changelog/2026-05-22-staged-publishing-and-new-install-time-controls-for-npm/",
+  "source_name": "GitHub Blog",
+  "published_at": "2026-05-27T06:00:00Z",
+  "priority": 700
+}
