@@ -1,0 +1,10 @@
+{
+  "id": "news-650",
+  "title": "Langtlevende AI-agenter",
+  "summary": "Addy Osmani utforsker arkitekturen bak AI-agenter som kan kjøre i timevis eller dager. Gjennomgår tre barrierer (endelig kontekst, manglende tilstand og selvverifisering) og løsninger som Ralph Loop, Anthropics Brain/Hands/Session og Cursors Planner/Worker/Judge.",
+  "image_url": "https://substackcdn.com/image/fetch/w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbf57c226-c3eb-4c62-86c4-083008b5f2f1_1376x768.jpeg",
+  "source_url": "https://addyo.substack.com/p/long-running-agents",
+  "source_name": "Addy Osmani (Substack)",
+  "published_at": "2026-05-28T06:00:00Z",
+  "priority": 650
+}

@@ -1,0 +1,10 @@
+{
+  "id": "news-720",
+  "title": "Bruk kjedelige språk med LLM-er",
+  "summary": "LLM-agenter presterer best på språk med lav variasjon i treningskorpuset — Go, Rust og Rails overgår fragmenterte økosystemer som JavaScript og Python. Forfatteren argumenterer for at konsistente rammeverk med én riktig måte å gjøre ting på gir bedre agentisk kode enn fleksible alternativer.",
+  "image_url": "https://jry.io/writing/use-boring-languages-with-llms/python_environment_2x.png",
+  "source_url": "https://jry.io/writing/use-boring-languages-with-llms/",
+  "source_name": "Jacob Young (jry.io)",
+  "published_at": "2026-05-28T06:00:00Z",
+  "priority": 720
+}
