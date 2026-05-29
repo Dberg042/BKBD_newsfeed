@@ -1,0 +1,10 @@
+{
+  "id": "news-750",
+  "title": "TrapDoor — omfattende supply chain-angrep på tvers av npm, PyPI og Crates.io",
+  "summary": "Socket avdekker TrapDoor, en angrepskampanje med 34+ ondsinnede pakker på tvers av npm, PyPI og Crates.io. Malwaren stjeler AWS-credentials, GitHub-tokens, SSH-nøkler og krypto-lommebøker. Angriperne manipulerer .cursorrules- og CLAUDE.md-filer for å lure AI-verktøy til eksfiltrering.",
+  "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOb58wXNPgRDazHcSLTObawPnMVsCDUEAoFclGVn3CC8qe6Pr_0-Gce-SxCO7FJ5HzU23WE_soU5iTc0zvLL0zzbXPcO8MqVgHIIAKXJo4ExcujDPV9yiIdN1X1jV63ACBN66_ktTeQ0FVmYsCTJC3tpyxpUBrvxLh_xqF-mKOZy8uaqz3QKyf6XpJHC4z/s1600/npm-python-rust.jpg",
+  "source_url": "https://thehackernews.com/2026/05/trapdoor-supply-chain-attack-spreads.html",
+  "source_name": "The Hacker News",
+  "published_at": "2026-05-29T06:00:00Z",
+  "priority": 750
+}

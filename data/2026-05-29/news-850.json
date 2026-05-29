@@ -1,0 +1,10 @@
+{
+  "id": "news-850",
+  "title": "Claude Opus 4.8 — ny ærlighet og agent-workflows",
+  "summary": "Anthropic lanserer Claude Opus 4.8 med forbedringer i ærlighet og selvkorrigering — modellen er fire ganger mindre tilbøyelig til å overse feil i egen kode. Dynamic Workflows lar Claude Code kjøre hundrevis av parallelle underagenter. Effort Control og billigere Fast Mode følger med.",
+  "image_url": "https://cdn.sanity.io/images/4zrzovbb/website/0eaa0ed2dce9810169112e1c77de2585fcf1f5c2-2880x1620.jpg",
+  "source_url": "https://www.anthropic.com/news/claude-opus-4-8",
+  "source_name": "Anthropic",
+  "published_at": "2026-05-29T06:00:00Z",
+  "priority": 850
+}

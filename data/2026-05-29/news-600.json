@@ -1,0 +1,10 @@
+{
+  "id": "news-600",
+  "title": "Rust 1.96.0 ute — nye Range-typer, assert_matches! og WebAssembly-endring",
+  "summary": "Rust 1.96.0 stabiliserer nye Range-typer i core::range som implementerer IntoIterator i stedet for Iterator, noe som muliggjør Copy. assert_matches! gir bedre feilmeldinger ved pattern matching. WebAssembly-targets får en breaking change: --allow-undefined fjernes som standard.",
+  "image_url": "https://rust-lang.org/static/images/rust-social-wide.jpg",
+  "source_url": "https://blog.rust-lang.org/2026/05/28/Rust-1.96.0/",
+  "source_name": "Rust Blog",
+  "published_at": "2026-05-29T06:00:00Z",
+  "priority": 600
+}
