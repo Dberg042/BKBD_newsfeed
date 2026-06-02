@@ -1,0 +1,10 @@
+{
+  "id": "news-450",
+  "title": "Bygg AI-agenter, ikke pipeliner — nytt rammeverk for AI-integrasjon",
+  "summary": "Sean Goedecke argumenterer for agentbasert AI-integrasjon fremfor faste pipelines. Agenter løser komplekse oppgaver ved dynamisk kontekstinnhenting og resonneringsløkker. Artikkelen gir praktiske råd for utviklere som vil bygge autonome AI-agenter i produksjon.",
+  "image_url": "https://www.seangoedecke.com/og-image.jpg",
+  "source_name": "Sean Goedecke",
+  "source_url": "https://www.seangoedecke.com/build-agents-not-pipelines/",
+  "published_at": "2026-06-02T06:00:00Z",
+  "priority": 450
+}

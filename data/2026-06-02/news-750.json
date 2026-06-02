@@ -1,0 +1,10 @@
+{
+  "id": "news-750",
+  "title": "FortiClient EMS-sårbarhet aktivt utnyttet — infostealer spres via VPN-regler",
+  "summary": "Angripere utnytter CVE-2026-35616 i FortiClient EMS for å spre EKZ infostealer via manipulerte VPN-regler. Skadevare stjeler passord, kredittkort og informasjonskapsler fra Chromium og Firefox. Oppdatering til siste sikkerhetsoppdatering er kritisk.",
+  "image_url": "https://www.bleepstatic.com/content/hl-images/2025/12/19/Fortinet.jpg",
+  "source_url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-forticlient-ems-flaw-to-push-infostealer-malware/",
+  "source_name": "BleepingComputer",
+  "published_at": "2026-06-02T06:00:00Z",
+  "priority": 750
+}

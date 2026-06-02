@@ -1,0 +1,9 @@
+{
+  "id": "news-550",
+  "title": "MiniMax M3 — åpen vektmodell med frontend-nivå koding og 1M kontekst",
+  "summary": "MiniMax lanserer M3, en åpen vektmodell med påstått frontend-nivå kodeytelse og agentiske evner. Modellen støtter bilde/video, kan styre en datamaskin, og har 1M tokens kontekst via sparse attention-arkitektur. Vekter ventes om cirka ti dager.",
+  "source_url": "https://threadreaderapp.com/thread/2061266317815296322.html",
+  "source_name": "MiniMax",
+  "published_at": "2026-06-02T06:00:00Z",
+  "priority": 550
+}

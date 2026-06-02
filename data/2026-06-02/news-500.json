@@ -1,0 +1,10 @@
+{
+  "id": "news-500",
+  "title": "Botnett på 17 millioner enheter tatt ned av nederlandsk politi",
+  "summary": "Nederlandsk politi tok ned et botnett på 17 millioner enheter styrt via 200 servere. Nettverket var knyttet til Russland-baserte ASOCKS. Skadelige apper rekrutterte telefoner og rutere til et proxy-nettverk. Et av de største botnettene demontert noensinne.",
+  "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2020/04/botnet6.jpg",
+  "source_url": "https://arstechnica.com/security/2026/05/botnet-of-more-than-17-million-devices-dismantled/",
+  "source_name": "Ars Technica",
+  "published_at": "2026-06-02T06:00:00Z",
+  "priority": 500
+}

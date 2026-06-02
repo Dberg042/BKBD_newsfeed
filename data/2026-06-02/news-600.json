@@ -1,0 +1,10 @@
+{
+  "id": "news-600",
+  "title": "LLMReaper — Chrome-utvidelse stjeler AI-samtaler i sanntid",
+  "summary": "LLMReaper er en Chrome-utvidelse som i sanntid skraper ChatGPT-, Claude- og Gemini-samtaler via DOM-en. Data sendes til en backend som søker etter API-nøkler og credentials. Utvidelsen krever kun standard leserettigheter. Bruk dedikerte nettleserprofiler for AI-verktøy.",
+  "image_url": "https://thewhiteh4t.github.io/_assets/cardImage.BRVDVEdz.jpg",
+  "source_url": "https://thewhiteh4t.github.io/blog/ai-chat-llmreaper/",
+  "source_name": "thewhiteh4t",
+  "published_at": "2026-06-02T06:00:00Z",
+  "priority": 600
+}
