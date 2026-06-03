@@ -1,0 +1,10 @@
+{
+  "id": "news-780",
+  "title": "MAI-Code-1-Flash — Microsofts nye AI-kodemodell",
+  "summary": "Microsoft lanserer MAI-Code-1-Flash, en ny kodemodell bygget spesifikt for GitHub Copilot. Modellen slår Claude Haiku 4.5 på SWE-Bench Pro (51,2 % mot 35,2 %) og bruker opptil 60 % færre tokens på komplekse oppgaver. Rulles ut til VS Code-brukere via model picker.",
+  "image_url": "https://microsoft.ai/wp-content/themes/wp-base-theme/images/social.jpg",
+  "source_url": "https://microsoft.ai/news/introducingmai-code-1-flash/",
+  "source_name": "Microsoft AI",
+  "published_at": "2026-06-03T06:00:00Z",
+  "priority": 780
+}

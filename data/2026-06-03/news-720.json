@@ -1,0 +1,10 @@
+{
+  "id": "news-720",
+  "title": "NPM-pakke stjal OpenAI-tokens — 27 000 nedlastninger påvirket",
+  "summary": "NPM-pakken codexui-android (27 000 ukentlige nedlastninger) viste seg å stjele OpenAI refresh_tokens via skjult JavaScript. Stjålne nøkler ble sendt til en forkledd Sentry-endpoint. Pakken er fortsatt tilgjengelig. Alle som har installert den bør rotere OpenAI-tokens umiddelbart.",
+  "image_url": "https://hackread.com/wp-content/uploads/2026/05/codex-ui-tool-secretly-stole-openai-refresh-tokens.png",
+  "source_url": "https://hackread.com/codex-ui-tool-secretly-stole-openai-refresh-tokens/",
+  "source_name": "HackRead",
+  "published_at": "2026-06-03T06:00:00Z",
+  "priority": 720
+}

@@ -1,0 +1,10 @@
+{
+  "id": "news-690",
+  "title": "Supply chain-angrep mot Claude Code via GitHub Actions",
+  "summary": "Sikkerhetsforsker RyotaK fant en feilkonfigurasjon i Claude Codes GitHub Actions-workflow som tillot repo-takeover via issues. Angriperen kunne stjele OIDC-tokens og få skrivetilgang. Anthropic har patchet sårbarheten. Teams bør auditere GitHub App-permisjoner.",
+  "image_url": "https://flatt.tech/research/poisoning-claude-code-one-github-issue-to-break-the-supply-chain/thumbnail.png",
+  "source_url": "https://flatt.tech/research/posts/poisoning-claude-code-one-github-issue-to-break-the-supply-chain/",
+  "source_name": "Flatt Security",
+  "published_at": "2026-06-03T06:00:00Z",
+  "priority": 690
+}

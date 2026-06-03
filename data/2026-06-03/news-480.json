@@ -1,0 +1,10 @@
+{
+  "id": "news-480",
+  "title": "Gleam 1.17.0 — enkeltfiler for Erlang VM og nye utviklerverktøy",
+  "summary": "Gleam 1.17.0 er ute med gleam export escript som lager kjørbare enkeltfiler for Erlang VM — samme konsept som JavaScript-bundling. Nytt er også highlight-referanser i språkserveren, todo-støtte i konstanter, og forbedret autofullfør med importforslag ved ukjente variabler.",
+  "image_url": "https://gleam.run/images/preview/v1.17.png",
+  "source_url": "https://gleam.run/news/single-file-gleam-beam-programs-with-escript/",
+  "source_name": "Gleam",
+  "published_at": "2026-06-03T06:00:00Z",
+  "priority": 480
+}
