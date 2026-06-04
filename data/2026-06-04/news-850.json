@@ -1,0 +1,10 @@
+{
+  "id": "news-850",
+  "title": "Red Hat npm-pakker kompromittert i angrep mot utviklere",
+  "summary": "Over 30 npm-pakker under Red Hats @redhat-cloud-services-navn ble kompromittert i et supply chain-angrep. Malwaren Miasma, en Shai-Hulud-variant, stjeler GitHub Actions-hemmeligheter, AWS/GCP/Azure-legitimasjon, SSH-nøkler og mer. 309 GitHub-repositorier er så langt kompromittert.",
+  "image_url": "https://www.bleepstatic.com/content/hl-images/2025/10/02/redhat-header-vign.jpg",
+  "source_url": "https://www.bleepingcomputer.com/news/security/red-hat-npm-packages-compromised-to-steal-developer-credentials/",
+  "source_name": "BleepingComputer",
+  "published_at": "2026-06-04T06:00:00Z",
+  "priority": 850
+}

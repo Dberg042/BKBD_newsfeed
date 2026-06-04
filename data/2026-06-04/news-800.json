@@ -1,0 +1,10 @@
+{
+  "id": "news-800",
+  "title": "Google lanserer Gemma 4 12B — encoder-fri multimodal modell",
+  "summary": "Google DeepMinds Gemma 4 12B er en encoder-fri multimodal modell som kjører lokalt med 16GB VRAM. Den håndterer tekst, bilde og lyd direkte uten egne enkodere, noe som reduserer minnebruk og latens. Modellen er lisensiert under Apache 2.0 og støttes av Ollama, LM Studio og vLLM.",
+  "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Social_Image_G4_12B.width-1300.png",
+  "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/",
+  "source_name": "Google Blog",
+  "published_at": "2026-06-04T06:00:00Z",
+  "priority": 800
+}

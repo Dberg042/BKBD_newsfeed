@@ -1,0 +1,10 @@
+{
+  "id": "news-600",
+  "title": "GitHub Copilot App — agent-native skrivebordsopplevelse",
+  "summary": "GitHub lanserer Copilot-appen som et kontrollsenter for agentisk utvikling. Den inkluderer My Work-visning, separate git-worktrees for parallelle agentøkter, Agent Merge for automatisert PR-gjennomgang og Copilot Code Review. Lokale og skybaserte sandkasser gir isolerte kjøremiljøer for AI-agenter.",
+  "image_url": "https://github.blog/wp-content/uploads/2026/06/MSFTBuild_Blog_Header_01.jpg",
+  "source_url": "https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/",
+  "source_name": "GitHub Blog",
+  "published_at": "2026-06-04T06:00:00Z",
+  "priority": 600
+}
