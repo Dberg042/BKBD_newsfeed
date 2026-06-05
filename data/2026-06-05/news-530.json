@@ -1,0 +1,10 @@
+{
+  "id": "news-530",
+  "title": "WSL 2 får raskere Windows-filsystemtilgang",
+  "summary": "En endring i WSL 2 gir hver virtio-enhet sin egen DMA-pool, noe som fjerner flaskehalser på virtiofs-stien. Tidligere delte alle enheter én global SWIOTLB-buffer. Endringen er spesielt nyttig for utviklere som bygger på tvers av OS-grensen, for eksempel npm install eller cargo build fra /mnt/c.",
+  "image_url": "https://www.boxofcables.dev/content/images/size/w1200/2026/05/Screenshot-2026-05-31-174734.png",
+  "source_url": "https://www.boxofcables.dev/wsl2-per-device-swiotlb-pools-for-virtiofs-and-virtioproxy/",
+  "source_name": "Box of Cables",
+  "published_at": "2026-06-05T06:00:00Z",
+  "priority": 530
+}

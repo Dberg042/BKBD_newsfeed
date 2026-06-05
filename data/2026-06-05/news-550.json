@@ -1,0 +1,9 @@
+{
+  "id": "news-550",
+  "title": "Microsoft Coreutils bringer Linux-kommandoer til Windows",
+  "summary": "Microsoft annonserte Coreutils for Windows på Build 2026, basert på det Rust-baserte uutils-prosjektet. Installeres via winget og inneholder kommandoer som cat, cp, find, grep, ls og rm i en enkelt binær med NTFS-hardlinks. chmod, chown og whoami er utelatt grunnet manglende POSIX-støtte på Windows.",
+  "source_url": "https://www.bleepingcomputer.com/news/microsoft/microsofts-coreutils-project-brings-linux-commands-to-windows/",
+  "source_name": "BleepingComputer",
+  "published_at": "2026-06-05T06:00:00Z",
+  "priority": 550
+}

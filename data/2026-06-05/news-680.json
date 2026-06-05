@@ -1,0 +1,10 @@
+{
+  "id": "news-680",
+  "title": "GitHub.dev-sårbarhet stjeler OAuth-tokens med ett klikk",
+  "summary": "Sikkerhetsforsker Ammar Askar har publisert PoC for et angrep på GitHub.dev som stjeler OAuth-tokens via ondsinnede Jupyter-notebooks. Angrepet utnytter VS Code-webviews til å simulere tastetrykk og installere en angriperstyrt utvidelse. Microsoft har bekreftet feilen og jobber med en løsning.",
+  "image_url": "https://media.thenextweb.com/2026/06/github-dev-vscode-oauth-token-theft.avif",
+  "source_url": "https://thenextweb.com/news/github-dev-vscode-oauth-token-theft",
+  "source_name": "TNW",
+  "published_at": "2026-06-05T06:00:00Z",
+  "priority": 680
+}

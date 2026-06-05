@@ -1,0 +1,10 @@
+{
+  "id": "news-750",
+  "title": "Når AI bygger seg selv — fremgang mot rekursiv selvforbedring",
+  "summary": "Anthropic viser at over 80 % av kode i deres kodebase nå skrives av Claude. Oppgaver AI kan fullføre selvstendig dobler seg hver fjerde måned, og utviklere merger 8x mer kode per dag sammenlignet med 2024. Claude-kvalitet forventes å bli bedre enn menneskelig kode innen året.",
+  "image_url": "https://cdn.sanity.io/images/4zrzovbb/website/6d4a0d28992ade92d6fa63646fd9c9d318245c6c-2400x1260.jpg",
+  "source_url": "https://www.anthropic.com/institute/recursive-self-improvement",
+  "source_name": "Anthropic",
+  "published_at": "2026-06-05T06:00:00Z",
+  "priority": 750
+}

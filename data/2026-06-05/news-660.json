@@ -1,0 +1,10 @@
+{
+  "id": "news-660",
+  "title": "Anthropics åpne rammeverk for AI-drevet sårbarhetsdeteksjon",
+  "summary": "Anthropic har lansert et åpent referanseimplementasjon for autonom sårbarhetsdeteksjon og reparasjon med Claude. Rammeverket inneholder ferdigheter for trusselmodellering, statisk skanning, triagering og patching i en pipeline på 7 trinn som kjører i gVisor-sandkasse.",
+  "image_url": "https://opengraph.githubassets.com/22742a62deadf1ea330ef6f6e40db52ab841230724fa8dd2e1afff45e48013d0/anthropics/defending-code-reference-harness",
+  "source_url": "https://github.com/anthropics/defending-code-reference-harness",
+  "source_name": "GitHub (Anthropic)",
+  "published_at": "2026-06-05T06:00:00Z",
+  "priority": 660
+}
