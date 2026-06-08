@@ -6,5 +6,6 @@
   "source_url": "https://letsencrypt.org/2026/06/03/pq-certs",
   "source_name": "Let's Encrypt",
   "published_at": "2026-06-08T06:00:00Z",
-  "priority": 700
+  "priority": 700,
+  "local_image": "optimized-images/news-700_260608.jpg"
 }
