@@ -1,0 +1,10 @@
+{
+  "id": "news-700",
+  "title": "Let's Encrypts post-kvantum-fremtid med Merkle Tree-sertifikater",
+  "summary": "Let's Encrypt forplikter seg til Merkle Tree Certificates (MTCs) for post-kvantum autentisering i Web PKI. MTCs erstatter store ML-DSA-signaturer med én signatur per batch. Staging-miljø kommer i slutten av 2026, produksjon i 2027. Chrome, Cloudflare og IETF PLANTS støtter dette.",
+  "image_url": "https://letsencrypt.org/images/LetsEncrypt-SocialShare.png",
+  "source_url": "https://letsencrypt.org/2026/06/03/pq-certs",
+  "source_name": "Let's Encrypt",
+  "published_at": "2026-06-08T06:00:00Z",
+  "priority": 700
+}

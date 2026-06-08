@@ -1,0 +1,10 @@
+{
+  "id": "news-600",
+  "title": "Elixir v1.20 lansert: Nå et gradvis typet språk",
+  "summary": "Elixir 1.20 introduserer gradvis typing med set-teoretiske typer — uten at utviklere trenger å skrive typeannotasjoner. Systemet rapporterer død kode og verifiserte feil med ekstremt lav falsk positiv-rate. Består 12/13 kategorier i ifT-benchmark. Raskere kompilering på flerkjernemaskiner.",
+  "image_url": "https://elixir-lang.org/images/social/elixir-og-card.jpg",
+  "source_url": "https://elixir-lang.org/blog/2026/06/03/elixir-v1-20-0-released/",
+  "source_name": "Elixir-lang.org",
+  "published_at": "2026-06-08T06:00:00Z",
+  "priority": 600
+}

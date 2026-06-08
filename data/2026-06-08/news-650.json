@@ -1,0 +1,10 @@
+{
+  "id": "news-650",
+  "title": "Pwnd Blaster: Hacking PC-en via høyttaleren uten å berøre den",
+  "summary": "Sikkerhetsforsker har reverse-engine'et Creative Sound Blaster Katana V2X og funnet sårbarheter som lar angripere innen 15 meters rekkevidde omprogrammere høyttaleren via Bluetooth — uten å fysisk berøre den. Ingen signatursjekk på firmware-oppdateringer. Kan brukes som spionverktøy og Bad USB.",
+  "image_url": "https://blog.nns.ee/img/2026-04-08-katana-badusb/og-image.png",
+  "source_url": "https://blog.nns.ee/2026/06/03/katana-badusb/",
+  "source_name": "nns.ee",
+  "published_at": "2026-06-08T06:00:00Z",
+  "priority": 650
+}
