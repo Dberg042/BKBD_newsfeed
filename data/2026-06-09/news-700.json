@@ -1,0 +1,10 @@
+{
+  "id": "news-700",
+  "title": "Meta bekrefter at 20.000 Instagram-kontoer ble hacket via AI-chatbot",
+  "summary": "Meta bekrefter at 20.225 Instagram-kontoer ble kapret via en feil i AI-assistert kontogjenoppretting. Chatboten sendte tilbakestillingslenker til angriperens e-post uten verifisering. Angrepet pågikk april–juni og rammet kontoer uten 2FA. Chatboten er deaktivert.",
+  "image_url": "https://www.bleepstatic.com/content/hl-images/2026/06/08/Meta.jpg",
+  "source_url": "https://www.bleepingcomputer.com/news/security/meta-ai-support-data-breach-affects-20-000-instagram-accounts/",
+  "source_name": "BleepingComputer",
+  "published_at": "2026-06-09T06:00:00Z",
+  "priority": 700
+}

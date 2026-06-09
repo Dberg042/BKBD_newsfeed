@@ -1,0 +1,10 @@
+{
+  "id": "news-500",
+  "title": "PostgreSQL 19 får endelig query hints — etter to tiår med motstand",
+  "summary": "PostgreSQL 19 får endelig query hints gjennom pg_plan_advice og pg_stash_advice, etter to tiår med motstand. Hint settes via GUC eller eksternt nøkkellager uten SQL-endring. Planneren genererer selv forslag, og dårlige hint gir tilbakefall til beste plan.",
+  "image_url": "https://a.storyblok.com/f/187930/1200x630/57ea58e411/og-default-1200x630.jpg",
+  "source_url": "https://www.pgedge.com/blog/looking-forward-to-postgres-19-query-hints",
+  "source_name": "pgEdge",
+  "published_at": "2026-06-09T06:00:00Z",
+  "priority": 500
+}
