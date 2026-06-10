@@ -1,0 +1,10 @@
+{
+  "id": "news-850",
+  "title": "Microsofts open source-verktøy hacket for å stjele passord fra AI-utviklere",
+  "summary": "Microsoft tok ned minst 70 GitHub-prosjekter etter at angripere injiserte passordstjelende malware i verktøy for Azure, Claude Code, Gemini CLI og VS Code. Supply chain-angrepet målretter AI-utviklere og er en rekompromittering av Durable Task-prosjektet.",
+  "source_url": "https://techcrunch.com/2026/06/08/microsofts-open-source-tools-were-hacked-to-steal-passwords-of-ai-developers/",
+  "source_name": "TechCrunch",
+  "published_at": "2026-06-10T06:00:00Z",
+  "priority": 850,
+  "image_url": "https://techcrunch.com/wp-content/uploads/2022/07/Microsoft-e1658216731934.jpg?resize=1200,675"
+}

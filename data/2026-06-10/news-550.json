@@ -1,0 +1,10 @@
+{
+  "id": "news-550",
+  "title": "OpenCV 5 lansert – det største steget på flere år for datasyn",
+  "summary": "OpenCV 5 er lansert og beskrives som det største spranget i bibliotekets historie. Versjonen har nye API-er, bedre ytelse og utvidede muligheter for maskinlæringsintegrasjon. Oppdateringen er viktig for utviklere som jobber med datasyn og bildebehandling i produksjonsmiljøer.",
+  "source_url": "https://opencv.org/opencv-5/",
+  "source_name": "OpenCV",
+  "published_at": "2026-06-10T06:00:00Z",
+  "priority": 550,
+  "image_url": "https://opencv.org/wp-content/uploads/2026/06/opencv-5.png"
+}

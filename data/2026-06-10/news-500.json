@@ -1,0 +1,10 @@
+{
+  "id": "news-500",
+  "title": "MXC – Microsofts nye sandbox for sikker kjøring av agentkode",
+  "summary": "Microsoft annonserte MXC på Build 2026, en plattformagnostisk sandbox for upålitelig agentkode. Sandboxen kjører på OS-nivå med isolasjon via AppContainer, WSL microVM, NanVix, bubblewrap eller macOS Seatbelt. Løsningen erstatter applikasjonsnivå-sandboxer som i Codex og Claude Code.",
+  "source_url": "https://www.originhq.com/research/mxc-execution-containers-internals",
+  "source_name": "Origin",
+  "published_at": "2026-06-10T06:00:00Z",
+  "priority": 500,
+  "image_url": "https://www.originhq.com/research/mxc-execution-containers-internals/opengraph-image"
+}

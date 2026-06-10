@@ -1,0 +1,10 @@
+{
+  "id": "news-700",
+  "title": "Kritisk sårbarhet i Cursor: sandbox-escape via prompt injection",
+  "summary": "Forskere avdekket NomShub, en kritisk sårbarhet i Cursor AI-editor som gir angripere shell-tilgang kun ved å åpne et ondsinnet repository. Angrepet kombinerer prompt-injeksjon, sandbox-escape via shell builtins og kapring av Cursors tunnel-funksjon. Patchet i Cursor 3.0 i april.",
+  "source_url": "https://www.straiker.ai/blog/nomshub-cursor-remote-tunneling-sandbox-breakout",
+  "source_name": "Straiker Research",
+  "published_at": "2026-06-10T06:00:00Z",
+  "priority": 700,
+  "image_url": "https://cdn.prod.website-files.com/67e35850d44d18d58bb24073/69cf2d76c5eeb6033d07a3af_nomshub-opengraph.jpg"
+}
