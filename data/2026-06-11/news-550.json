@@ -1,0 +1,10 @@
+{
+  "id": "news-550",
+  "title": "Grit: Git omskrevet i Rust med AI-agenter",
+  "summary": "Scott Chacon og teamet bak GitButler har brukt AI-agenter til å skrive om Git i ren Rust. Resultatet er Grit — et bibliotekbasert, minnesikkert alternativ som består 99,3% av Gits testsuite. Kostnad: ~$10-15K i API-tokens. Ikke klar for produksjon, men et teknisk gjennombrudd.",
+  "image_url": "https://gitbutler-docs-images-public.s3.us-east-1.amazonaws.com/grit.webp",
+  "source_url": "https://blog.gitbutler.com/true-grit",
+  "source_name": "GitButler Blog",
+  "published_at": "2026-06-11T06:00:00Z",
+  "priority": 550
+}
