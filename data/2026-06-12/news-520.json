@@ -1,0 +1,10 @@
+{
+  "id": "news-520",
+  "title": "Anthropic kartlegger AI-drevne cybertrusler i MITRE ATT&CK",
+  "summary": "Anthropic analyserte 13 873 teknikkobservasjoner fra 832 stengte kontoer og fant at middels- til høyrisikoaktører økte fra 33% til 56% på ett år. Høyrisikoaktører bruker nå AI-verktøy som Claude Code til autonom lateral bevegelse og credential harvesting.",
+  "image_url": "https://www.anthropic.com/api/opengraph-illustration?name=Object-LaptopSecure&backgroundColor=cactus",
+  "source_url": "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack",
+  "source_name": "Anthropic",
+  "published_at": "2026-06-12T06:00:00Z",
+  "priority": 520
+}

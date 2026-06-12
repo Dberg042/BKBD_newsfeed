@@ -1,0 +1,10 @@
+{
+  "id": "news-820",
+  "title": "Claude Fable 5 og Mythos 5 — Anthropics nye flaggskipmodeller",
+  "summary": "Anthropic lanserer Fable 5 (sikkerhetsjustert) og Mythos 5 (full kapasitet). Modellene setter nye standarder på koding, visjon, legemiddeldesign og vitenskapelige hypoteser. Stripe rapporterer at måneder med migreringsarbeid ble komprimert til dager på en 50M-linjer kodebase.",
+  "image_url": "https://cdn.sanity.io/images/4zrzovbb/website/b7055119423427c40a0e4d84054aed17682b50a2-2880x1620.png",
+  "source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+  "source_name": "Anthropic",
+  "published_at": "2026-06-12T06:00:00Z",
+  "priority": 820
+}

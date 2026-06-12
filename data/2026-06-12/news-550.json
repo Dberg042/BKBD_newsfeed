@@ -1,0 +1,10 @@
+{
+  "id": "news-550",
+  "title": "Langflow-sårbarhet CVE-2026-5027 utnyttes aktivt i angrep",
+  "summary": "Angripere utnytter en path traversal-sårbarhet i Langflow (CVE-2026-5027) for å skrive vilkårlige filer på eksponerte servere. Sårbarheten krever ingen autentisering grunnet standard auto-pålogging. Omtrent 7000 Langflow-instanser er offentlig eksponert. Oppgrader til versjon 1.10.0 umiddelbart.",
+  "image_url": "https://www.bleepstatic.com/content/hl-images/2026/06/10/Langflow.jpg",
+  "source_url": "https://www.bleepingcomputer.com/news/security/path-traversal-flaw-in-ai-dev-platform-langflow-exploited-in-attacks/",
+  "source_name": "BleepingComputer",
+  "published_at": "2026-06-12T06:00:00Z",
+  "priority": 550
+}

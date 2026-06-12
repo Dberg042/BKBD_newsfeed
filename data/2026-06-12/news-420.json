@@ -1,0 +1,10 @@
+{
+  "id": "news-420",
+  "title": "Grit: Git gjenoppbygget i Rust — 99,3% av testene bestått",
+  "summary": "GitButler har brukt AI-agenter til å portere hele Git til minnesikkert, bibliotekbasert Rust. Prosjektet på 360 000+ LOC består 41 715 av 42 001 tester. Utviklingen kostet estimert $10–15k i API-tokener og tok noen uker. Grit er MIT-lisensiert og åpner for WASM-basert Git i edge-funksjoner.",
+  "image_url": "https://gitbutler-docs-images-public.s3.us-east-1.amazonaws.com/grit.webp",
+  "source_url": "https://blog.gitbutler.com/true-grit",
+  "source_name": "GitButler Blog",
+  "published_at": "2026-06-12T06:00:00Z",
+  "priority": 420
+}

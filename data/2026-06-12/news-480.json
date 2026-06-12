@@ -1,0 +1,10 @@
+{
+  "id": "news-480",
+  "title": "OpenCV 5 lansert — ny DNN-motor med over 80% ONNX-dekning",
+  "summary": "OpenCV 5 er den største oppgraderingen på over 20 år, med en ny DNN-motor bygget rundt en typet operasjonsgraf. ONNX-dekning øker fra 22% til over 80%. Motoren kjører LLMer og VLMer som Qwen 2.5 og Gemma 3 direkte, og er 4–36% raskere enn ONNX Runtime på benchmarkede modeller.",
+  "image_url": "https://opencv.org/wp-content/uploads/2026/06/opencv-5.png",
+  "source_url": "https://opencv.org/opencv-5/",
+  "source_name": "OpenCV",
+  "published_at": "2026-06-12T06:00:00Z",
+  "priority": 480
+}

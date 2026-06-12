@@ -1,0 +1,10 @@
+{
+  "id": "news-580",
+  "title": "DiffusionGemma: Googles nye åpne modell genererer tekst 4x raskere",
+  "summary": "Google DeepMind lanserer DiffusionGemma, en 26B Mixture-of-Experts-modell som bruker tekst-diffusjon i stedet for autoregressiv generering. Modellen prosesserer 256 tokens parallelt og når over 1000 tokens per sekund på én H100.",
+  "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/HeroVisual.width-2200.format-webp-1152x648.png",
+  "source_url": "https://arstechnica.com/google/2026/06/googles-latest-diffusiongemma-open-ai-model-comes-with-a-4x-speed-boost",
+  "source_name": "Ars Technica",
+  "published_at": "2026-06-12T06:00:00Z",
+  "priority": 580
+}
