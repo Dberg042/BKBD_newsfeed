@@ -1,0 +1,10 @@
+{
+  "id": "news-850",
+  "title": "Anthropic suspenderer Fable 5 og Mythos 5",
+  "summary": "Anthropic har deaktivert Fable 5 og Mythos 5 etter amerikansk eksportkontrollordre. Regjeringen ba Anthropic fikse jailbreak-hull eller ta ned modellene, etter Amazon-forskere viste at modellene kunne misbrukes til angrep. Anthropic sier sårbarhetene er grunnleggende.",
+  "image_url": "https://cdn.sanity.io/images/4zrzovbb/website/50159fff55088f12070cc8a56eb51ff61006b631-2400x1260.png",
+  "source_url": "https://www.anthropic.com/news/fable-mythos-access",
+  "source_name": "Anthropic",
+  "published_at": "2026-06-16T06:00:00Z",
+  "priority": 850
+}

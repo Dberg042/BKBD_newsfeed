@@ -1,0 +1,10 @@
+{
+  "id": "news-650",
+  "title": "LangGraph RCE: SQLi og usikker deserialisering",
+  "summary": "Check Point Research avdekket tre sårbarheter i LangGraphs persistenslag (50M+ nedlastinger): SQLi i SQLite og Redis checkpointing samt usikker msgpack-deserialisering som gir RCE. Fikset i langgraph-checkpoint-sqlite 3.0.1+, langgraph 1.0.10+ og langgraph-checkpoint-redis 1.0.2+.",
+  "image_url": "https://research.checkpoint.com/wp-content/uploads/2026/06/banner2.png",
+  "source_url": "https://research.checkpoint.com/2026/from-sqli-to-rce-exploiting-langgraphs-checkpointer/",
+  "source_name": "Check Point Research",
+  "published_at": "2026-06-16T06:00:00Z",
+  "priority": 650
+}

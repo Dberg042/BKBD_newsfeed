@@ -1,0 +1,10 @@
+{
+  "id": "news-750",
+  "title": "GitHub deaktiverer npm auto-run scripts i npm 12",
+  "summary": "npm 12 deaktiverer installasjonsscripts, Git-avhengigheter og eksterne nedlastinger som standard. prepare-scripts kjøres ikke lenger automatisk ved npm install. Endringen reduserer supply chain-angrep der ondsinnet kode skjules i installasjonsscripts.",
+  "image_url": "https://image.theregister.com/5253722.jpg?imageId=5253722&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+  "source_url": "https://www.theregister.com/devops/2026/06/10/github-pulls-pin-on-npms-auto-run-scripts/5253453",
+  "source_name": "The Register",
+  "published_at": "2026-06-16T06:00:00Z",
+  "priority": 750
+}
