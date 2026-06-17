@@ -1,0 +1,10 @@
+{
+  "id": "news-750",
+  "title": "ShinyHunters hacket Europarådet — 297 GB data stjålet",
+  "summary": "ShinyHunters hevder å ha stjålet 297 GB data fra Europarådet med lønnsopplysninger, bankinfo og medisinske journaler. Gruppen truer med lekkasje om ikke forhandlinger innledes. Angrepet følger en bølge av ShinyHunters-innbrudd hos Salesforce-kunder og utnyttelse av zero-day i Oracle PeopleSoft.",
+  "source_url": "https://www.securityweek.com/shinyhunters-claims-council-of-europe-hack/",
+  "source_name": "SecurityWeek",
+  "published_at": "2026-06-17T06:00:00Z",
+  "priority": 750,
+  "image_url": "https://www.securityweek.com/wp-content/uploads/2026/06/EU-Europe-European-Union-.jpeg"
+}

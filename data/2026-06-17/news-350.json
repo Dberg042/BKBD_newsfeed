@@ -1,0 +1,10 @@
+{
+  "id": "news-350",
+  "title": "Slik fikset x86-emulatorteamet elendig kode — under emulering",
+  "summary": "Raymond Chen forteller om x86-emulatorteamet som oppdaget et program som brukte 65 536 individuelle instruksjoner for å initialisere 64 KB stack-minne — 256 KB kode for 64 KB data. Teamet la til spesiell logikk for å oppdage og erstatte denne monstrositeten med en kompakt løkke.",
+  "source_url": "https://devblogs.microsoft.com/oldnewthing/20260615-00/?p=112419",
+  "source_name": "Microsoft Dev Blog (Raymond Chen)",
+  "published_at": "2026-06-17T06:00:00Z",
+  "priority": 350,
+  "image_url": "https://devblogs.microsoft.com/oldnewthing/wp-content/uploads/sites/38/2019/02/ShowCover.jpg"
+}

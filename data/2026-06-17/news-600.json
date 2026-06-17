@@ -1,0 +1,10 @@
+{
+  "id": "news-600",
+  "title": "Lokale modeller er gode nå — 75 % av frontier-kvalitet på egen maskin",
+  "summary": "Lokale AI-modeller har nådd et vendepunkt og yter 75 % av frontier-nivå for agentisk koding. Med Gemma 4 og verktøy som LM Studio kan utviklere refaktorere kodebaser og skrive tester helt lokalt. Fordeler: full innsikt, ingen API-kostnader og personvern.",
+  "source_url": "https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/",
+  "source_name": "Vicki Boykis",
+  "published_at": "2026-06-17T06:00:00Z",
+  "priority": 600,
+  "image_url": "https://vickiboykis.com/images/refactor_gemma.png"
+}
