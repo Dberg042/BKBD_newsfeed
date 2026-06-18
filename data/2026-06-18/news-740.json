@@ -1,0 +1,10 @@
+{
+  "priority": 740,
+  "id": "news-740",
+  "title": "Å kjøre lokale modeller er blitt bra nå",
+  "summary": "Vicki Boykis skriver at lokale modeller endelig er blitt gode nok til praktisk agentisk koding på en vanlig Mac med mye RAM. Hun bruker dem til refaktorering, tester og prototyping, og viser at lokal kjøring nå er et reelt alternativ for mange utviklere.",
+  "image_url": "https://vickiboykis.com/images/refactor_gemma.png",
+  "source_url": "https://vickiboykis.com/2026/06/15/running-local-models-is-good-now/",
+  "source_name": "Vicki Boykis",
+  "published_at": "2026-06-18T06:00:00Z"
+}

@@ -1,0 +1,10 @@
+{
+  "priority": 760,
+  "id": "news-760",
+  "title": "Feilraten øker på tvers av mange Claude-modeller",
+  "summary": "Claude hadde en periode med forhøyede feil på tvers av Sonnet- og Opus-modeller, før hendelsen ble løst samme dag. For team som bygger mot AI-tjenester er dette en påminnelse om at modellvalg også er en driftsrisiko med direkte konsekvenser for produkt og SLA.",
+  "image_url": "https://dka575ofm4ao0.cloudfront.net/assets/logos/favicon-2b86ed00cfa6258307d4a3d0c482fd733c7973f82de213143b24fc062c540367.png",
+  "source_url": "https://status.claude.com/incidents/xmhsglsz3h3w",
+  "source_name": "Claude",
+  "published_at": "2026-06-18T06:00:00Z"
+}

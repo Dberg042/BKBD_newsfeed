@@ -1,0 +1,10 @@
+{
+  "priority": 700,
+  "id": "news-700",
+  "title": "GPT-NL: en suveren språkmodell for Nederland",
+  "summary": "TNO lanserer GPT-NL som en suveren nederlandsk språkmodell med vekt på åpenhet, kontroll over data og tydelig offentlig styring. Prosjektet er relevant også her hjemme fordi det viser hvordan AI kan bygges med governance og datasuverenitet som første krav.",
+  "image_url": "https://www.tno.nl/publish/pages/14621/genai.jpg",
+  "source_url": "https://www.tno.nl/en/digital/artificial-intelligence/gpt-nl/",
+  "source_name": "TNO",
+  "published_at": "2026-06-18T06:00:00Z"
+}
