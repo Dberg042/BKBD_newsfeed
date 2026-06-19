@@ -1,0 +1,10 @@
+{
+  "id": "news-650",
+  "title": "Slik bygde vi et varig agentminne på Elasticsearch med 0,89 recall og ingen lekkasjer mellom leietakere",
+  "summary": "Elastic viser hvordan en varig agent-minnekanal kan bygges med tre indekser, hybrid recall, reranking og DLS-isolasjon. Poenget er konkret: kontekstvinduet er korttidsminne, ikke hukommelse. Skal agenter bli nyttige over tid, må minnet leve utenfor chatten.",
+  "source_url": "https://www.elastic.co/search-labs/blog/agent-memory-elasticsearch",
+  "source_name": "Elastic",
+  "published_at": "2026-06-19T06:00:00Z",
+  "priority": 650,
+  "image_url": "https://cdn.sanity.io/images/me0ej585/search-labs-import-testing/15fbc95df401906a7655ad1c9a7194b954bcce05-1280x720.png?rect=0,24,1280,672&w=1200&h=630"
+}

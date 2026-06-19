@@ -1,0 +1,10 @@
+{
+  "id": "news-760",
+  "title": "Skalerte administrerte agenter: skiller hjernen fra hendene",
+  "summary": "Anthropic beskriver Managed Agents som en stabil tjeneste for langvarig agentarbeid, der session, harness og sandbox kan byttes uten å ødelegge resten. Budskapet er mindre modell-magi og mer infrastruktur: bygg grensesnitt som tåler at modellene blir bedre uten at arkitekturen kollapser.",
+  "source_url": "https://www.anthropic.com/engineering/managed-agents",
+  "source_name": "Anthropic",
+  "published_at": "2026-06-19T06:00:00Z",
+  "priority": 760,
+  "image_url": "https://cdn.sanity.io/images/4zrzovbb/website/c4c716fb31cdbd336b628549cdac0f14e10d0099-2000x1050.heif"
+}

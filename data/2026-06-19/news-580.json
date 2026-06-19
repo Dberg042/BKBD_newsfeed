@@ -1,0 +1,10 @@
+{
+  "id": "news-580",
+  "title": "Lokal Qwen er ikke en dårligere Opus, bare et annet verktøy",
+  "summary": "Alex Ellis skiller mellom lokal Qwen og toppmodeller: lokale modeller kan gi reell verdi i konkrete arbeidsflyter, men de er fortsatt ustabile nok til at du ikke bør stole blindt på dem. For konsulenter er læringen jordnær: bruk lokal AI der kontroll og kost betyr mest.",
+  "source_url": "https://blog.alexellis.io/local-ai-is-not-opus/",
+  "source_name": "Alex Ellis",
+  "published_at": "2026-06-19T06:00:00Z",
+  "priority": 580,
+  "image_url": "https://blog.alexellis.io/content/images/2026/06/17/6000.jpg"
+}

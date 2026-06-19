@@ -1,0 +1,10 @@
+{
+  "id": "news-850",
+  "title": "Slik fant jeg 10 000 GitHub-repositorier som distribuerte trojanermalware",
+  "summary": "Orchidfiles beskriver et mønster der tusenvis av GitHub-repositorier jevnlig oppdateres for å pushe trojaner-lenker i README. Det er en nyttig påminnelse om at supply chain-angrep ofte ser kjedelige ut helt til de treffer CI, pakkehåndtering eller en sliten utvikler på fredag.",
+  "source_url": "https://orchidfiles.com/github-repositories-distributing-malware/",
+  "source_name": "Orchidfiles",
+  "published_at": "2026-06-19T06:00:00Z",
+  "priority": 850,
+  "image_url": "https://orchidfiles.com/content/images/2026/03/avatar-1.png"
+}
