@@ -1,0 +1,10 @@
+{
+  "id": "news-740",
+  "title": "GitHub-prosjektet Recall skal gi Claude Code varig minne",
+  "summary": "GitHub-repoet Recall vil gi Claude Code varig, lokal prosjektminne uten at alt må forklares på nytt for hver sesjon. Verktøyet lover offline lagring, mindre token-sløsing og en enklere måte å holde kontekst mellom økter, noe mange team faktisk trenger mer enn enda en chatbot.",
+  "image_url": "https://opengraph.githubassets.com/923f3204f09b5c9af89286e3f05cc7f62ea44b981d85bc48f59b00f53860e10a/raiyanyahya/recall",
+  "source_url": "https://github.com/raiyanyahya/recall",
+  "source_name": "GitHub",
+  "published_at": "2026-06-22T06:00:00Z",
+  "priority": 740
+}

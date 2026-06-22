@@ -1,0 +1,10 @@
+{
+  "id": "news-860",
+  "title": "Identitetsverifisering rulles ut i Claude",
+  "summary": "Anthropic ruller ut identitetsverifisering i Claude for enkelte bruksområder, med Persona som partner. De sier at ordningen skal redusere misbruk og oppfylle regulatoriske krav, samtidig som ID- og selfiedata ikke brukes til modelltrening. Litt mer skjema, litt mindre kaos.",
+  "image_url": "https://downloads.intercomcdn.com/i/o/lupk8zyo/792494/717b10d3ebd874823db64841659b/76f3062d78ebbb04863fb1de3ef9cca0.png",
+  "source_url": "https://support.claude.com/en/articles/14328960-identity-verification-on-claude",
+  "source_name": "Claude Help Center",
+  "published_at": "2026-06-22T06:00:00Z",
+  "priority": 860
+}
