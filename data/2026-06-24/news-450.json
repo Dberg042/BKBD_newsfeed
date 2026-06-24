@@ -1,0 +1,10 @@
+{
+  "id": "news-450",
+  "title": "TanStack Table v9 med store TypeScript-ytelsesforbedringer",
+  "summary": "TanStack Table har kommet i versjon 9 med betydelige ytelsesforbedringer i TypeScript, nye memoiserings-APIer og en slankere kjerne. Rammeverket er blant de mest brukte tabellkomponentene i React- og Solid-økosystemet, og v9 gir merkbart raskere tabeller i store datavisualiseringsprosjekter.",
+  "image_url": "https://tanstack.com/cdn-cgi/image/width=1200,height=630,fit=cover,quality=80,format=auto/blog-assets/tanstack-table-v9-typescript-performance/header.png",
+  "source_url": "https://tanstack.com/blog/tanstack-table-v9-typescript-performance",
+  "source_name": "TanStack Blog",
+  "published_at": "2026-06-23T07:00:00Z",
+  "priority": 450
+}

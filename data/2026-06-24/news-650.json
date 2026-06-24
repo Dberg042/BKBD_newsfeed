@@ -1,0 +1,10 @@
+{
+  "id": "news-650",
+  "title": "Meta stanser internt sporingprogram etter datalekkasje",
+  "summary": "Meta har satt Model Compatibility Initiative på pause etter at en intern database med tastetrykk, museklikk og skjermbilder fra ansatte ble eksponert internt. Verktøyet trente AI-systemer på menneskelig programvarebruk, men ansatte protesterte mot manglende samtykke og svak datasikkerhet.",
+  "image_url": "https://media.wired.com/photos/6a39a2a46c59c72c499e05ba/191:100/w_1280,c_limit/2281617231",
+  "source_url": "https://www.wired.com/story/meta-pauses-employee-tracking-program-following-internal-security-breach/",
+  "source_name": "Wired",
+  "published_at": "2026-06-22T11:00:00Z",
+  "priority": 650
+}

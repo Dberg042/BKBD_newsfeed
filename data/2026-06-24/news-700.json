@@ -1,0 +1,10 @@
+{
+  "id": "news-700",
+  "title": "7000 AI-rammeverkservere kompromittert gjennom kjente sårbarheter",
+  "summary": "Tre av de mest brukte AI-agent-rammeverkene — LangGraph, Langflow og LangChain — har gjort enkle SQL-injection- og path-traversal-feil om til fullstendig remote code execution. Check Point, Tenable og Cyera har dokumentert utnyttelser i produksjon, og over 7000 servere er bekreftet påvirket.",
+  "image_url": "https://images.ctfassets.net/jdtwqhzvc2n1/5CFo8mBoW1WjItcZvYyHpg/3172659c88b4856fe7137de54672ab16/hero.png?w=800&q=75",
+  "source_url": "https://venturebeat.com/security/7000-langflow-servers-under-attack-langgraph-langchain-same-holes",
+  "source_name": "VentureBeat",
+  "published_at": "2026-06-23T09:00:00Z",
+  "priority": 700
+}

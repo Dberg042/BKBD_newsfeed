@@ -1,0 +1,10 @@
+{
+  "id": "news-720",
+  "title": "Swift Package Index blir en del av Apple",
+  "summary": "Swift Package Index, søke- og metadata-indeksen for Swift-pakker med over 10.000 indekserte pakker og 3,5 millioner kompatibilitetsbygg i fjor, blir nå en del av Apple. Plattformen forblir åpen kildekode og gratis, men får Apples ressurser og nye funksjoner for pakkesignering bak seg.",
+  "image_url": "https://swiftpackageindex.com/images/logo.svg",
+  "source_url": "https://swiftpackageindex.com/blog/swift-package-index-joins-apple",
+  "source_name": "Swift Package Index Blog",
+  "published_at": "2026-06-23T08:00:00Z",
+  "priority": 720
+}

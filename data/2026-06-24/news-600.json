@@ -1,0 +1,10 @@
+{
+  "id": "news-600",
+  "title": "Cisco kjøper WideField Security for å tette hull i agentic AI-sikkerhet",
+  "summary": "Cisco har kunngjort oppkjøpet av WideField Security, et selskap grunnlagt av to ex-Netskope-ingeniører som leverer identitetstelemetri for AI-agenter og andre ikke-menneskelige identiteter. Integrasjonen skjer i Splunk-plattformen og er Ciscos tredje sikkerhetsoppkjøp på tre måneder.",
+  "image_url": "https://www.crn.com/news/security/2026/media_1bf3c172ba163acaf65a87c114275f627832f7a63.jpg?width=1200&format=pjpg&optimize=medium",
+  "source_url": "https://www.crn.com/news/security/2026/cisco-bets-on-widefield-security-acquisition-to-tackle-agentic-ai-security-gap",
+  "source_name": "CRN",
+  "published_at": "2026-06-22T14:00:00Z",
+  "priority": 600
+}
