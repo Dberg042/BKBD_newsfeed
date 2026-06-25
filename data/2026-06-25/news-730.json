@@ -1,0 +1,11 @@
+{
+  "filename": "news-730.json",
+  "id": "news-730",
+  "title": "OpenAI lanserer GPT-5.5-Cyber og Patch the Planet-initiativet",
+  "summary": "OpenAI lanserer fullversjonen av GPT-5.5-Cyber, som scorer 85,6 prosent på CyberGym, og oppdaterte Codex Security-arbeidsflyter som genererer patcher automatisk. Initiativet Patch the Planet, støttet av Trail of Bits og HackerOne, hjelper åpen kildekode-prosjekter å lukke sårbarheter raskere.",
+  "image_url": "https://cdn.sanity.io/images/4zrzovbb/website/b9ba85fd4d8beaf4efe04a4cf6cec14761e52c78-2400x1260.jpg",
+  "source_url": "https://openai.com/index/daybreak-securing-the-world/",
+  "source_name": "OpenAI Blog",
+  "published_at": "2026-06-25T06:00:00Z",
+  "priority": 730
+}

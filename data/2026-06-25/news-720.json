@@ -1,0 +1,11 @@
+{
+  "filename": "news-720.json",
+  "id": "news-720",
+  "title": "Datamaskinbruk kommer til Gemini 3.5 Flash",
+  "summary": "Google gjør «computer use» tilgjengelig i Gemini 3.5 Flash, slik at modellen kan navigere nettlesere og klikke gjennom grensesnitt som et menneske. Funksjonen er tilgjengelig via Gemini API og Vertex AI. Utviklere kan prototype autonome arbeidsflyter mot legacy-systemer uten API.",
+  "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-5__keyword__blog-header__light_7VsKV.width-1300.png",
+  "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
+  "source_name": "Google Blog",
+  "published_at": "2026-06-25T06:00:00Z",
+  "priority": 720
+}

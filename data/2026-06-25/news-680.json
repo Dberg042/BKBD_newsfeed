@@ -1,0 +1,11 @@
+{
+  "filename": "news-680.json",
+  "id": "news-680",
+  "title": "Cloudflare håndterte Linux-kjernen Copy-Fail-sårbarheten",
+  "summary": "Cloudflare beskriver hvordan de håndterte en lokal rettighetseskalering i Linux-kjernens AF_ALG-grensesnitt som kunne gi uautoriserte brukere root. Selskapet rullet ut en eBPF-basert policy som begrenser AF_ALG-binder til en allow-list. Mønsteret er nyttig for norske driftsteam.",
+  "image_url": "https://cdn.sanity.io/images/4zrzovbb/website/b9ba85fd4d8beaf4efe04a4cf6cec14761e52c78-2400x1260.jpg",
+  "source_url": "https://blog.cloudflare.com/copy-fail-linux-vulnerability-mitigation/",
+  "source_name": "Cloudflare Blog",
+  "published_at": "2026-06-25T06:00:00Z",
+  "priority": 680
+}

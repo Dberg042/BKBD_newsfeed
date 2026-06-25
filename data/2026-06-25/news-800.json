@@ -1,0 +1,11 @@
+{
+  "filename": "news-800.json",
+  "id": "news-800",
+  "title": "OpenAI avduker sin første egendesignede AI-brikke bygget med Broadcom",
+  "summary": "OpenAI har kunngjort sin første egendesignede AI-brikke bygget med Broadcom, optimalisert for stor-skala inferens. Brikken fases inn i Microsoft Azure fra fjerde kvartal og er et direkte svar på Nvidia-avhengigheten. Norske kunder som kjører OpenAI på Azure får mer forutsigbar pris.",
+  "image_url": "https://techcrunch.com/wp-content/uploads/2026/06/Screenshot-2026-06-24-at-9.49.59-AM.jpg?resize=1200,670",
+  "source_url": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/",
+  "source_name": "TechCrunch",
+  "published_at": "2026-06-24T12:00:00Z",
+  "priority": 800
+}

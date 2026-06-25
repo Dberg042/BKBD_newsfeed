@@ -1,0 +1,11 @@
+{
+  "filename": "news-690.json",
+  "id": "news-690",
+  "title": "Microsoft redefinerer skydrift med agentisk observabilitet",
+  "summary": "Microsoft beskriver et skifte fra tradisjonelle dashboards til AI-agenter som kan resonnere over telemetri og driftsdata for å oppdage og løse infrastrukturproblemer raskere. Satsningen bygger på Azure Monitor og Copilot, og posisjonerer agentisk observabilitet som et nytt lag i skydrift.",
+  "image_url": "https://blogs.microsoft.com/wp-content/uploads/2026/06/OMB-Hero-6_23-Post-1024x683.jpg",
+  "source_url": "https://blogs.microsoft.com/blog/2026/06/23/rethinking-cloud-operations-with-agentic-observability/",
+  "source_name": "Microsoft Blog",
+  "published_at": "2026-06-23T15:00:00Z",
+  "priority": 690
+}

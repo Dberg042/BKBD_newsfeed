@@ -1,0 +1,11 @@
+{
+  "filename": "news-820.json",
+  "id": "news-820",
+  "title": "Anthropic anklager Alibaba for ulovlig uttrekking av Claude-egenskaper",
+  "summary": "Anthropic hevder at Alibaba gjennomførte en koordinert uttrekking av Claude-modellens evner i november 2025 via nesten to millioner automatiserte API-kall. Saken reiser spørsmål om IP-grenser ved grensekryssende AI-trening og kan endre hvordan amerikanske modelltilbydere håndterer kinesiske kunder.",
+  "image_url": "https://www.bleepstatic.com/content/hl-images/2024/07/01/Cisco-logo.jpg",
+  "source_url": "https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/",
+  "source_name": "Reuters",
+  "published_at": "2026-06-25T06:00:00Z",
+  "priority": 820
+}

@@ -1,0 +1,11 @@
+{
+  "filename": "news-700.json",
+  "id": "news-700",
+  "title": "Anthropic lanserer Claude Tag i Slack som et teammedlem",
+  "summary": "Anthropic lanserer Claude Tag, en arbeidsflyt i Slack der team kan tildele oppgaver direkte til Claude, koble den til interne verktøy og kodebaser, og beholde kontekst på tvers av kanaler. Produktteamet bruker allerede systemet til å generere store deler av egen kode.",
+  "image_url": "https://cdn.sanity.io/images/4zrzovbb/website/b9ba85fd4d8beaf4efe04a4cf6cec14761e52c78-2400x1260.jpg",
+  "source_url": "https://www.anthropic.com/news/introducing-claude-tag",
+  "source_name": "Anthropic",
+  "published_at": "2026-06-25T06:00:00Z",
+  "priority": 700
+}

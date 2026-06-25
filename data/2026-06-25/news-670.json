@@ -1,0 +1,11 @@
+{
+  "filename": "news-670.json",
+  "id": "news-670",
+  "title": "GitHub actions/checkout v7 blokkerer vanlige pwn-request-mønstre",
+  "summary": "GitHub har oppdatert actions/checkout slik at workflows med pull_request_target og workflow_run ikke lenger sjekker ut risikable refs fra forkede pull requests. Endringen blokkerer de vanligste pwn-request-mønstrene der uønsket kode kjører med hemmeligheter i basisrepoet.",
+  "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcacTEKD_LZFda1wwX5aClbAVOb6mwah2lVUY-jUZwNsrSZGDOFL18LP5zYLX3M2DwKng0qknZ5qo_hMk4q-NExgZv1ozhCy7DJuZwvviZE0sv36PQ2k8Y2emv1KMDFplakFwVzulOFPteWkmVoLO6Le912KAbJGFW0nkqKWHEkwJQLbsGhz5npWO3aJaR/s1600/github-actions.jpg",
+  "source_url": "https://thehackernews.com/2026/06/github-updates-actionscheckout-to-block.html",
+  "source_name": "The Hacker News",
+  "published_at": "2026-06-25T06:00:00Z",
+  "priority": 670
+}
