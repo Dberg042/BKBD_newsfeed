@@ -1,0 +1,10 @@
+{
+  "id": "news-800",
+  "title": "Gemini 3.5 Flash får innebygd computer use for agent-bygging",
+  "summary": "Google integrerer computer use som innebygd verktøy i Gemini 3.5 Flash, slik at utviklere kan bygge agenter som ser, resonnerer og handler på tvers av nettleser og desktop. Modellen leverer beste agentiske ytelse hittil, med to valgfrie sikkerhetsmekanismer mot prompt injection.",
+  "source_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/",
+  "source_name": "Google",
+  "published_at": "2026-06-26T06:00:00Z",
+  "priority": 800,
+  "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-3-5__keyword__blog-header_.width-200.format-webp_z1cHm8L.webp"
+}

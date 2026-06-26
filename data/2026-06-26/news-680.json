@@ -1,0 +1,10 @@
+{
+  "id": "news-680",
+  "title": "Magnus koblet KI-agenten til bankkontoen via SpareBank 1 sitt utvikler-API",
+  "summary": "Utvikler Magnus Rødseth lot en KI-agent skrive en komplett Rust-CLI mot SpareBank 1 sitt bank-API på halvannen time. sb1 henter kontoer, transaksjoner og utfører overføringer, og viser hvordan bankens åpne API nå gjør bankintegrasjon tilgjengelig for norske agent-byggere.",
+  "source_url": "https://www.kode24.no/artikkel/magnus-gir-agenter-tilgang-til-sparebank-1/266444",
+  "source_name": "Kode24",
+  "published_at": "2026-06-26T06:00:00Z",
+  "priority": 680,
+  "image_url": "https://image-www.kode24.no/266502.webp?imageId=266502&width=1200"
+}

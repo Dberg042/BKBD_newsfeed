@@ -1,0 +1,10 @@
+{
+  "id": "news-760",
+  "title": "FortiBleed-kampanje har hostet 110 millioner legitimasjon fra FortiGate-brannmurer",
+  "summary": "En russisktalende initial access broker har siden tidlig i 2026 kjørt FortiBleed mot 430 000 FortiGate-brannmurer og samlet over 110 millioner legitimasjonspar via sniffere og brute-force. Norske virksomheter med Fortinet-utstyr bør nå revidere kontoer og eksponerte adminflater umiddelbart.",
+  "source_url": "https://thehackernews.com/2026/06/fortibleed-targeted-fortigate-firewalls.html",
+  "source_name": "The Hacker News",
+  "published_at": "2026-06-26T06:00:00Z",
+  "priority": 760,
+  "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJkhDD5qINhfAhBFXG2C13raQF6T6zAOmnHlArhnLUP5z0ifBzpyq6M_4n11cgynQfZW0mxJWnYU-TDYSpKQHYFHvXsZHCB7uoMFg0w02yZILY-JLMm2-uqm-CA_wIqZHhzl25FfO_lMd7dYm6VfprDP83bz_SoB3MWLEc059E4YCa554bba-qWHW5udHv/s1600/fortigate.jpg"
+}
