@@ -6,5 +6,6 @@
   "source_name": "Semgrep",
   "published_at": "2026-06-29T06:00:00Z",
   "priority": 750,
-  "image_url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks"
+  "image_url": "https://semgrep.dev/assets/blog/glm-5.2-beats-claude-in-our-cybersecurity-benchmarks.png",
+  "local_image": "optimized-images/news-750_260629.jpg"
 }

@@ -6,5 +6,6 @@
   "source_name": "Nx Blog",
   "published_at": "2026-06-29T06:00:00Z",
   "priority": 720,
-  "image_url": "https://nx.dev/blog/nx-self-healing-ci"
+  "image_url": "https://nx.dev/blog/images/articles/thumb-self-healing-ci.png",
+  "local_image": "optimized-images/news-720_260629.jpg"
 }
