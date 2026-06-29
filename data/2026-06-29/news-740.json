@@ -1,0 +1,10 @@
+{
+  "id": "news-740",
+  "title": "AI-acceleration slår tilbake i produksjon",
+  "summary": "Basert på telemetri fra 22 000 utviklere i 4 000 team viser Faros at kode-churn øker med 861 prosent, incidents-per-PR med 243 prosent og defekter per utvikler klatrer fra 9 til 54 prosent ved høy AI-adopsjon. Gjennomstrømningen går opp, men team betaler prisen i omarbeid og produksjonsstabilitet.",
+  "source_url": "https://www.faros.ai/blog/ai-acceleration-whiplash-takeaways",
+  "source_name": "Faros AI",
+  "published_at": "2026-06-29T06:00:00Z",
+  "priority": 740,
+  "image_url": "https://www.faros.ai/blog/ai-acceleration-whiplash-takeaways"
+}

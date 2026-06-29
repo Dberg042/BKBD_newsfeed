@@ -1,0 +1,9 @@
+{
+  "id": "news-680",
+  "title": "Cloudflare: Bot Management-fil lammet kjernenettet i seks timer",
+  "summary": "En database-endring doblet størrelsen på Cloudflares Bot Management feature-fil, som overskred proxyens runtime-grense og utløste HTTP 5xx-feil globalt klokka 11:20 UTC 18. november 2025. Hendelsen ble først mistolket som et massivt DDoS-angrep, og kjernetrafikken var ikke normalisert før 14:30 UTC.",
+  "source_url": "https://blog.cloudflare.com/18-november-2025-outage/",
+  "source_name": "Cloudflare Blog",
+  "published_at": "2026-06-29T06:00:00Z",
+  "priority": 680
+}

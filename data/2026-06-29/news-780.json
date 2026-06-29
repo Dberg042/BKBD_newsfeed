@@ -1,0 +1,9 @@
+{
+  "id": "news-780",
+  "title": "GitHub: Slik vurderer du pull requests fra AI-agenter",
+  "summary": "GitHub Copilot har gjennomført over 60 millioner kodegjennomganger det siste året, og mer enn hver femte review involverer nå en AI-agent. Griffiths peker på fire røde flagg: CI-svekking, duplisering av hjelpere, hallusinert korrekthet i subtile bugtyper og prompt injection via PR-data.",
+  "source_url": "https://github.blog/ai-and-ml/generative-ai/agent-pull-requests-are-everywhere-heres-how-to-review-them/",
+  "source_name": "GitHub Blog",
+  "published_at": "2026-06-29T06:00:00Z",
+  "priority": 780
+}

@@ -1,0 +1,10 @@
+{
+  "id": "news-750",
+  "title": "GLM 5.2 slår Claude Code i cybersikkerhet-benchmark",
+  "summary": "I Semgreps IDOR-benchmark scorer open-weight-modellen GLM 5.2 fra Zhipu AI 39 prosent F1, mot Claude Code Opus 4.6 sine 37 prosent, til rundt 0,17 dollar per funn. Semgreps egen Multimodal-pipeline treffer 53–61 prosent F1, noe som bekrefter at harness rundt modellen betyr mer enn modellvalget.",
+  "source_url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks",
+  "source_name": "Semgrep",
+  "published_at": "2026-06-29T06:00:00Z",
+  "priority": 750,
+  "image_url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks"
+}

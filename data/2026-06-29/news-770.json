@@ -1,0 +1,10 @@
+{
+  "id": "news-770",
+  "title": "Anthropic lanserer Code Review for Claude Code",
+  "summary": "Anthropic lanserer et multi-agent reviewsystem for Claude Code i forskningspreview for Team- og Enterprise-kunder. Andelen PR-er med substansielle kommentarer har gått fra 16 til 54 prosent, og under én prosent av funnene er feilaktige. Kostnaden ligger på 15–25 dollar per review.",
+  "source_url": "https://claude.com/blog/code-review",
+  "source_name": "Anthropic",
+  "published_at": "2026-06-29T06:00:00Z",
+  "priority": 770,
+  "image_url": "https://claude.com/blog/code-review"
+}

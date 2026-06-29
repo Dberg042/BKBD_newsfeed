@@ -1,0 +1,10 @@
+{
+  "id": "news-720",
+  "title": "Self-Healing CI fikser ødelagte pipelines automatisk",
+  "summary": "Nx Cloud introduserer Self-Healing CI, der en AI-agent analyserer loggen, foreslår en patch og kjører den gjennom mislykkede tester før PR-en oppdateres med manuell godkjenning. Løsningen fanger opp vanlige feil som manglende imports, lint-brudd og konfigurasjonsfeil automatisk.",
+  "source_url": "https://nx.dev/blog/nx-self-healing-ci",
+  "source_name": "Nx Blog",
+  "published_at": "2026-06-29T06:00:00Z",
+  "priority": 720,
+  "image_url": "https://nx.dev/blog/nx-self-healing-ci"
+}
