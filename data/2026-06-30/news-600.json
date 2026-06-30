@@ -1,0 +1,10 @@
+{
+  "id": "news-600",
+  "title": "Google Antigravity-agenter får full kontekst via GitLab Orbit",
+  "summary": "Google Antigravity-agenter kan nå installere GitLab Orbit fra MCP Store og få strukturert tilgang til prosjekter, pipelines, merge requests og kildekode. Orbit eksponerer dataene via MCP-tools, slik at agenter svarer på spørsmål om hele programvarelivssyklusen uten å bytte verktøy.",
+  "image_url": "https://res.cloudinary.com/about-gitlab-com/image/upload/v1782391928/dkbgxzitp72snzrnzupe.png",
+  "source_url": "https://about.gitlab.com/blog/gitlab-orbit-and-google-antigravity/",
+  "source_name": "GitLab Blog",
+  "published_at": "2026-06-30T06:00:00Z",
+  "priority": 600
+}
