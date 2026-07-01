@@ -1,0 +1,10 @@
+{
+  "id": "news-700",
+  "title": "DirtyClone: Fjerde Linux-kjerne-sårbarhet på seks uker eskalerer til root",
+  "summary": "CVE-2026-43503 (CVSS 8.8) lar uprivilegerte lokale brukere eskalere til root via side-channel på kjernens page-cache. Fjerde sårbarhet i DirtyFrag-familien på seks uker, krever CAP_NET_ADMIN. Ubuntu 24.04+ blokkert via AppArmor, Debian og Fedora sårbare som standard.",
+  "image_url": "https://securityaffairs.com/wp-content/uploads/2026/06/image-75.png",
+  "source_url": "https://securityaffairs.com/194338/uncategorized/dirtyclone-fourth-linux-kernel-flaw-in-six-weeks-escalates-to-root.html",
+  "source_name": "Security Affairs",
+  "published_at": "2026-07-01T06:00:00Z",
+  "priority": 700
+}

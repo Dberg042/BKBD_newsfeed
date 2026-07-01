@@ -1,0 +1,10 @@
+{
+  "id": "news-800",
+  "title": "Anthropic lanserer Claude Sonnet 5",
+  "summary": "Anthropic lanserer Claude Sonnet 5, designet for å utføre agentiske flerstegsoppgaver nær Opus 4.8-nivå til lavere pris. Modellen er tilgjengelig på alle plan og blir standard for Free- og Pro-abonnenter. Introduksjonspris to dollar per million input-tokens gjennom 31. august 2026.",
+  "image_url": "https://cdn.sanity.io/images/4zrzovbb/website/458ea645ef6b729f6847cba16932716e6b547f2f-2880x1620.png",
+  "source_url": "https://www.anthropic.com/news/claude-sonnet-5",
+  "source_name": "Anthropic",
+  "published_at": "2026-07-01T06:00:00Z",
+  "priority": 800
+}

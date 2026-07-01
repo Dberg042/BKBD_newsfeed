@@ -1,0 +1,10 @@
+{
+  "id": "news-580",
+  "title": "Cognition lanserer Devin Fusion med 35 prosent lavere kostnad",
+  "summary": "Cognition lanserer Devin Fusion, et multi-modell-harness som dynamisk ruterer mellom frontier- og kostnadseffektive modeller og reduserer kostnader med 35 prosent. Bruker to-agent-arkitektur for å unngå cache-misser, integrerer Fable 5 for ytterligere effektivitet.",
+  "image_url": "https://cognition.com/images/devin-fusion/fusion-og.png",
+  "source_url": "https://cognition.com/blog/devin-fusion",
+  "source_name": "Cognition",
+  "published_at": "2026-07-01T06:00:00Z",
+  "priority": 580
+}
