@@ -1,0 +1,10 @@
+{
+  "id": "news-520",
+  "title": "Claude Code skjult fingeravtrykker Kina-koblede API-rutere",
+  "summary": "Claude Code legger inn usynlige steganografiske markører i promptene basert på ANTHROPIC_BASE_URL og tidssone for å klassifisere om brukeren ruter via bestemte leverandører. Teknikken bruker usynlig tegnbruk i apostroffer og datostreker, og analytikere mener den grenser mot spionprogramvare.",
+  "image_url": "https://www.vincentschmalbach.com/wp-content/uploads/2021/05/Vincent-Schmalbach-draft01.jpg",
+  "source_url": "https://www.vincentschmalbach.com/claude-code-china-router-fingerprint/",
+  "source_name": "Vinceso",
+  "published_at": "2026-07-02T06:00:00Z",
+  "priority": 520
+}

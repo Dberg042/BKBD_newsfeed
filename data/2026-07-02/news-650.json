@@ -1,0 +1,11 @@
+{
+  "id": "news-650",
+  "title": "OpenAI kutter kostnader for gjeste-ChatGPT-brukere med mer enn halvparten",
+  "summary": "OpenAI har angivelig kuttet responskostnadene for gjeste-ChatGPT-brukere med over 50 prosent gjennom optimaliseringer av inferens-stacken. Gjestebrukere har begrenset funksjonalitet, så det er uvisst om gevinsten bærer over i fullproduktet. Kutten knyttes til GPT-5.5-optimaliseringer.",
+  "image_url": "https://the-decoder.com/wp-content/uploads/2026/06/openai_logo_background_dark.png",
+  "source_url": "https://the-decoder.com/openai-reportedly-cut-response-costs-for-guest-chatgpt-users-by-more-than-half/",
+  "source_name": "The Decoder",
+  "published_at": "2026-07-02T06:00:00Z",
+  "priority": 650,
+  "local_image": "optimized-images/news-650_260702.jpg"
+}

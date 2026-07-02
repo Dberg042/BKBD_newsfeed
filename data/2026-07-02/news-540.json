@@ -1,0 +1,11 @@
+{
+  "id": "news-540",
+  "title": "Vercel støtter nå Docker-innebygde backends med Dockerfile.vercel",
+  "summary": "Vercel kan nå bygge og kjøre enhver HTTP-tjeneste fra en Dockerfile.vercel i Fluid compute, med forhåndsvisninger og autoskalering. Funksjonen er målrettet backends som Go, Rails, Spring Boot, Express, Laravel, ASP.NET og FastAPI, så lenge de lytter på $PORT.",
+  "image_url": "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/1Wdvcld1Wzct1CysAXQYfg/35ae25ac76ee222ad0801a4ca35c4c6d/vercel-containers-og.png",
+  "source_url": "https://vercel.com/blog/dockerfile-on-vercel",
+  "source_name": "Vercel",
+  "published_at": "2026-07-02T06:00:00Z",
+  "priority": 540,
+  "local_image": "optimized-images/news-540_260702.jpg"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "news-850",
+  "title": "Anthropic lanserer Claude Sonnet 5",
+  "summary": "Claude Sonnet 5 er Anthropics mest agentiske Sonnet-modell, nær Opus 4.8 på planlegging og verktøybruk til lavere pris. Modellen er tryggere i agentiske kontekster, men har lavere evne til cybersikkerhetsoppgaver. Lanseringsprisen er 2 dollar per million input-tokens til 31. august.",
+  "image_url": "https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F458ea645ef6b729f6847cba16932716e6b547f2f-2880x1620.png&w=3840&q=75",
+  "source_url": "https://www.anthropic.com/news/claude-sonnet-5",
+  "source_name": "Anthropic",
+  "published_at": "2026-07-02T06:00:00Z",
+  "priority": 850,
+  "local_image": "optimized-images/news-850_260702.jpg"
+}

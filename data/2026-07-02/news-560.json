@@ -1,0 +1,11 @@
+{
+  "id": "news-560",
+  "title": "ngrok porterer Kubernetes til nettleseren",
+  "summary": "En utvikler har portert Kubernetes kontrollplan til en nettleserbasert demo der man kan kjøre pod-planlegging og nettverk direkte i en sandboxet JS-runtime. Prosjektet er ikke produksjonsklart, men viser hvordan distribuert kompleksitet kan utforskes uten tunge installasjoner.",
+  "image_url": "https://ngrok.com/blog-assets/images/2026-06-26-i-ported-kubernetes-to-the-browser/og.jpg",
+  "source_url": "https://ngrok.com/blog/i-ported-kubernetes-to-the-browser",
+  "source_name": "ngrok",
+  "published_at": "2026-07-02T06:00:00Z",
+  "priority": 560,
+  "local_image": "optimized-images/news-560_260702.jpg"
+}
