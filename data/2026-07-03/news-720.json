@@ -1,0 +1,11 @@
+{
+  "id": "news-720",
+  "title": "F-Droid oppdager ny Android-skadevare fra Googles distribusjonskanal",
+  "summary": "F-Droid har oppdaget ny Android-skadevare distribuert gjennom en offisiell Google-distribusjonskanal. Skadevaren omgår flere standard sikkerhetsmekanismer i Android, og hendelsen reiser spørsmål om tilliten til lukkede distribusjonskanaler i mobil-leverandørkjeden.",
+  "image_url": "https://f-droid.org/assets/fdroid-logo_bfHl7nsLHOUQxzdU8-rGIhn4bAgl6z7k2mA3fWoCyT4=.png",
+  "source_url": "https://f-droid.org/2026/07/01/adv-malware.html",
+  "source_name": "F-Droid",
+  "published_at": "2026-07-03T06:00:00Z",
+  "priority": 720,
+  "local_image": "optimized-images/news-720_260703.jpg"
+}

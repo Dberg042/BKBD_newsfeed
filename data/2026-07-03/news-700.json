@@ -1,0 +1,11 @@
+{
+  "id": "news-700",
+  "title": "Cloudflare lanserer Monetization Gateway med x402-protokoll",
+  "summary": "Cloudflare lanserer en Monetization Gateway basert på x402-protokollen, som lar utviklere ta betalt for enhver ressurs bak Cloudflare direkte via HTTP. Betalingen håndteres med stablecoin-lommebok og mikrobetalinger, og åpner for agentisk handel på åpen infrastruktur.",
+  "image_url": "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/7wA6Z3Df13eeHZkxM3Fokt/088b64cd947100b70bd0e49c845fc984/Announcing_the_Monetization_Gateway-_charge_for_any_resource_behind_Cloudflare_via_x402-OG.png",
+  "source_url": "https://blog.cloudflare.com/monetization-gateway/",
+  "source_name": "Cloudflare Blog",
+  "published_at": "2026-07-03T06:00:00Z",
+  "priority": 700,
+  "local_image": "optimized-images/news-700_260703.jpg"
+}

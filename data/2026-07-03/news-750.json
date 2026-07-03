@@ -1,0 +1,11 @@
+{
+  "id": "news-750",
+  "title": "Google åpner null-kunnskaps-bevis for aldersverifisering med personvern",
+  "summary": "Google åpner sin ZKP-infrastruktur (null-kunnskaps-bevis) for å gjøre aldersverifisering på nett mulig uten å avsløre identitet. Tjenester kan bekrefte at brukeren er over en gitt aldersgrense uten å samle fødselsdato eller personopplysninger, i tråd med EU- og USA-krav.",
+  "image_url": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Screenshot_2025-07-03_12.59.53_PM.width-1300.png",
+  "source_url": "https://blog.google/innovation-and-ai/technology/safety-security/opening-up-zero-knowledge-proof-technology-to-promote-privacy-in-age-assurance/",
+  "source_name": "Google Blog",
+  "published_at": "2026-07-03T06:00:00Z",
+  "priority": 750,
+  "local_image": "optimized-images/news-750_260703.jpg"
+}

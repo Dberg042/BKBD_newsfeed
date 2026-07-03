@@ -1,0 +1,11 @@
+{
+  "id": "news-620",
+  "title": "Meta beskriver nytt lagringssystem for AI-arbeidsbelastninger i stor skala",
+  "summary": "Meta har redesignet lagringsarkitekturen for AI-arbeidsbelastninger, med nytt metadata-delsystem og lagdelt caching. Målet er å redusere inntakstid for treningsdata og holde GPU-utnyttelsen høy når modellene vokser, i mønstre relevante for store inferensklynger.",
+  "image_url": "https://engineering.fb.com/wp-content/uploads/2026/06/Metas-AI-Storage-Blueprint-at-Scale-Hero-1.png",
+  "source_url": "https://engineering.fb.com/2026/07/01/data-infrastructure/metas-ai-storage-blueprint-at-scale/",
+  "source_name": "Engineering at Meta",
+  "published_at": "2026-07-03T06:00:00Z",
+  "priority": 620,
+  "local_image": "optimized-images/news-620_260703.jpg"
+}

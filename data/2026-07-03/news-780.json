@@ -1,0 +1,11 @@
+{
+  "id": "news-780",
+  "title": "Kimi K2.7 Code er generelt tilgjengelig i GitHub Copilot",
+  "summary": "Moonshots K2.7 Code er nå generelt tilgjengelig i GitHub Copilot for betalte abonnenter. K2.7 er en åpen kodellsmodell optimalisert for agentisk kodeflyt, refaktorering og flerfilsendringer, og gir et sterkt åpent alternativ til OpenAI og Anthropic i Copilot.",
+  "image_url": "https://github.blog/wp-content/uploads/2026/06/613814616-4d64d5a2-d26c-4377-9ce6-a444b1b30840.png",
+  "source_url": "https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot/",
+  "source_name": "GitHub Blog",
+  "published_at": "2026-07-03T06:00:00Z",
+  "priority": 780,
+  "local_image": "optimized-images/news-780_260703.jpg"
+}

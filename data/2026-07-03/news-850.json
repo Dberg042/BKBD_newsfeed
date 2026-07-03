@@ -1,0 +1,11 @@
+{
+  "id": "news-850",
+  "title": "Azure CLI-passordspray truffet 78+ Microsoft-kontoer i 81 millioner forsøk",
+  "summary": "En automatisert passord-spray fra et IPv6-segment kontrollert av LSHIY LLC presset over 81 millioner Azure CLI-innlogningsforsøk i juni. Angripere brukte ROPC OAuth for å omgå Conditional Access. Minst 78 kontoer i 64 organisasjoner ble kompromittert, og Huntress ber alle stramme MFA-policyen.",
+  "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlhMdp0ML_DO3inv2zhyphenhyphenoZ9CmB1ESRBbVh_YHPol3serW7D4zTsXPGVjF62GhEcvamH6fmTs0ZLguVOM72ynrL6ebpPxBgpCv3XeUJNCb4un1Ue4o1V5BjB4r9pEnW_t717d8d49ZdH4OPavLgNkov9VNaJDMruqwG65QoBkxpzFx8q7QofYHuH9gDie-O/s1700-e365/login.jpg",
+  "source_url": "https://thehackernews.com/2026/07/azure-cli-password-spray-hits-at-least.html",
+  "source_name": "The Hacker News",
+  "published_at": "2026-07-03T06:00:00Z",
+  "priority": 850,
+  "local_image": "optimized-images/news-850_260703.jpg"
+}
