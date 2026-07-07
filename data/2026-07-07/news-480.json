@@ -1,0 +1,9 @@
+{
+  "id": "news-480",
+  "title": "Elm 0.19.2 kutter kompileringstid med opptil 1,9x",
+  "summary": "Elm 0.19.2 reduserer kompileringstid for 850 000 linjer fra bunnen av til 5,7 sekunder, og inkrementelle bygg til under 350 ms. Forbedringene kommer fra mindre GC-trykk under parsing. Dette er første steg på veien mot Elm 1.0.",
+  "source_url": "https://elm-lang.org/news/faster-builds",
+  "source_name": "Elm-lang",
+  "published_at": "2026-07-07T03:00:00Z",
+  "priority": 480
+}

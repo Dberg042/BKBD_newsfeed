@@ -1,0 +1,11 @@
+{
+  "id": "news-600",
+  "title": "Cloudflare åpner Monetization Gateway for betaling via x402",
+  "summary": "Cloudflare åpner venteliste for Monetization Gateway som lar eiere kreve betaling for nettsider, datasett, APIer og MCP-verktøy bak Cloudflare. Betalinger avregnes via x402-protokollen og skaper en ny edge-primitiv for betalte agenter og API-tilgang.",
+  "image_url": "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/qPuShvhz5HUDcJS2agaXn/be302f6d4f4e511a51378f597d0b21c0/BLOG-3342-hero.png",
+  "source_url": "https://blog.cloudflare.com/monetization-gateway/",
+  "source_name": "Cloudflare Blog",
+  "published_at": "2026-07-07T03:00:00Z",
+  "priority": 600,
+  "local_image": "optimized-images/news-600_260707.jpg"
+}

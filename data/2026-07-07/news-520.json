@@ -1,0 +1,11 @@
+{
+  "id": "news-520",
+  "title": "Kani: åpen kildekode-modell-sjekker for Rust akseptert ved ASE 2026",
+  "summary": "Kani er en åpen kildekode-modell-sjekker for Rust som verifiserer sikkerhetsegenskaper i AWS-produsert kode. Verktøyet brukes nå internt i Amazon for å fange opp minne- og sikkerhetsbugs. Paperet ble akseptert ved ASE 2026 Industry Showcase.",
+  "image_url": "https://arxiv.org/static/base/1.0.1/images/arxiv-logo-primary-light.svg",
+  "source_url": "https://arxiv.org/abs/2607.01504",
+  "source_name": "ArXiv",
+  "published_at": "2026-07-07T03:00:00Z",
+  "priority": 520,
+  "local_image": "optimized-images/news-520_260707.jpg"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "news-620",
+  "title": "Addy Osmani: en arbeidsmodell for agent-autonomi i programvareutvikling",
+  "summary": "Addy Osmani foreslår en to-akset modell for agent-autonomi langs agency og orkestrering, i stedet for Steve Yegges enkle stige. Seks nivåer fra Assist til Managed-by-exception orchestration beskriver hvordan ingeniører velger riktig nivå. Verifikasjon er flaskehalsen.",
+  "image_url": "https://substackcdn.com/image/fetch/$s_!2N4L!,w_1200,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbf5a99c5-704d-45ee-93fb-3d51a232a19c_1376x768.jpeg",
+  "source_url": "https://addyo.substack.com/p/agentic-autonomy-levels",
+  "source_name": "Addy Osmani (Elevate)",
+  "published_at": "2026-07-07T03:00:00Z",
+  "priority": 620,
+  "local_image": "optimized-images/news-620_260707.jpg"
+}

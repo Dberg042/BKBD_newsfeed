@@ -1,0 +1,11 @@
+{
+  "id": "news-680",
+  "title": "EUs CADA-lov presser europeiske selskaper mot suverene sky-stack",
+  "summary": "EUs foreslåtte Cloud and AI Development Act (CADA) innfører et firedelt suverenitets-rammeverk som presser regulerte virksomheter mot Kubernetes, OpenStack og GitOps. Europeiske togoperatører, banker og telekom-selskaper tar allerede i bruk open-source-stacken.",
+  "image_url": "https://www.cncf.io/wp-content/uploads/2026/06/Blog-Default-24.jpg",
+  "source_url": "https://www.cncf.io/blog/2026/07/03/how-data-sovereignty-is-changing-cloud-native-infrastructure-design/",
+  "source_name": "CNCF",
+  "published_at": "2026-07-07T03:00:00Z",
+  "priority": 680,
+  "local_image": "optimized-images/news-680_260707.jpg"
+}
