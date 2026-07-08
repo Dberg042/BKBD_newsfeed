@@ -1,0 +1,11 @@
+{
+  "id": "news-750",
+  "title": "GLM 5.2 og det varslede marginkollapset i AI (del 1)",
+  "summary": "GLM 5.2 fra Z.ai er ifølge Martin Alderson den første åpne modellen som matcher Opus og GPT på kvalitet, til under 20 prosent av prisen. Med kompatible endepunkt kan man bytte fra Claude Code uten kodeendring. Dette varsler et mulig marginkollaps for frontier-labene.",
+  "source_url": "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/",
+  "source_name": "Martin Alderson",
+  "published_at": "2026-07-08T06:00:00Z",
+  "priority": 750,
+  "image_url": "https://martinalderson.com/img/og/glm-5-2-and-the-coming-ai-margin-collapse-part-1.png",
+  "local_image": "optimized-images/news-750_260708.jpg"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "news-800",
+  "title": "Anthropic: Et globalt arbeidsrom i språkmodeller",
+  "summary": "Anthropic har identifisert «J-space» i Claude – et internt nevralt mønster som fungerer som en bevisst arbeidsflate, og som oppsto spontant under trening. Forskerne kan nå lese hva Claude tenker uten å si det, og bruke det til å avdekke skjulte mål og fabrikkert data.",
+  "source_url": "https://www.anthropic.com/research/global-workspace",
+  "source_name": "Anthropic Research",
+  "published_at": "2026-07-08T06:00:00Z",
+  "priority": 800,
+  "image_url": "https://cdn.sanity.io/images/4zrzovbb/website/fbdc967f9f3d88566f25b21cce7ef523b3fabbbb-1280x720.jpg",
+  "local_image": "optimized-images/news-800_260708.jpg"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "news-720",
+  "title": "Bad Epoll Linux-kjernen sårbarhet for root-eskalering [CVE-2026-46242]",
+  "summary": "En race-condition use-after-free i Linux-kjernens epoll lar en uautorisert lokal bruker eskalere til root. PoC-eksploiten treffer med 99 prosent pålitelighet på 6.12-kjerner, og påvirker servere, desktop og Android (Pixel 10 bekreftet). Mythos fant en annen race-bug i samme kode uten å fange denne.",
+  "source_url": "https://www.securityweek.com/proof-of-concept-exploit-released-for-linux-bad-epoll-root-access-vulnerability",
+  "source_name": "SecurityWeek",
+  "published_at": "2026-07-08T06:00:00Z",
+  "priority": 720,
+  "image_url": "https://www.securityweek.com/wp-content/uploads/2026/05/Linux-vulnerability-malware.jpeg",
+  "local_image": "optimized-images/news-720_260708.jpg"
+}

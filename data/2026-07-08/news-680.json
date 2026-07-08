@@ -1,0 +1,11 @@
+{
+  "id": "news-680",
+  "title": "FFmpeg: heap-overskriving i MagicYUV-dekoderen [CVE-2026-8461]",
+  "summary": "JFrog har avdekket en heap-overskriving i FFmpegs MagicYUV-dekoder (CVSS 8.8) som kan utløses av en ondsinnet AVI- eller MKV-fil. Jellyfin og Nextcloud er demonstrert som RCE-veier. FFmpeg 8.1.2 er ute – organisasjoner som prosesserer upålitelig media bør patche nå.",
+  "source_url": "https://linuxsecurity.com/news/security-vulnerabilities/ffmpeg-vulnerability-linux-media-servers-rce-risk",
+  "source_name": "LinuxSecurity.com",
+  "published_at": "2026-07-08T06:00:00Z",
+  "priority": 680,
+  "image_url": "https://cdn.sanity.io/images/4zrzovbb/website/fbdc967f9f3d88566f25b21cce7ef523b3fabbbb-1280x720.jpg",
+  "local_image": "optimized-images/news-680_260708.jpg"
+}
