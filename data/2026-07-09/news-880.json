@@ -1,0 +1,11 @@
+{
+  "id": "news-880",
+  "title": "Januscape: 16 år gammel KVM-bug gir gjeste-til-vert VM-flukt",
+  "summary": "Forsker Hyunwoo Kim avslører Januscape — en use-after-free i Linux KVM sin shadow MMU som har ligget skjult siden 2010. En ondsinnet gjeste-VM kan bryte ut og kjøre kode som root på verten i multi-tenant-skyer med nested virtualisering. Alle KVM-verter må patche umiddelbart.",
+  "image_url": "https://blog.cloudlinux.com/wp-content/uploads/2026/07/januscape-featured.jpg",
+  "source_url": "https://blog.cloudlinux.com/januscape-cve-2026-53359-mitigation-and-kernel-update-on-cloudlinux",
+  "source_name": "CloudLinux Blog",
+  "published_at": "2026-07-09T03:00:00Z",
+  "priority": 880,
+  "local_image": "optimized-images/news-880_260709.jpg"
+}

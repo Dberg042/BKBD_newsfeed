@@ -1,0 +1,11 @@
+{
+  "id": "news-780",
+  "title": "Anthropic: Et globalt arbeidsrom i språkmodeller",
+  "summary": "Anthropic viser at Claude internt har utviklet et J-space — et lite sett med nevrale mønstre som ligner «global workspace»-teorien om menneskelig bevissthet. Funnet er et gjennombrudd i tolkning av hva moderne LLM-er gjør internt.",
+  "image_url": "https://www-cdn.anthropic.com/images/4zrzovbb/website/0ab926f491beb999ece405a03cc7684730156905-3824x2640.png",
+  "source_url": "https://www.anthropic.com/research/global-workspace",
+  "source_name": "Anthropic",
+  "published_at": "2026-07-09T03:00:00Z",
+  "priority": 780,
+  "local_image": "optimized-images/news-780_260709.jpg"
+}

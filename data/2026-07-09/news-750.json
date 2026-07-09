@@ -1,0 +1,11 @@
+{
+  "id": "news-750",
+  "title": "Microsoft kan spore brukere via en Windows-enhets-ID (GDID)",
+  "summary": "FBI brukte Microsofts Global Device ID for å knytte en Scattered Spider-hacker til et innbrudd, noe som avdekker at Windows har en persistent, enhetsnivå-ID uten enkel opt-out. Microsoft sier ID-en kan resettes ved full reinstall av Windows.",
+  "image_url": "https://i.pcmag.com/imagery/articles/02VZVE6JO9dXqKyKowYhZzj-1.fit_lim.v1783350873.jpg",
+  "source_url": "https://www.pcmag.com/news/a-hackers-arrest-reveals-microsoft-can-track-users-via-a-windows-device",
+  "source_name": "PCMag",
+  "published_at": "2026-07-09T03:00:00Z",
+  "priority": 750,
+  "local_image": "optimized-images/news-750_260709.jpg"
+}

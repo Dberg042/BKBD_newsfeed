@@ -1,0 +1,11 @@
+{
+  "id": "news-580",
+  "title": "kapa.ai: Slik beskjærer vi RAG-kontekst til kun det svaret trenger",
+  "summary": "kapa.ai forklarer hvordan de beskjærer RAG-kontekst til kun det svaret faktisk trenger, i stedet for å sende hele vektor-chunks til LLM-en. Teknikken kutter token-kostnader og reduserer hallusinasjoner uten å miste treffsikkerhet.",
+  "image_url": "https://framerusercontent.com/images/6GxuXM90o1IK62mxhycPvoG2M.png?width=1267&height=654",
+  "source_url": "https://www.kapa.ai/blog/how-we-prune-rag-context",
+  "source_name": "kapa.ai",
+  "published_at": "2026-07-09T03:00:00Z",
+  "priority": 580,
+  "local_image": "optimized-images/news-580_260709.jpg"
+}
