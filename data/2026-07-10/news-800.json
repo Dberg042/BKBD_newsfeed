@@ -1,0 +1,9 @@
+{
+  "id": "news-800",
+  "title": "Microsoft kan spore brukere via en Windows-enhets-ID",
+  "summary": "En hackerarrestasjon avdekket at Microsoft kan identifisere enkeltbrukere via en unik Windows-enhets-ID som er vanskelig å skjule. Etterforskere sporet en mistenkt på tvers av kontoer. Saken reiser personvernspørsmål for norske IT-avdelinger med Windows-utrulling.",
+  "source_url": "https://www.pcmag.com/news/a-hackers-arrest-reveals-microsoft-can-track-users-via-a-windows-device",
+  "source_name": "PCMag",
+  "published_at": "2026-07-10T03:00:00Z",
+  "priority": 800
+}

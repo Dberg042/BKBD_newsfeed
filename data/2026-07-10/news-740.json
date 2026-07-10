@@ -1,0 +1,9 @@
+{
+  "id": "news-740",
+  "title": "OpenSSH 10.4 sluppet – flere sikkerhetsfikser",
+  "summary": "OpenSSH 10.4 ble sluppet 6. juli 2026 med flere sikkerhetsfikser, blant annet sårbarheter i sftp og scp for ondsinnede servere, og en klient-side use-after-free ved nøkkelutveksling. Servere med seccomp-sandbox bør oppdateres raskt, siden manglende støtte nå er fatalt.",
+  "source_url": "https://www.openssh.com/txt/release-10.4",
+  "source_name": "OpenSSH",
+  "published_at": "2026-07-10T03:00:00Z",
+  "priority": 740
+}

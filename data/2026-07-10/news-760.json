@@ -1,0 +1,11 @@
+{
+  "id": "news-760",
+  "title": "Slik kastet en liten LLM 68 prosent av RAG-konteksten",
+  "summary": "Kapa.ai la inn et tredje steg mellom retriever og generator: en liten modell som kutter 68 prosent av hentede chunks og beholder 96 prosent av treffraten. Tilnærmingen kutter en tredel av totalkostnaden per spørring. Nyttig mønster for norske konsulenter med kundeagenter over store dokumentbaser.",
+  "image_url": "https://framerusercontent.com/images/6GxuXM90o1IK62mxhycPvoG2M.png?width=1267&height=654",
+  "source_url": "https://www.kapa.ai/blog/how-we-prune-rag-context",
+  "source_name": "Kapa.ai",
+  "published_at": "2026-07-10T03:00:00Z",
+  "priority": 760,
+  "local_image": "optimized-images/news-760_260710.jpg"
+}

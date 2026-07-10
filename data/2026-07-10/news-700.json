@@ -1,0 +1,11 @@
+{
+  "id": "news-700",
+  "title": "Små AI-modeller vinner terreng i ustabile nettverk",
+  "summary": "IEEE Spectrum rapporterer at små språkmodeller tas i bruk i farmasøytisk industri og feltmiljøer med ustabil nettilgang, der store modeller er upraktiske. Lokal inferens reduserer personvernrisiko og gir forutsigbar responstid. Nyttig mønster for norske apotek- og laboratoriemiljøer.",
+  "image_url": "https://spectrum.ieee.org/media-library/image.jpg?id=67101133&width=1200&height=600&coordinates=0%2C889%2C0%2C361",
+  "source_url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
+  "source_name": "IEEE Spectrum",
+  "published_at": "2026-07-10T03:00:00Z",
+  "priority": 700,
+  "local_image": "optimized-images/news-700_260710.jpg"
+}

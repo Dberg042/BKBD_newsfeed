@@ -1,0 +1,11 @@
+{
+  "id": "news-540",
+  "title": "CoMaps – FOSS offline-kart som utfordrer Google Maps",
+  "summary": "CoMaps er et åpent kildekode-prosjekt med offline-kart bygget på OpenStreetMap-data, og posisjonerer seg som et personvernvennlig alternativ til Google Maps. Appen kjører uten tracking og fungerer i områder med dårlig dekning. Relevant for norske feltverktøy uten skyleverandør-binding.",
+  "image_url": "https://www.comaps.app/images/sections/map-s-3.webp",
+  "source_url": "https://www.comaps.app/",
+  "source_name": "comaps.app",
+  "published_at": "2026-07-10T03:00:00Z",
+  "priority": 540,
+  "local_image": "optimized-images/news-540_260710.jpg"
+}

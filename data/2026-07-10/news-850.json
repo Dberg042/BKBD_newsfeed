@@ -1,0 +1,11 @@
+{
+  "id": "news-850",
+  "title": "Anthropic avdekker et internt «globalt arbeidsrom» i Claude",
+  "summary": "Anthropic viser at Claude har utviklet et internt J-space som fungerer som et globalt arbeidsrom for indre resonnement. Mønstrene oppstod spontant under trening, og modellen kan styre dem ved forespørsel. Funnene gir et vindu inn i tolkbarhet og sikkerhet for komplekse AI-modeller.",
+  "image_url": "https://cdn.sanity.io/images/4zrzovbb/website/fbdc967f9f3d88566f25b21cce7ef523b3fabbbb-1280x720.jpg",
+  "source_url": "https://www.anthropic.com/research/global-workspace",
+  "source_name": "Anthropic",
+  "published_at": "2026-07-10T03:00:00Z",
+  "priority": 850,
+  "local_image": "optimized-images/news-850_260710.jpg"
+}
