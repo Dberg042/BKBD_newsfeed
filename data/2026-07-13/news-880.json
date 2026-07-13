@@ -1,0 +1,11 @@
+{
+  "id": "news-880",
+  "title": "Januscape: Gjest-til-vert-escape i KVM/x86 [CVE-2026-53359]",
+  "summary": "Januscape er en use-after-free i KVM/x86 sin shadow MMU som lar en gjest rømme til verten, skjult i Linux-kjernen i rundt 16 år. Sårbarheten utløses av en ondsinnet gjest alene og truer multi-tenant x86-skyer. PoC-en ble brukt som 0-day i Google kvmCTF – sjekk at commit 81ccda30b4e8 er patchet inn.",
+  "source_url": "https://github.com/V4bel/Januscape",
+  "source_name": "V4bel/GitHub",
+  "published_at": "2026-07-13T03:00:00Z",
+  "priority": 880,
+  "image_url": "https://opengraph.githubassets.com/858b1606647a8cad0d22b23b257f071963defa4e473dbb479ab2befdf1cff91e/V4bel/Januscape",
+  "local_image": "optimized-images/news-880_260713.jpg"
+}

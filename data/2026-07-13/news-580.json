@@ -1,0 +1,11 @@
+{
+  "id": "news-580",
+  "title": "AMD Ryzen AI Halo: AI-utviklerkit med 128 GB minne",
+  "summary": "AMD har sendt Ryzen AI Halo til $3999: 16-kjerners Zen 5, Radeon 8060S-grafikk og 128 GB unified LPDDR5x – nok minne til lokale LLM-er. Leveres med Debian-Linux eller Windows 11 Pro, posisjonert mot DGX Spark. For norske IT-avdelinger et skrivebordsalternativ for lokal AI-utvikling uten GPU-sky.",
+  "source_url": "https://www.lttlabs.com/articles/2026/07/06/amd-ryzen-ai-halo",
+  "source_name": "LTT Labs",
+  "published_at": "2026-07-13T03:00:00Z",
+  "priority": 580,
+  "image_url": "https://storage.ghost.io/c/68/2d/682dc4d0-6daf-426a-b3d4-9f443976d0d8/content/images/2026/07/2026-06---AMD-Ryzen-AI-Halo-1-1.png",
+  "local_image": "optimized-images/news-580_260713.jpg"
+}

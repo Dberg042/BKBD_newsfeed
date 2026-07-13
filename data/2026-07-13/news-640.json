@@ -1,0 +1,9 @@
+{
+  "id": "news-640",
+  "title": "OpenSSH 10.4 / 10.4p1 utgitt",
+  "summary": "OpenSSH 10.4 tetter en sftp-bug der ondsinnet server kan omdirigere filer utenom målkatalog, og en scp-vei som lot serveren skrive til foreldrekatalog. Strammer sshd-sandkassen og legger til post-kvante-støtte (ML-DSA 44 + Ed25519). Norske driftsmiljøer bør oppgradere.",
+  "source_url": "https://www.openssh.com/txt/release-10.4",
+  "source_name": "OpenSSH",
+  "published_at": "2026-07-13T03:00:00Z",
+  "priority": 640
+}
