@@ -1,0 +1,11 @@
+{
+  "id": "news-840",
+  "title": "Device code-phishing via ekte Microsoft-side: URL-sjekk er ikke nok",
+  "summary": "Kaspersky viser en farlig vri på phishing: angriperen bruker Microsofts egen device code-flow, så offeret skriver koden inn på en ekte Microsoft-side mens tokenet havner hos angriperen. Det gjør ren URL-sjekk langt mindre nyttig enn folk tror.",
+  "image_url": "https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2026/07/03170147/Device-Code-Phishing-pingpongsuperman_A_fisherman_hacker_is_fishing_using_a_large_TV_261a6841-d900-4140-bffd-0f2f596e9977-1200x600.jpg",
+  "source_url": "https://securelist.com/microsoft-device-code-phishing-attack/120350/",
+  "source_name": "Securelist (Kaspersky)",
+  "published_at": "2026-07-14T03:00:00Z",
+  "priority": 840,
+  "local_image": "optimized-images/news-840_260714.jpg"
+}

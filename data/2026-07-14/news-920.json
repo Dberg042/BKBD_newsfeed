@@ -1,0 +1,11 @@
+{
+  "id": "news-920",
+  "title": "Januscape: Gjest-til-vert-flukt i KVM/x86 [CVE-2026-53359]",
+  "summary": "Januscape viser hvor alvorlig en KVM use-after-free kan være når shadow MMU lar en gjest påvirke verten. For drift betyr det at x86-hosts med nested virtualization og flere leietakere bør patches og overvåkes med en gang, ikke «neste uke».",
+  "image_url": "https://github.com/V4bel/Januscape/raw/main/assets/tux.png",
+  "source_url": "https://github.com/V4bel/Januscape",
+  "source_name": "GitHub",
+  "published_at": "2026-07-14T03:00:00Z",
+  "priority": 920,
+  "local_image": "optimized-images/news-920_260714.jpg"
+}

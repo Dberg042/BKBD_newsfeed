@@ -1,0 +1,11 @@
+{
+  "id": "news-640",
+  "title": "LangChain lanserer OpenWiki Brains: wiki-minne for agenter",
+  "summary": "LangChain lanserer OpenWiki Brains, et lokalt wiki-minne som henter kontekst fra Gmail, Notion, git, X og websøk uten manuell kopiering. Det er nyttig for team som jobber på tvers av mange kilder og trenger fersk bakgrunn i agentene.",
+  "image_url": "https://cdn.prod.website-files.com/65c81e88c254bb0f97633a71/6a512027b30ddebe32035fd0_openwiki-brains.png",
+  "source_url": "https://www.langchain.com/blog/introducing-openwiki-brains-general-purpose-wiki-memory-for-agents",
+  "source_name": "LangChain",
+  "published_at": "2026-07-14T03:00:00Z",
+  "priority": 640,
+  "local_image": "optimized-images/news-640_260714.jpg"
+}

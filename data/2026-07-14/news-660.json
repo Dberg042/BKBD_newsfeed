@@ -1,0 +1,11 @@
+{
+  "id": "news-660",
+  "title": "Datadog GuardDog 3.0: ny regelmotor, åpen sandboxing og YARA-basert scanning",
+  "summary": "Datadog GuardDog 3.0 går fra Semgrep til YARA, legger på risikoscore og kjører scanning i sandbox som standard. For norske team med mye npm og PyPI er dette et konkret løft i forsyningskjeden, ikke bare en pen dashboard-oppdatering.",
+  "image_url": "https://securitylabs.dd-static.net/img/guarddog-3-0-release/hero.png?auto=format&h=712&dpr=1",
+  "source_url": "https://securitylabs.datadoghq.com/articles/guarddog-3-0-release/",
+  "source_name": "Datadog Security Labs",
+  "published_at": "2026-07-14T03:00:00Z",
+  "priority": 660,
+  "local_image": "optimized-images/news-660_260714.jpg"
+}

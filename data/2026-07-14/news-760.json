@@ -1,0 +1,11 @@
+{
+  "id": "news-760",
+  "title": "Anthropic: Et globalt arbeidsminne i språkmodeller",
+  "summary": "Anthropic hevder Claude har fått et internt «global workspace» for begreper som kan leses, flyttes og brukes i flertrinns resonnering. Uansett om du kjøper beviset for bevissthet, er dette nyttig interpretabilitetsarbeid for folk som bygger og gransker modeller.",
+  "image_url": "https://cdn.sanity.io/images/4zrzovbb/website/fbdc967f9f3d88566f25b21cce7ef523b3fabbbb-1280x720.jpg",
+  "source_url": "https://www.anthropic.com/research/global-workspace",
+  "source_name": "Anthropic",
+  "published_at": "2026-07-14T03:00:00Z",
+  "priority": 760,
+  "local_image": "optimized-images/news-760_260714.jpg"
+}

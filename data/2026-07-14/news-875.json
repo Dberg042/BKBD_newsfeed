@@ -1,0 +1,11 @@
+{
+  "id": "news-875",
+  "title": "Kompromittert Injective SDK npm-pakke stjal wallet-nøkler og mnemonics",
+  "summary": "Et kompromittert Injective SDK-npm-slipp stjal mnemonics og private keys via falsk telemetri, og samme versjon ble dyttet inn i 17 relaterte pakker. Alle som bygger mot krypto, må rote gjennom avhengigheter og rotere nøkler umiddelbart.",
+  "image_url": "https://cdn.sanity.io/images/cgdhsj6q/production/5d23e5e0d79394376e8ee062faf361dc33d838fb-1672x941.png?w=1600&q=95&fit=max&auto=format",
+  "source_url": "https://socket.dev/blog/compromised-injective-sdk-npm-package",
+  "source_name": "Socket",
+  "published_at": "2026-07-14T03:00:00Z",
+  "priority": 875,
+  "local_image": "optimized-images/news-875_260714.jpg"
+}

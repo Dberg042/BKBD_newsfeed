@@ -1,0 +1,11 @@
+{
+  "id": "news-690",
+  "title": "Kapa kastet 68 prosent av RAG-konteksten med en liten LLM",
+  "summary": "Kapa viser at en liten LLM kan kaste 68 prosent av RAG-konteksten og likevel beholde 96 prosent av treffene. For team som betaler per token, betyr det lavere kostnad, mindre støy og mer plass til det agenten faktisk må huske.",
+  "image_url": "https://framerusercontent.com/images/6GxuXM90o1IK62mxhycPvoG2M.png?width=1267&height=654",
+  "source_url": "https://www.kapa.ai/blog/how-we-prune-rag-context",
+  "source_name": "Kapa",
+  "published_at": "2026-07-14T03:00:00Z",
+  "priority": 690,
+  "local_image": "optimized-images/news-690_260714.jpg"
+}
