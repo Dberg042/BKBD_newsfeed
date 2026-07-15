@@ -1,0 +1,11 @@
+{
+  "id": "news-600",
+  "title": "Kapa.ai viser hvordan de beskjærer RAG-kontekst",
+  "summary": "Kapa.ai deler sin metode for å beskjære RAG-kontekst slik at kun relevant innhold sendes til språkmodellen. Teknikken reduserer tokens, kostnad og hallusinasjoner, og er direkte anvendelig for norske utviklere som bygger kundebårne AI-assistenter.",
+  "image_url": "https://framerusercontent.com/images/6GxuXM90o1IK62mxhycPvoG2M.png?width=1267&height=654",
+  "source_url": "https://www.kapa.ai/blog/how-we-prune-rag-context",
+  "source_name": "Kapa.ai",
+  "published_at": "2026-07-15T06:00:00Z",
+  "priority": 600,
+  "local_image": "optimized-images/news-600_260715.jpg"
+}

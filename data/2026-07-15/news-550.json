@@ -1,0 +1,11 @@
+{
+  "id": "news-550",
+  "title": "CVE-2026-53359: KVM/x86-sårbarhet lar VM bryte ut",
+  "summary": "Sikkerhetsforsker V4bel har publisert detaljer om CVE-2026-53359, en gjest-til-vert-escape-sårbarhet i KVM/x86 som lar en ondsinnet VM bryte ut av hypervisoren. Sårbarheten berører de fleste Linux-baserte skyløsninger og krever umiddelbar patching i berørte miljøer.",
+  "image_url": "https://opengraph.githubassets.com/cb2df43cbb1f40048ee271680948af3ae71c1de14415ec7a72610dd0119058ec/V4bel/Januscape",
+  "source_url": "https://github.com/V4bel/Januscape",
+  "source_name": "GitHub/V4bel",
+  "published_at": "2026-07-15T06:00:00Z",
+  "priority": 550,
+  "local_image": "optimized-images/news-550_260715.jpg"
+}

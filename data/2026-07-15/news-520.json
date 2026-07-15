@@ -1,0 +1,9 @@
+{
+  "id": "news-520",
+  "title": "OpenSSH 10.4: viktige sikkerhetsfikser ute",
+  "summary": "OpenSSH 10.4 er sluppet med flere sikkerhetsfikser og forbedringer. Utgivelsen tetter sårbarheter i autentiseringsflyten og fjerner utdaterte nøkkelalgoritmer. Alle norske driftsteam bør planlegge oppdatering i vedlikeholdsvinduet.",
+  "source_url": "https://www.openssh.org/txt/release-10.4",
+  "source_name": "OpenSSH",
+  "published_at": "2026-07-15T06:00:00Z",
+  "priority": 520
+}

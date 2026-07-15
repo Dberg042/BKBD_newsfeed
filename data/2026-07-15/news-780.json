@@ -1,0 +1,11 @@
+{
+  "id": "news-780",
+  "title": "Microsoft sporer Windows-brukere via GDID — avslørt i rettsdokumenter",
+  "summary": "Rettsdokumenter i saken mot Scattered Spider-medlemmet Peter Stokes avslører at Microsoft bruker en Global Device Identifier (GDID) som sporer Windows-installasjoner på tvers av VPN. Identifikatoren overlever oppdateringer og har ingen enkel opt-out. Nye personvernspørsmål.",
+  "image_url": "https://www.digitaltrends.com/tachyon/2026/06/Windows-11-on-a-laptop.jpg?resize=1200%2C630",
+  "source_url": "https://www.digitaltrends.com/computing/your-windows-pc-has-been-quietly-tracking-you-and-a-hackers-arrest-just-made-it-public/",
+  "source_name": "Digital Trends",
+  "published_at": "2026-07-15T06:00:00Z",
+  "priority": 780,
+  "local_image": "optimized-images/news-780_260715.jpg"
+}

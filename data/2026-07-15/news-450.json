@@ -1,0 +1,11 @@
+{
+  "id": "news-450",
+  "title": "OfficeCLI: Åpen kildekode-verktøy for AI-agenter i Office",
+  "summary": "Åpen kildekode-prosjektet OfficeCLI gir AI-agenter mulighet til å lese og redigere Microsoft Office-dokumenter programmatisk. Verktøyet støtter Word, Excel og PowerPoint og er relevant for norske konsulenter som vil automatisere dokumentarbeidsflyter med LLM-er.",
+  "image_url": "https://opengraph.githubassets.com/777eaff1ea740ec484faa86de13d31ef57caff7e2d6eaa5f23a866f83c462df3/iOfficeAI/OfficeCLI",
+  "source_url": "https://github.com/iOfficeAI/OfficeCLI",
+  "source_name": "GitHub/iOfficeAI",
+  "published_at": "2026-07-15T06:00:00Z",
+  "priority": 450,
+  "local_image": "optimized-images/news-450_260715.jpg"
+}
